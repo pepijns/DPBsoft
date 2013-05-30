@@ -51,6 +51,8 @@
         android:layout_marginTop="70dp"
         android:ems="10"
         android:hint="@string/etxtGebruikersnaamHint"
-        android:singleLine="true" />
-
+        android:singleLine="true">
+        <requestFocus />
+  	</EditText>
+  	
 </RelativeLayout>
