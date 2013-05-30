@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.dpbsoft.app.MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +29,10 @@
         <activity
             android:name="com.dpbsoft.app.AboutActivity"
             android:label="@string/title_activity_about" >
+        </activity>
+        <activity
+            android:name="com.dpbsoft.app.ListCategoriesActivity"
+            android:label="@string/title_activity_list_categories" >
         </activity>
     </application>
 
