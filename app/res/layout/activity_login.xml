@@ -17,7 +17,7 @@
         android:layout_below="@+id/editText2"
         android:layout_marginTop="23dp"
         android:ems="10"
-        android:hint="Wachtwoord"
+        android:hint="@string/etxtWachtwoordHint"
         android:inputType="textPassword"
         android:singleLine="true" />
 
@@ -28,7 +28,7 @@
         android:layout_alignLeft="@+id/editText1"
         android:layout_below="@+id/editText1"
         android:layout_marginTop="14dp"
-        android:text="Gegevens onthouden" 
+        android:text="@string/btnGegevensOpslaanTekst" 
         android:textColor="#FFFFFF"/>
 
     <Button
@@ -39,7 +39,7 @@
         android:layout_alignRight="@+id/editText1"
         android:layout_below="@+id/checkBox1"
         android:layout_marginTop="19dp"
-        android:text="Login" 
+        android:text="@string/btnLoginTekst" 
         android:background="@android:color/white"/>
 
     <EditText
@@ -50,7 +50,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:ems="10"
-        android:hint="Gebruikersnaam"
+        android:hint="@string/etxtGebruikersnaamHint"
         android:singleLine="true" />
 
 </RelativeLayout>
