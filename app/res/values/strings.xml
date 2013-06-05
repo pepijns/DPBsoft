@@ -3,15 +3,17 @@
 
     <string name="app_name">Charitybook</string>
     <string name="app_id">172436992923336</string>
+    
     <string name="action_settings">Settings</string>
+    
     <string name="title_activity_login">Login</string>
     <string name="title_activity_about">Over deze App</string>
     <string name="title_activity_list_categories">Categorieën</string>
+    
     <string name="btnLoginTekst">Login</string>
-    <string name="etxtGebruikersnaamHint">Gebruikersnaam</string>
-    <string name="etxtWachtwoordHint">Wachtwoord</string>
-    <string name="btnGegevensOpslaanTekst">Gegevens onthouden</string>
-    <string name="title_activity_splash">SplashActivity</string>
-    <string name="hello_world">Hello world!</string>
+   	<string name="etxtGebruikersnaamHint">Gebruikersnaam</string>
+   	<string name="etxtWachtwoordHint">Wachtwoord</string>
+   	<string name="btnGegevensOpslaanTekst">Gegevens onthouden</string>
+  
 
 </resources>
