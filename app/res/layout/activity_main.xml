@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" 
-    android:background="#3b5998">
+    android:background="@color/main_blue">
 
     <TextView
         android:id="@+id/textView1"
@@ -16,9 +16,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        android:text="Charitybook"
+        android:text="@string/app_name"
         android:textColor="@android:color/white"
-        android:textSize="30dip" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/aboutButton"
@@ -29,7 +29,7 @@
         android:layout_marginTop="25dp"
         android:background="@android:color/white"
         android:onClick="aboutScreen"
-        android:text="Over deze App" />
+        android:text="@string/title_activity_about" />
 
     <Button
         android:id="@+id/loginButton"
@@ -38,7 +38,7 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="58dp"
-        android:text="Login" 
+        android:text="@string/title_activity_login" 
         android:onClick="loginScreen"
         android:background="@android:color/white"/>
 
