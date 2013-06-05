@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".CategorieActivity" >
+    tools:context=".CategoryDierenActivity" >
 
     <TextView
         android:id="@+id/textView1"
@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:text="Categorie 1"
+        android:text="@string/category_dieren"
         android:textSize="40sp" />
 
     <Button
@@ -27,7 +27,7 @@
         android:layout_marginTop="60dp"
         android:textSize="20sp" 
         
-        android:text="Goede doelen" />
+        android:text="@string/goede_doelen" />
 
     <Button
         android:id="@+id/btnNieuws"
@@ -38,6 +38,6 @@
         android:layout_marginTop="70dp"
         android:textSize="20sp" 
         
-        android:text="Nieuws" />
+        android:text="@string/nieuws" />
 
 </RelativeLayout>
