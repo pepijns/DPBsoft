@@ -1,6 +1,7 @@
 package com.dpbsoft.app;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -27,8 +28,8 @@ public class ListCategoriesActivity extends ListActivity {
  
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			    Toast.makeText(getApplicationContext(),
-				((TextView) view).getText(), Toast.LENGTH_SHORT).show();
+				Intent intent = new Intent(ListCategoriesActivity.this, CategorieActivity.class);
+		        startActivity(intent);
 			}
 		});
  
