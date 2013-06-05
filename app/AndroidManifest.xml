@@ -23,7 +23,6 @@
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -48,10 +47,8 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/app_id" />
 
-            
         <activity
-            android:name="com.dpbsoft.app.MainActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            android:name="com.dpbsoft.app.MainActivity">
         </activity>
     </application>
 
