@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+			android:background="#3b5998" >
+
+        <TextView
+	        android:id="@+id/textView0"
+  			android:layout_width="fill_parent" 
+    		android:layout_height="fill_parent" 
+    		android:gravity="center"
+	        android:layout_alignParentTop="true"
+	        android:text="Charitybook"
+	        android:textColor="@android:color/white"
+	        android:textSize="30sp" />
+
+	</RelativeLayout>
