@@ -4,20 +4,19 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
-public class CategorieActivity extends Activity {
+public class CharityWNFMainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_categorie);
+		setContentView(R.layout.activity_charity_wnfmain);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.categorie, menu);
+		getMenuInflater().inflate(R.menu.charity_wnfmain, menu);
 		return true;
 	}
-	
-	
+
 }

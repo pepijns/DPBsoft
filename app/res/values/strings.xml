@@ -12,7 +12,10 @@
     <string name="etxtWachtwoordHint">Wachtwoord</string>
     <string name="btnGegevensOpslaanTekst">Gegevens onthouden</string>
     <string name="title_activity_splash">SplashActivity</string>
-    <string name="title_activity_categorie">CategorieActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="category_dieren">Dieren</string>
+    <string name="goede_doelen">Goede doelen</string>
+    <string name="nieuws">Nieuws</string>
+    <string name="wnf">Wereld Natuur Fonds</string>
 
 </resources>

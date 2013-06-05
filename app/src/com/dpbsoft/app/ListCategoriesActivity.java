@@ -11,7 +11,7 @@ import android.widget.AdapterView.OnItemClickListener;
  
 public class ListCategoriesActivity extends ListActivity {
  
-	static final String[] CATEGORIES = new String[] { "Categorie 1", "Categorie 2", "Categorie 3",
+	static final String[] CATEGORIES = new String[] { "Dieren", "Categorie 2", "Categorie 3",
 			"Categorie 4", "Categorie 5", "Categorie 6", "Categorie 7", "Categorie 8",
 			"Categorie 9", "Categorie 10", "Categorie 11", "Categorie 12", "Categorie 13" };
  
@@ -26,7 +26,7 @@ public class ListCategoriesActivity extends ListActivity {
  
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Intent intent = new Intent(ListCategoriesActivity.this, CategorieActivity.class);
+				Intent intent = new Intent(ListCategoriesActivity.this, CategoryDierenActivity.class);
 		        startActivity(intent);
 			}
 		});

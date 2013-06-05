@@ -51,8 +51,16 @@
         <activity android:name="com.dpbsoft.app.MainActivity" >
         </activity>
         <activity
-            android:name="com.dpbsoft.app.CategorieActivity"
-            android:label="@string/title_activity_categorie" >
+            android:name="com.dpbsoft.app.CategoryDierenActivity"
+            android:label="@string/category_dieren" >
+        </activity>
+        <activity
+            android:name="com.dpbsoft.app.ListCharitiesActivity"
+            android:label="@string/goede_doelen" >
+        </activity>
+        <activity
+            android:name="com.dpbsoft.app.CharityWNFMainActivity"
+            android:label="@string/wnf" >
         </activity>
     </application>
 
