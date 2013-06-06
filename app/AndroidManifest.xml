@@ -85,7 +85,23 @@
         </activity>
         <activity
             android:name="com.dpbsoft.app.CharityWNFMainActivity"
-            android:label="@string/wnf" >
+            android:label="@string/wnf_title" >
+        </activity>
+        <activity
+            android:name="com.dpbsoft.app.CharityWNFInfoActivity"
+            android:label="@string/wnf_title" >
+        </activity>
+        <activity
+            android:name="com.dpbsoft.app.CategoryActivity"
+            android:label="@string/title_activity_category" >
+        </activity>
+        <activity
+            android:name="com.dpbsoft.app.CharityMainActivity"
+            android:label="@string/title_activity_charity_main" >
+        </activity>
+        <activity
+            android:name="com.dpbsoft.app.CharityInfoActivity"
+            android:label="@string/title_activity_charity_info" >
         </activity>
     </application>
 

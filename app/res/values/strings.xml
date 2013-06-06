@@ -22,6 +22,16 @@
     <string name="category_vluchtelingenhulp">Vluchtelingenhulp</string>
     <string name="goede_doelen">Goede doelen</string>
     <string name="nieuws">Nieuws</string>
-    <string name="wnf">Wereld Natuur Fonds</string>
+    <string name="wnf_title">Wereld Natuur Fonds</string>
+    <string name="title_activity_charity_wnfinfo">CharityWNFInfoActivity</string>
+    <string name="info">Informatie</string>
+    <string name="steun">Steun dit goede doel</string>
+    <string name="url">De officiële website</string>
+    <string name="wnf_info">Het Wereld Natuur Fonds zet zich op veel manieren in voor bedreigde diersoorten. Allereerst natuurlijk door de bescherming in hun eigen gebied door middel van verschillende veldprojecten. Bijvoorbeeld door trainen en financieren van anti-stropersbrigades. Maar ook door samen met de lokale bevolking te zoeken naar alternatieve, duurzame bronnen van inkomen en haar te helpen conflicten met wilde dieren te voorkomen. </string>
+    <string name="donate">Klik hier om te doneren</string>
+    <string name="comments">Aanbevelingen / comments</string>
+    <string name="title_activity_category">CategoryActivity</string>
+    <string name="title_activity_charity_main">CharityMainActivity</string>
+    <string name="title_activity_charity_info">CharityInfoActivity</string>
 
 </resources>

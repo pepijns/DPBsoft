@@ -6,13 +6,56 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+<<<<<<< HEAD
     android:background="@color/main_blue"
     tools:context=".CharityWNFMainActivity" >
+=======
+    tools:context=".CharityWNFMainActivity" 
+    android:background="@color/main_blue" >
+>>>>>>> 4e9eaeace1783502f46e39e6756cb83ef7e39ce4
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
+<<<<<<< HEAD
         android:layout_height="wrap_content"
         android:text="@string/hello_world" 
         android:textColor="@color/main_white"/>
+=======
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textSize="25sp"
+        android:text="@string/wnf_title"
+        android:textColor="@color/white" />
+>>>>>>> 4e9eaeace1783502f46e39e6756cb83ef7e39ce4
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/info" />
+
+    <Button
+        android:id="@+id/btnSteun"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/btnInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="@string/steun" />
+
+    <Button
+        android:id="@+id/btnComments"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/btnSteun"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="@string/comments" />
 
 </RelativeLayout>
