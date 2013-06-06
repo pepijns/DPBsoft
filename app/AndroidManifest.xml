@@ -55,30 +55,6 @@
             android:label="@string/category_dieren" >
         </activity>
         <activity
-            android:name="com.dpbsoft.app.CategoryNatuurEnMilieuActivity"
-            android:label="@string/category_natuur_en_milieu" >
-        </activity>
-        <activity
-            android:name="com.dpbsoft.app.CategoryNoodhulpActivity"
-            android:label="@string/category_noodhulp" >
-        </activity>
-        <activity
-            android:name="com.dpbsoft.app.CategoryOntwikkelingshulpActivity"
-            android:label="@string/category_ontwikkelingshulp" >
-        </activity>
-        <activity
-            android:name="com.dpbsoft.app.CategoryVluchtelingenhulpActivity"
-            android:label="@string/category_vluchtelingenhulp" >
-        </activity>
-        <activity
-            android:name="com.dpbsoft.app.CategoryZiektenEnAandoeningenActivity"
-            android:label="@string/category_ziekten_en_aandoeningen" >
-        </activity>
-        <activity
-            android:name="com.dpbsoft.app.CategoryOverigActivity"
-            android:label="@string/category_overig" >
-        </activity>      
-        <activity
             android:name="com.dpbsoft.app.ListCharitiesActivity"
             android:label="@string/goede_doelen" >
         </activity>
