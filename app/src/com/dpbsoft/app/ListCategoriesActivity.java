@@ -11,9 +11,8 @@ import android.widget.AdapterView.OnItemClickListener;
  
 public class ListCategoriesActivity extends ListActivity {
  
-	static final String[] CATEGORIES = new String[] { "Dieren", "Categorie 2", "Categorie 3",
-			"Categorie 4", "Categorie 5", "Categorie 6", "Categorie 7", "Categorie 8",
-			"Categorie 9", "Categorie 10", "Categorie 11", "Categorie 12", "Categorie 13" };
+	static final String[] CATEGORIES = new String[] { "Dieren", "Natuur en milieu", "Noodhulp",
+			"Ontwikkelingshulp", "Vluchtelingenhulp", "Ziekten en aandoeningen", "Overig" };
  
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
