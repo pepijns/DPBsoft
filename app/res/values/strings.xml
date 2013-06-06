@@ -14,6 +14,12 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="category_dieren">Dieren</string>
+    <string name="category_overig">Overige goede doelen</string>
+    <string name="category_noodhulp">Noodhulp</string>
+    <string name="category_ziekten_en_aandoeningen">Ziekten en aandoeningen</string>
+    <string name="category_ontwikkelingshulp">Ontwikkelingshulp</string>
+    <string name="category_natuur_en_milieu">Natuur en milieu</string>
+    <string name="category_vluchtelingenhulp">Vluchtelingenhulp</string>
     <string name="goede_doelen">Goede doelen</string>
     <string name="nieuws">Nieuws</string>
     <string name="wnf">Wereld Natuur Fonds</string>
