@@ -102,6 +102,10 @@
             android:name="com.dpbsoft.app.CharityInfoActivity"
             android:label="@string/title_activity_charity_info" >
         </activity>
+        <activity
+            android:name="com.dpbsoft.app.NieuwsOverzichtActivity"
+            android:label="@string/title_activity_nieuw_overzicht" >
+        </activity>
     </application>
 
 </manifest>
