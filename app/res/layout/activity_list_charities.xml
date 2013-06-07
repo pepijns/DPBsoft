@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,22 +8,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/main_blue"
     tools:context=".ListCharitiesActivity" >
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world"
-        android:textColor="@color/main_white" />
-
-</RelativeLayout>
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+     <TextView
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:padding="10dp"
     android:textSize="20sp" 
-    android:textColor="@color/white" 
-    android:background="@color/main_blue">
-</TextView>
->>>>>>> 4e9eaeace1783502f46e39e6756cb83ef7e39ce4
+    android:textColor="@color/main_white" />
+
+</RelativeLayout>

@@ -6,13 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-<<<<<<< HEAD
     android:background="@color/main_blue"
     tools:context=".CategoryDierenActivity" >
-=======
-    tools:context=".CategoryDierenActivity" 
-    android:background="@color/main_blue" >
->>>>>>> 4e9eaeace1783502f46e39e6756cb83ef7e39ce4
 
     <TextView
         android:id="@+id/textView1"
@@ -22,13 +17,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:text="@string/category_dieren"
-<<<<<<< HEAD
         android:textSize="40sp"
         android:textColor="@color/main_white" />
-=======
-        android:textColor="@color/white"
-        android:textSize="40sp" />
->>>>>>> 4e9eaeace1783502f46e39e6756cb83ef7e39ce4
+
 
     <Button
         android:id="@+id/btnGoedeDoelen"

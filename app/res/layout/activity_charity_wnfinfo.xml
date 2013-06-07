@@ -18,7 +18,7 @@
         android:layout_marginTop="40dp"
         android:textSize="25sp"
         android:text="@string/wnf_title"
-        android:textColor="@color/white" />
+        android:textColor="@color/main_white" />
 
     <TextView
         android:id="@+id/txtvInfo"
@@ -28,7 +28,7 @@
         android:layout_alignTop="@id/textView1"
         android:layout_marginTop="40dp"
         android:text="@string/wnf_info"
-        android:textColor="@color/white"
+        android:textColor="@color/main_white"
         android:textSize="15sp" />
 
     <TextView

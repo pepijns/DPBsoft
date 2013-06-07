@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
     <color name="main_blue">#3b5998</color>
     <color name="main_white">#fff</color>
-=======
-    
-   <color name="main_blue">#3b5998</color>
-   <color name="white">#fff</color>
-    
->>>>>>> 4e9eaeace1783502f46e39e6756cb83ef7e39ce4
 </resources>

@@ -22,11 +22,7 @@ int color com_facebook_usersettingsfragment_connected_shadow_color 0x7f060002
 int color com_facebook_usersettingsfragment_connected_text_color 0x7f060001
 int color com_facebook_usersettingsfragment_not_connected_text_color 0x7f060003
 int color main_blue 0x7f060005
-<<<<<<< HEAD
 int color main_white 0x7f060006
-=======
-int color white 0x7f060006
->>>>>>> 4e9eaeace1783502f46e39e6756cb83ef7e39ce4
 int dimen activity_horizontal_margin 0x7f07000c
 int dimen activity_vertical_margin 0x7f07000d
 int dimen com_facebook_loginview_height 0x7f070007
@@ -119,59 +115,36 @@ int id txtvDonate 0x7f04000b
 int id txtvInfo 0x7f04000a
 int id txtvURL 0x7f04000c
 int layout activity_about 0x7f030000
-<<<<<<< HEAD
-int layout activity_category_dieren 0x7f030001
-int layout activity_category_natuur_en_milieu 0x7f030002
-int layout activity_category_noodhulp 0x7f030003
-int layout activity_category_ontwikkelingshulp 0x7f030004
-int layout activity_category_overig 0x7f030005
-int layout activity_category_vluchtelingenhulp 0x7f030006
-int layout activity_category_ziekten_en_aandoeningen 0x7f030007
-int layout activity_charity_wnfmain 0x7f030008
-int layout activity_list_categories 0x7f030009
-int layout activity_list_charities 0x7f03000a
-int layout activity_login 0x7f03000b
-int layout activity_main 0x7f03000c
-int layout activity_splash_screen 0x7f03000d
-int layout com_facebook_friendpickerfragment 0x7f03000e
-int layout com_facebook_login_activity_layout 0x7f03000f
-int layout com_facebook_picker_activity_circle_row 0x7f030010
-int layout com_facebook_picker_checkbox 0x7f030011
-int layout com_facebook_picker_image 0x7f030012
-int layout com_facebook_picker_list_row 0x7f030013
-int layout com_facebook_picker_list_section_header 0x7f030014
-int layout com_facebook_picker_search_box 0x7f030015
-int layout com_facebook_picker_title_bar 0x7f030016
-int layout com_facebook_picker_title_bar_stub 0x7f030017
-int layout com_facebook_placepickerfragment 0x7f030018
-int layout com_facebook_placepickerfragment_list_row 0x7f030019
-int layout com_facebook_usersettingsfragment 0x7f03001a
-=======
 int layout activity_category 0x7f030001
 int layout activity_category_dieren 0x7f030002
-int layout activity_charity_info 0x7f030003
-int layout activity_charity_main 0x7f030004
-int layout activity_charity_wnfinfo 0x7f030005
-int layout activity_charity_wnfmain 0x7f030006
-int layout activity_list_categories 0x7f030007
-int layout activity_list_charities 0x7f030008
-int layout activity_login 0x7f030009
-int layout activity_main 0x7f03000a
-int layout activity_splash_screen 0x7f03000b
-int layout com_facebook_friendpickerfragment 0x7f03000c
-int layout com_facebook_login_activity_layout 0x7f03000d
-int layout com_facebook_picker_activity_circle_row 0x7f03000e
-int layout com_facebook_picker_checkbox 0x7f03000f
-int layout com_facebook_picker_image 0x7f030010
-int layout com_facebook_picker_list_row 0x7f030011
-int layout com_facebook_picker_list_section_header 0x7f030012
-int layout com_facebook_picker_search_box 0x7f030013
-int layout com_facebook_picker_title_bar 0x7f030014
-int layout com_facebook_picker_title_bar_stub 0x7f030015
-int layout com_facebook_placepickerfragment 0x7f030016
-int layout com_facebook_placepickerfragment_list_row 0x7f030017
-int layout com_facebook_usersettingsfragment 0x7f030018
->>>>>>> 4e9eaeace1783502f46e39e6756cb83ef7e39ce4
+int layout activity_category_natuur_en_milieu 0x7f030003
+int layout activity_category_noodhulp 0x7f030004
+int layout activity_category_ontwikkelingshulp 0x7f030005
+int layout activity_category_overig 0x7f030006
+int layout activity_category_vluchtelingenhulp 0x7f030007
+int layout activity_category_ziekten_en_aandoeningen 0x7f030008
+int layout activity_charity_info 0x7f030009
+int layout activity_charity_main 0x7f03000a
+int layout activity_charity_wnfinfo 0x7f03000b
+int layout activity_charity_wnfmain 0x7f03000c
+int layout activity_list_categories 0x7f03000d
+int layout activity_list_charities 0x7f03000e
+int layout activity_login 0x7f03000f
+int layout activity_main 0x7f030010
+int layout activity_splash_screen 0x7f030011
+int layout com_facebook_friendpickerfragment 0x7f030012
+int layout com_facebook_login_activity_layout 0x7f030013
+int layout com_facebook_picker_activity_circle_row 0x7f030014
+int layout com_facebook_picker_checkbox 0x7f030015
+int layout com_facebook_picker_image 0x7f030016
+int layout com_facebook_picker_list_row 0x7f030017
+int layout com_facebook_picker_list_section_header 0x7f030018
+int layout com_facebook_picker_search_box 0x7f030019
+int layout com_facebook_picker_title_bar 0x7f03001a
+int layout com_facebook_picker_title_bar_stub 0x7f03001b
+int layout com_facebook_placepickerfragment 0x7f03001c
+int layout com_facebook_placepickerfragment_list_row 0x7f03001d
+int layout com_facebook_usersettingsfragment 0x7f03001e
 int menu about 0x7f090000
 int menu categorie 0x7f090001
 int menu category 0x7f090002
@@ -222,34 +195,26 @@ int string com_facebook_requesterror_web_login 0x7f050014
 int string com_facebook_usersettingsfragment_log_in_button 0x7f050008
 int string com_facebook_usersettingsfragment_logged_in 0x7f050009
 int string com_facebook_usersettingsfragment_not_logged_in 0x7f05000a
-int string comments 0x7f05002f
-int string donate 0x7f05002e
+int string comments 0x7f050035
+int string donate 0x7f050034
 int string etxtGebruikersnaamHint 0x7f050020
 int string etxtWachtwoordHint 0x7f050021
 int string goede_doelen 0x7f05002c
 int string hello_world 0x7f050024
-<<<<<<< HEAD
+int string info 0x7f050030
 int string nieuws 0x7f05002d
-=======
-int string info 0x7f05002a
-int string nieuws 0x7f050027
-int string steun 0x7f05002b
->>>>>>> 4e9eaeace1783502f46e39e6756cb83ef7e39ce4
+int string steun 0x7f050031
 int string title_activity_about 0x7f05001d
-int string title_activity_category 0x7f050030
-int string title_activity_charity_info 0x7f050032
-int string title_activity_charity_main 0x7f050031
-int string title_activity_charity_wnfinfo 0x7f050029
+int string title_activity_category 0x7f050036
+int string title_activity_charity_info 0x7f050038
+int string title_activity_charity_main 0x7f050037
+int string title_activity_charity_wnfinfo 0x7f05002f
 int string title_activity_list_categories 0x7f05001e
 int string title_activity_login 0x7f05001c
 int string title_activity_splash 0x7f050023
-<<<<<<< HEAD
-int string wnf 0x7f05002e
-=======
-int string url 0x7f05002c
-int string wnf_info 0x7f05002d
-int string wnf_title 0x7f050028
->>>>>>> 4e9eaeace1783502f46e39e6756cb83ef7e39ce4
+int string url 0x7f050032
+int string wnf_info 0x7f050033
+int string wnf_title 0x7f05002e
 int style AppBaseTheme 0x7f080002
 int style AppTheme 0x7f080003
 int style com_facebook_loginview_default_style 0x7f080000

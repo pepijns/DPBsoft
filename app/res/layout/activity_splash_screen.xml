@@ -11,13 +11,8 @@
    			android:layout_height="fill_parent"
      		android:gravity="center"
 			android:layout_alignParentTop="true"
-<<<<<<< HEAD
-			android:text="Charitybook"
-			android:textColor="@color/main_white"
-=======
 			android:text="@string/app_name"
-			android:textColor="@color/white"
->>>>>>> 4e9eaeace1783502f46e39e6756cb83ef7e39ce4
+			android:textColor="@color/main_white"
 			android:textSize="30sp" />
 
 </RelativeLayout>
