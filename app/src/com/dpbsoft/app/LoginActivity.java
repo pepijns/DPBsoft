@@ -1,56 +1,46 @@
 package com.dpbsoft.app;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
+import android.widget.Toast;
 
 import com.parse.LogInCallback;
 import com.parse.Parse;
-import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
 
 public class LoginActivity extends Activity {
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
+		setContentView(R.layout.activity_login);
+		super.onCreate(savedInstanceState);
+		
 		Parse.initialize(this, "B6hZvvU0sVgaDY7a9hpYvntoE5rWPHECMJ8PQxkx", "KIsuKwb6sPQO5STRqL4PmN3EqjyoEPRyxLaDhRi9"); 
 		ParseFacebookUtils.initialize("172436992923336");		
-		ParseAnalytics.trackAppOpened(getIntent());
-		
+
 		ParseFacebookUtils.logIn(this, new LogInCallback() {
-			  @Override
+			@Override
 			  public void done(ParseUser user, ParseException err) {
 			    if (user == null) {
-			      Log.d("MyApp", "Uh oh. The user cancelled the Facebook login.");
+			    	Toast.makeText(getApplicationContext(), "Log in om deze applicatie te gebruiken. Voor deze applicatie is een internetverbinding vereist.", Toast.LENGTH_LONG).show();
+			    	Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+			        startActivity(intent);
 			    } else if (user.isNew()) {
-			      Log.d("MyApp", "User signed up and logged in through Facebook!");
+			    	Intent intent = new Intent(LoginActivity.this, NieuwsOverzichtActivity.class);
+			        startActivity(intent);
 			    } else {
-			      Log.d("MyApp", "User logged in through Facebook!");
+			    	Intent intent = new Intent(LoginActivity.this, NieuwsOverzichtActivity.class);
+			        startActivity(intent);
 			    }
 			  }
 			});
-		
-		
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);
-		
-		Button loginButton = (Button)findViewById(R.id.button1);
-		
-		loginButton.setOnClickListener(new View.OnClickListener() {
-		      @Override
-		      public void onClick(View view) {
-		        Intent intent = new Intent(LoginActivity.this, ListCategoriesActivity.class);
-		        startActivity(intent);
-		      }
-		});
 	}
-
+	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 	  super.onActivityResult(requestCode, resultCode, data);
