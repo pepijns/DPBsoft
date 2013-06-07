@@ -14,7 +14,16 @@ public class CategoryOntwikkelingshulpActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_category_overig);
 
+		Button btnNieuws = (Button)findViewById(R.id.btnNieuws);
 		Button btnGoedeDoelen = (Button)findViewById(R.id.btnGoedeDoelen);
+		
+		btnNieuws.setOnClickListener(new View.OnClickListener() {
+		      @Override
+		      public void onClick(View view) {
+		    	  Intent intent = new Intent(CategoryOntwikkelingshulpActivity.this, CategoryNewsOntwikkelingshulpActivity.class);
+		    	  startActivity(intent);
+		      }
+		});
 		
 		btnGoedeDoelen.setOnClickListener(new View.OnClickListener() {
 		      @Override

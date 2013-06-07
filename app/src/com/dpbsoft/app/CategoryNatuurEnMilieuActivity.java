@@ -15,7 +15,15 @@ public class CategoryNatuurEnMilieuActivity extends Activity {
 		setContentView(R.layout.activity_category_overig);
 
 		Button btnGoedeDoelen = (Button)findViewById(R.id.btnGoedeDoelen);
+		Button btnNieuws = (Button)findViewById(R.id.btnNieuws);
 		
+		btnNieuws.setOnClickListener(new View.OnClickListener() {
+		      @Override
+		      public void onClick(View view) {
+		    	  Intent intent = new Intent(CategoryNatuurEnMilieuActivity.this, CategoryNewsNatuurEnMilieuActivity.class);
+		    	  startActivity(intent);
+		      }
+		});
 		btnGoedeDoelen.setOnClickListener(new View.OnClickListener() {
 		      @Override
 		      public void onClick(View view) {
