@@ -13,7 +13,16 @@ public class CategoryDierenActivity extends CategoryActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_category_dieren);
 
+		Button btnNieuws = (Button)findViewById(R.id.btnNieuws);
 		Button btnGoedeDoelen = (Button)findViewById(R.id.btnGoedeDoelen);
+		
+		btnNieuws.setOnClickListener(new View.OnClickListener() {
+		      @Override
+		      public void onClick(View view) {
+		    	  Intent intent = new Intent(CategoryDierenActivity.this, CategoryNewsDierenActivity.class);
+		    	  startActivity(intent);
+		      }
+		});
 		
 		btnGoedeDoelen.setOnClickListener(new View.OnClickListener() {
 		      @Override

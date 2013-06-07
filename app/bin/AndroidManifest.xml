@@ -78,7 +78,6 @@
             android:name="com.dpbsoft.app.CategoryZiektenEnAandoeningenActivity"
             android:label="@string/category_ziekten_en_aandoeningen" >
         </activity>
-        
         <activity
             android:name="com.dpbsoft.app.ListCharitiesActivity"
             android:label="@string/goede_doelen" >
