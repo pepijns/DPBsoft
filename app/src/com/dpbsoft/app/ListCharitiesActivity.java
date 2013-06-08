@@ -26,10 +26,14 @@ public class ListCharitiesActivity extends ListActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		/* Lijst */
+		
 		setListAdapter(new ArrayAdapter<String>(this, R.layout.activity_list_categories,CHARITIES));
 
 		ListView listView = getListView();
 		listView.setTextFilterEnabled(true);
+		
+		/* Lijst knoppen */
 		
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			
@@ -38,6 +42,9 @@ public class ListCharitiesActivity extends ListActivity {
 				startActivity(intent);
 			}
 		});
+		
+		/* Einde knoppen */
+		/* Einde lijst */
 
 	}
 

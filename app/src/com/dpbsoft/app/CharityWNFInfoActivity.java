@@ -2,17 +2,19 @@ package com.dpbsoft.app;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
-public class CharityWNFInfoActivity extends CharityInfoActivity {
+public class CharityWNFInfoActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_charity_wnfinfo);
 		
+		/* Knoppen */
 		TextView txtvURL = (TextView)findViewById(R.id.txtvURL);
 		
 		txtvURL.setOnClickListener(new View.OnClickListener() {
@@ -34,11 +36,8 @@ public class CharityWNFInfoActivity extends CharityInfoActivity {
 		    		startActivity(i);
 		      }
 		});
-	}
-	
-	@SuppressWarnings("unused")
-	private void goToDonate(){
 		
+		/* Einde knoppen */
 	}
 
 }

@@ -14,6 +14,7 @@ public class CategoryVluchtelingenhulpActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_category_overig);
 
+		/* Knoppen */
 		Button btnNieuws = (Button)findViewById(R.id.btnNieuws);
 		Button btnGoedeDoelen = (Button)findViewById(R.id.btnGoedeDoelen);
 		
@@ -31,6 +32,7 @@ public class CategoryVluchtelingenhulpActivity extends Activity {
 		    	  startActivity(intent);
 		      }
 		});
+		/* Einde knoppen */
 	}
 	
 	@Override

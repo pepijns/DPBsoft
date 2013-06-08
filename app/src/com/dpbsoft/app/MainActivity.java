@@ -14,6 +14,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		/* Knoppen */
 		Button loginButton = (Button)findViewById(R.id.loginButton);
 		Button aboutButton = (Button)findViewById(R.id.aboutButton);
 		
@@ -32,6 +33,7 @@ public class MainActivity extends Activity {
 		        startActivity(intent);
 		      }
 		});
+		/* Einde knoppen */
 	}
 
 	@Override

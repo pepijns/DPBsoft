@@ -14,6 +14,7 @@ public class CategoryNatuurEnMilieuActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_category_overig);
 
+		/* Knoppen */
 		Button btnGoedeDoelen = (Button)findViewById(R.id.btnGoedeDoelen);
 		Button btnNieuws = (Button)findViewById(R.id.btnNieuws);
 		
@@ -31,6 +32,7 @@ public class CategoryNatuurEnMilieuActivity extends Activity {
 		    	  startActivity(intent);
 		      }
 		});
+		/* Einde knoppen */
 	}
 	
 	@Override

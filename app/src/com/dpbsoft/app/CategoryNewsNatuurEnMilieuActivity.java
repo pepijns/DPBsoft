@@ -1,5 +1,6 @@
 package com.dpbsoft.app;
 
-public class CategoryNewsNatuurEnMilieuActivity {
 
+public class CategoryNewsNatuurEnMilieuActivity {
+	
 }
