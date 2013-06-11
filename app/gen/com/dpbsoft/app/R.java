@@ -216,47 +216,50 @@ containing a value of this type.
         public static final int ic_launcher=0x7f02001f;
     }
     public static final class id {
-        public static final int aboutButton=0x7f040010;
-        public static final int action_settings=0x7f040028;
-        public static final int btnComments=0x7f04000f;
+        public static final int aboutButton=0x7f040013;
+        public static final int action_settings=0x7f04002b;
+        public static final int btnComments=0x7f040010;
         public static final int btnGoedeDoelen=0x7f040008;
-        public static final int btnInfo=0x7f04000d;
+        public static final int btnInfo=0x7f04000e;
         public static final int btnNieuws=0x7f040009;
-        public static final int btnSteun=0x7f04000e;
-        public static final int com_facebook_login_activity_progress_bar=0x7f040015;
-        public static final int com_facebook_picker_activity_circle=0x7f040014;
-        public static final int com_facebook_picker_checkbox=0x7f040017;
-        public static final int com_facebook_picker_checkbox_stub=0x7f04001b;
-        public static final int com_facebook_picker_divider=0x7f04001f;
-        public static final int com_facebook_picker_done_button=0x7f04001e;
-        public static final int com_facebook_picker_image=0x7f040018;
-        public static final int com_facebook_picker_list_section_header=0x7f04001c;
-        public static final int com_facebook_picker_list_view=0x7f040013;
-        public static final int com_facebook_picker_profile_pic_stub=0x7f040019;
-        public static final int com_facebook_picker_row_activity_circle=0x7f040016;
-        public static final int com_facebook_picker_title=0x7f04001a;
-        public static final int com_facebook_picker_title_bar=0x7f040021;
-        public static final int com_facebook_picker_title_bar_stub=0x7f040020;
-        public static final int com_facebook_picker_top_bar=0x7f04001d;
-        public static final int com_facebook_placepickerfragment_search_box_stub=0x7f040022;
-        public static final int com_facebook_usersettingsfragment_login_button=0x7f040027;
-        public static final int com_facebook_usersettingsfragment_logo_image=0x7f040025;
-        public static final int com_facebook_usersettingsfragment_profile_name=0x7f040026;
+        public static final int btnSteun=0x7f04000f;
+        public static final int com_facebook_login_activity_progress_bar=0x7f040018;
+        public static final int com_facebook_picker_activity_circle=0x7f040017;
+        public static final int com_facebook_picker_checkbox=0x7f04001a;
+        public static final int com_facebook_picker_checkbox_stub=0x7f04001e;
+        public static final int com_facebook_picker_divider=0x7f040022;
+        public static final int com_facebook_picker_done_button=0x7f040021;
+        public static final int com_facebook_picker_image=0x7f04001b;
+        public static final int com_facebook_picker_list_section_header=0x7f04001f;
+        public static final int com_facebook_picker_list_view=0x7f040016;
+        public static final int com_facebook_picker_profile_pic_stub=0x7f04001c;
+        public static final int com_facebook_picker_row_activity_circle=0x7f040019;
+        public static final int com_facebook_picker_title=0x7f04001d;
+        public static final int com_facebook_picker_title_bar=0x7f040024;
+        public static final int com_facebook_picker_title_bar_stub=0x7f040023;
+        public static final int com_facebook_picker_top_bar=0x7f040020;
+        public static final int com_facebook_placepickerfragment_search_box_stub=0x7f040025;
+        public static final int com_facebook_usersettingsfragment_login_button=0x7f04002a;
+        public static final int com_facebook_usersettingsfragment_logo_image=0x7f040028;
+        public static final int com_facebook_usersettingsfragment_profile_name=0x7f040029;
         public static final int large=0x7f040002;
-        public static final int loginButton=0x7f040011;
+        public static final int loginButton=0x7f040014;
         public static final int normal=0x7f040001;
-        public static final int picker_subtitle=0x7f040024;
-        public static final int search_box=0x7f040023;
+        public static final int picker_subtitle=0x7f040027;
+        public static final int search_box=0x7f040026;
         public static final int small=0x7f040000;
-        public static final int textView0=0x7f040012;
+        public static final int textView0=0x7f040015;
         public static final int textView1=0x7f040004;
         public static final int textView2=0x7f040003;
         public static final int textView3=0x7f040007;
         public static final int textView4=0x7f040006;
         public static final int textView5=0x7f040005;
-        public static final int txtvDonate=0x7f04000b;
-        public static final int txtvInfo=0x7f04000a;
-        public static final int txtvURL=0x7f04000c;
+        public static final int txtvComments=0x7f04000a;
+        public static final int txtvDonate=0x7f04000c;
+        public static final int txtvInfo=0x7f04000b;
+        public static final int txtvSteun=0x7f040011;
+        public static final int txtvSteunWNF=0x7f040012;
+        public static final int txtvURL=0x7f04000d;
     }
     public static final class layout {
         public static final int activity_about=0x7f030000;
@@ -277,27 +280,29 @@ containing a value of this type.
         public static final int activity_category_ziekten_en_aandoeningen=0x7f03000f;
         public static final int activity_charity_info=0x7f030010;
         public static final int activity_charity_main=0x7f030011;
-        public static final int activity_charity_wnfinfo=0x7f030012;
-        public static final int activity_charity_wnfmain=0x7f030013;
-        public static final int activity_list_categories=0x7f030014;
-        public static final int activity_list_charities=0x7f030015;
-        public static final int activity_login=0x7f030016;
-        public static final int activity_main=0x7f030017;
-        public static final int activity_nieuw_overzicht=0x7f030018;
-        public static final int activity_splash_screen=0x7f030019;
-        public static final int com_facebook_friendpickerfragment=0x7f03001a;
-        public static final int com_facebook_login_activity_layout=0x7f03001b;
-        public static final int com_facebook_picker_activity_circle_row=0x7f03001c;
-        public static final int com_facebook_picker_checkbox=0x7f03001d;
-        public static final int com_facebook_picker_image=0x7f03001e;
-        public static final int com_facebook_picker_list_row=0x7f03001f;
-        public static final int com_facebook_picker_list_section_header=0x7f030020;
-        public static final int com_facebook_picker_search_box=0x7f030021;
-        public static final int com_facebook_picker_title_bar=0x7f030022;
-        public static final int com_facebook_picker_title_bar_stub=0x7f030023;
-        public static final int com_facebook_placepickerfragment=0x7f030024;
-        public static final int com_facebook_placepickerfragment_list_row=0x7f030025;
-        public static final int com_facebook_usersettingsfragment=0x7f030026;
+        public static final int activity_charity_wnfcomment=0x7f030012;
+        public static final int activity_charity_wnfinfo=0x7f030013;
+        public static final int activity_charity_wnfmain=0x7f030014;
+        public static final int activity_charity_wnfsupport=0x7f030015;
+        public static final int activity_list_categories=0x7f030016;
+        public static final int activity_list_charities=0x7f030017;
+        public static final int activity_login=0x7f030018;
+        public static final int activity_main=0x7f030019;
+        public static final int activity_nieuw_overzicht=0x7f03001a;
+        public static final int activity_splash_screen=0x7f03001b;
+        public static final int com_facebook_friendpickerfragment=0x7f03001c;
+        public static final int com_facebook_login_activity_layout=0x7f03001d;
+        public static final int com_facebook_picker_activity_circle_row=0x7f03001e;
+        public static final int com_facebook_picker_checkbox=0x7f03001f;
+        public static final int com_facebook_picker_image=0x7f030020;
+        public static final int com_facebook_picker_list_row=0x7f030021;
+        public static final int com_facebook_picker_list_section_header=0x7f030022;
+        public static final int com_facebook_picker_search_box=0x7f030023;
+        public static final int com_facebook_picker_title_bar=0x7f030024;
+        public static final int com_facebook_picker_title_bar_stub=0x7f030025;
+        public static final int com_facebook_placepickerfragment=0x7f030026;
+        public static final int com_facebook_placepickerfragment_list_row=0x7f030027;
+        public static final int com_facebook_usersettingsfragment=0x7f030028;
     }
     public static final class menu {
         public static final int about=0x7f090000;
@@ -305,16 +310,18 @@ containing a value of this type.
         public static final int category=0x7f090002;
         public static final int charity_info=0x7f090003;
         public static final int charity_main=0x7f090004;
-        public static final int charity_wnfinfo=0x7f090005;
-        public static final int charity_wnfmain=0x7f090006;
-        public static final int display_message=0x7f090007;
-        public static final int list_categories=0x7f090008;
-        public static final int list_charities=0x7f090009;
-        public static final int login=0x7f09000a;
-        public static final int main=0x7f09000b;
-        public static final int nieuws_overzicht=0x7f09000c;
-        public static final int parent=0x7f09000d;
-        public static final int splash=0x7f09000e;
+        public static final int charity_wnfcomment=0x7f090005;
+        public static final int charity_wnfinfo=0x7f090006;
+        public static final int charity_wnfmain=0x7f090007;
+        public static final int charity_wnfsupport=0x7f090008;
+        public static final int display_message=0x7f090009;
+        public static final int list_categories=0x7f09000a;
+        public static final int list_charities=0x7f09000b;
+        public static final int login=0x7f09000c;
+        public static final int main=0x7f09000d;
+        public static final int nieuws_overzicht=0x7f09000e;
+        public static final int parent=0x7f09000f;
+        public static final int splash=0x7f090010;
     }
     public static final class string {
         public static final int action_settings=0x7f05001b;
@@ -331,6 +338,7 @@ containing a value of this type.
         public static final int category_overig=0x7f050027;
         public static final int category_vluchtelingenhulp=0x7f05002c;
         public static final int category_ziekten_en_aandoeningen=0x7f050029;
+        public static final int charity_steun=0x7f05003a;
         public static final int com_facebook_choose_friends=0x7f05000f;
         public static final int com_facebook_dialogloginactivity_ok_button=0x7f050000;
         public static final int com_facebook_internet_permission_error_message=0x7f050013;
@@ -366,7 +374,7 @@ containing a value of this type.
         public static final int goede_doelen=0x7f05002e;
         /**  Rest 
          */
-        public static final int hello_world=0x7f05003a;
+        public static final int hello_world=0x7f05003c;
         public static final int info=0x7f050032;
         public static final int nieuws=0x7f05002f;
         public static final int steun=0x7f050033;
@@ -374,7 +382,9 @@ containing a value of this type.
         public static final int title_activity_category=0x7f05002d;
         public static final int title_activity_charity_info=0x7f050039;
         public static final int title_activity_charity_main=0x7f050038;
+        public static final int title_activity_charity_wnfcomment=0x7f05003e;
         public static final int title_activity_charity_wnfinfo=0x7f050031;
+        public static final int title_activity_charity_wnfsupport=0x7f05003d;
         /**  Categories 
          */
         public static final int title_activity_list_categories=0x7f050025;
@@ -383,6 +393,7 @@ containing a value of this type.
         public static final int title_activity_splash=0x7f050022;
         public static final int url=0x7f050034;
         public static final int wnf_info=0x7f050035;
+        public static final int wnf_steun=0x7f05003b;
         public static final int wnf_title=0x7f050030;
     }
     public static final class style {

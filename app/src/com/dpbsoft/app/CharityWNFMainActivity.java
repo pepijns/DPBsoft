@@ -16,11 +16,29 @@ public class CharityWNFMainActivity extends Activity {
 		
 		/* Knoppen */
 		Button btnInfo = (Button)findViewById(R.id.btnInfo);
+		Button btnComments = (Button)findViewById(R.id.btnComments);
+		Button btnSteun = (Button)findViewById(R.id.btnSteun);
 		
 		btnInfo.setOnClickListener(new View.OnClickListener() {
 		      @Override
 		      public void onClick(View view) {
 		    	  Intent intent = new Intent(CharityWNFMainActivity.this, CharityWNFInfoActivity.class);
+		    	  startActivity(intent);
+		      }
+		});
+		
+		btnComments.setOnClickListener(new View.OnClickListener() {
+		      @Override
+		      public void onClick(View view) {
+		    	  Intent intent = new Intent(CharityWNFMainActivity.this, CharityWNFCommentActivity.class);
+		    	  startActivity(intent);
+		      }
+		});
+		
+		btnSteun.setOnClickListener(new View.OnClickListener() {
+		      @Override
+		      public void onClick(View view) {
+		    	  Intent intent = new Intent(CharityWNFMainActivity.this, CharityWNFSupportActivity.class);
 		    	  startActivity(intent);
 		      }
 		});

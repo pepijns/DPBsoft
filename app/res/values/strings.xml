@@ -14,7 +14,7 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_nieuw_overzicht">NieuwOverzichtActivity</string>
     <string name="fbloginscreen">Logging in&#8230;</string>
-    
+
     <!-- Categories -->
     <string name="title_activity_list_categories">Categorieën</string>
     <string name="category_dieren">Dieren</string>
@@ -25,7 +25,7 @@
     <string name="category_natuur_en_milieu">Natuur en milieu</string>
     <string name="category_vluchtelingenhulp">Vluchtelingenhulp</string>
     <string name="title_activity_category">CategoryActivity</string>
-    
+
     <!-- Charities -->
     <string name="goede_doelen">Goede doelen</string>
     <string name="nieuws">Nieuws</string>
@@ -39,8 +39,12 @@
     <string name="comments">Aanbevelingen / comments</string>
     <string name="title_activity_charity_main">CharityMainActivity</string>
     <string name="title_activity_charity_info">CharityInfoActivity</string>
-    
+	<string name="charity_steun">Laat zien dat u geeft om dit goede doel. Deel uw mening met uw vrienden! Laten zien dat u een goed doel steunt kan inspireren en activeren.</string>
+    <string name="wnf_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun het WNF dan ook door te doneren of mee te doen aan hun vele projecten.</string>
+	
     <!-- Rest -->
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_charity_wnfsupport">CharityWNFSupportActivity</string>
+    <string name="title_activity_charity_wnfcomment">CharityWNFCommentActivity</string>
 
 </resources>

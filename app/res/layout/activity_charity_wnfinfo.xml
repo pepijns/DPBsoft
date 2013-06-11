@@ -39,8 +39,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="5dp"
         android:text="@string/donate"
-        android:textSize="20sp"
-       android:onClick="goToWebsite"                
+        android:textSize="20sp"            
        android:clickable="true" />
 
     <TextView
@@ -51,8 +50,7 @@
         android:layout_alignLeft="@id/txtvDonate"
         android:layout_marginTop="25dp"
         android:text="@string/url"
-        android:textSize="20sp"
-       android:onClick="goToDonate"                
+        android:textSize="20sp"              
        android:clickable="true" />
 
 </RelativeLayout>
