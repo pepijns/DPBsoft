@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.dpbsoft.app.NieuwOverzichtActivity&apos; to &apos;NieuwsOverzichtActivity&apos;&#x0D;&#x0A;- Original project: &apos;app&apos;&#x0D;&#x0A;- Original element: &apos;com.dpbsoft.app.NieuwOverzichtActivity&apos;&#x0D;&#x0A;- Renamed element: &apos;com.dpbsoft.app.NieuwsOverzichtActivity&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;NieuwOverzichtActivity&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.dpbsoft.app{NieuwOverzichtActivity.java[NieuwOverzichtActivity" matchStrategy="1" name="NieuwsOverzichtActivity" qualified="false" references="true" similarDeclarations="false" stamp="1370604542186" textual="false" version="1.0"/>
-</session>
