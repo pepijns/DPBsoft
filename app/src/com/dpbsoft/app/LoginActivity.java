@@ -46,11 +46,4 @@ public class LoginActivity extends Activity {
 	  super.onActivityResult(requestCode, resultCode, data);
 	  ParseFacebookUtils.finishAuthentication(requestCode, resultCode, data);
 	}
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.login, menu);
-		return true;
-	}
 }

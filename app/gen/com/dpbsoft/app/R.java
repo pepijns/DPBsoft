@@ -310,20 +310,21 @@ containing a value of this type.
         public static final int about=0x7f090000;
         public static final int categorie=0x7f090001;
         public static final int category=0x7f090002;
-        public static final int charity_info=0x7f090003;
-        public static final int charity_main=0x7f090004;
-        public static final int charity_wnfcomment=0x7f090005;
-        public static final int charity_wnfinfo=0x7f090006;
-        public static final int charity_wnfmain=0x7f090007;
-        public static final int charity_wnfsupport=0x7f090008;
-        public static final int display_message=0x7f090009;
-        public static final int list_categories=0x7f09000a;
-        public static final int list_charities=0x7f09000b;
-        public static final int login=0x7f09000c;
-        public static final int main=0x7f09000d;
-        public static final int nieuws_overzicht=0x7f09000e;
-        public static final int parent=0x7f09000f;
-        public static final int splash=0x7f090010;
+        public static final int category_news_dieren=0x7f090003;
+        public static final int charity_info=0x7f090004;
+        public static final int charity_main=0x7f090005;
+        public static final int charity_wnfcomment=0x7f090006;
+        public static final int charity_wnfinfo=0x7f090007;
+        public static final int charity_wnfmain=0x7f090008;
+        public static final int charity_wnfsupport=0x7f090009;
+        public static final int display_message=0x7f09000a;
+        public static final int list_categories=0x7f09000b;
+        public static final int list_charities=0x7f09000c;
+        public static final int login=0x7f09000d;
+        public static final int main=0x7f09000e;
+        public static final int nieuws_overzicht=0x7f09000f;
+        public static final int parent=0x7f090010;
+        public static final int splash=0x7f090011;
     }
     public static final class string {
         public static final int action_settings=0x7f05001b;
@@ -382,6 +383,7 @@ containing a value of this type.
         public static final int steun=0x7f050033;
         public static final int title_activity_about=0x7f05001d;
         public static final int title_activity_category=0x7f05002d;
+        public static final int title_activity_category_news_dieren=0x7f05003f;
         public static final int title_activity_charity_info=0x7f050039;
         public static final int title_activity_charity_main=0x7f050038;
         public static final int title_activity_charity_wnfcomment=0x7f05003e;

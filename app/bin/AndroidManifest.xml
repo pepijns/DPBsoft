@@ -29,6 +29,10 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.dpbsoft.app.LoginActivity"
@@ -54,11 +58,7 @@
         <activity
             android:name="com.dpbsoft.app.ListCategoriesActivity"
             android:label="@string/title_activity_list_categories" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <activity
             android:name="com.dpbsoft.app.CategoryDierenActivity"
@@ -124,6 +124,10 @@
         </activity>
 
         <!-- Einde activities -->
+        <activity
+            android:name="com.dpbsoft.app.CategoryNewsDierenActivity"
+            android:label="@string/title_activity_category_news_dieren" >
+        </activity>
     </application>
 
 </manifest>
