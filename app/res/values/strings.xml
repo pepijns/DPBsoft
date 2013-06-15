@@ -30,6 +30,7 @@
     <string name="goede_doelen">Goede doelen</string>
     <string name="nieuws">Nieuws</string>
     <string name="wnf_title">Wereld Natuur Fonds</string>
+    <string name="wspa_title">WSPA</string>
     <string name="title_activity_charity_wnfinfo">CharityWNFInfoActivity</string>
     <string name="info">Informatie</string>
     <string name="steun">Steun dit goede doel</string>
@@ -47,5 +48,7 @@
     <string name="title_activity_charity_wnfsupport">CharityWNFSupportActivity</string>
     <string name="title_activity_charity_wnfcomment">CharityWNFCommentActivity</string>
     <string name="title_activity_category_news_dieren">CategoryNewsDierenActivity</string>
+    <string name="title_activity_charity_comment">CharityCommentActivity</string>
+    <string name="title_activity_charity_support">CharitySupportActivity</string>
 
 </resources>

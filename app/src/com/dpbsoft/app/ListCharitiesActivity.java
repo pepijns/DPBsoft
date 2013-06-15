@@ -18,33 +18,71 @@ public class ListCharitiesActivity extends ListActivity {
 		getMenuInflater().inflate(R.menu.list_charities, menu);
 		return true;
 	}
-	static final String[] CHARITIES = new String[] { "WNF", "Charity 2", "Charity 3",
+	static final String[] DIERENCHARITIES = new String[] { "WNF", "WSPA", "Charity 3",
 		"Charity 4", "Charity 5", "Charity 6", "Charity 7", "Charity 8",
 		"Charity 9", "Charity 10", "Charity 11", "Charity 12", "Charity 13" };
+	
+	private int category;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		/* Lijst */
+		category = Globals.getInstance().getCategory();
 		
-		setListAdapter(new ArrayAdapter<String>(this, R.layout.activity_list_categories,CHARITIES));
-
-		ListView listView = getListView();
-		listView.setTextFilterEnabled(true);
-		
-		/* Lijst knoppen */
-		
-		listView.setOnItemClickListener(new OnItemClickListener() {
-			
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Intent intent = new Intent(ListCharitiesActivity.this, CharityWNFMainActivity.class);
-				startActivity(intent);
-			}
-		});
-		
-		/* Einde knoppen */
-		/* Einde lijst */
+		/* Kijken welke lijst er weergegeven moeten worden */
+		switch (category){
+		case 1: /* dieren */
+			setListAdapter(new ArrayAdapter<String>(this, R.layout.activity_list_categories,DIERENCHARITIES));
+			ListView dierenListView = getListView();
+			dierenListView.setTextFilterEnabled(true);
+			/* knoppen */
+			dierenListView.setOnItemClickListener(new OnItemClickListener() {
+				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+					//welke knop?
+					switch (position){
+						case 0: //wnf
+							Globals.getInstance().setCharity(1);
+							Intent intent1 = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
+							startActivity(intent1);
+							break;
+						case 1: //wspa
+							Globals.getInstance().setCharity(2);
+							Intent intent2 = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
+							startActivity(intent2);
+							break;
+						default:
+							break;
+					}
+				}
+			});
+			break;
+		default:
+			setListAdapter(new ArrayAdapter<String>(this, R.layout.activity_list_categories,DIERENCHARITIES));
+			ListView defaultListView = getListView();
+			defaultListView.setTextFilterEnabled(true);
+			/* knoppen */
+			defaultListView.setOnItemClickListener(new OnItemClickListener() {
+				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+					//welke knop?
+					switch (position){
+						case 0: //wnf
+							Globals.getInstance().setCharity(1);
+							Intent intent1 = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
+							startActivity(intent1);
+							break;
+						case 1: //wspa
+							Globals.getInstance().setCharity(2);
+							Intent intent2 = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
+							startActivity(intent2);
+							break;
+						default:
+							break;
+					}
+				}
+			});
+			break;
+		}
 
 	}
 

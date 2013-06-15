@@ -13,6 +13,7 @@ public class ListCategoriesActivity extends ListActivity {
  
 	static final String[] CATEGORIES = new String[] { "Dieren", "Natuur en milieu", "Noodhulp", "Ontwikkelingshulp", "Vluchtelingenhulp", "Ziekten en aandoeningen", "Overig" };
 
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,8 +29,15 @@ public class ListCategoriesActivity extends ListActivity {
 		/* Lijst knoppen */
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				Intent intent = new Intent(ListCategoriesActivity.this, CategoryDierenActivity.class);
-		        startActivity(intent);
+				switch (position){
+				case 0:
+					Globals.getInstance().setCategory(1);
+					Intent intent = new Intent(ListCategoriesActivity.this, CategoryDierenActivity.class);
+					startActivity(intent);
+					break;
+				default:
+					break;
+				}
 			}
 		});
 		/* Einde knoppen */
