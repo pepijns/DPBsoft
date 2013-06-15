@@ -388,23 +388,23 @@ containing a value of this type.
         public static final int nieuws=0x7f050029;
         public static final int steun=0x7f05002c;
         public static final int title_activity_about=0x7f050035;
-        public static final int title_activity_category=0x7f050039;
-        public static final int title_activity_category_news_dieren=0x7f050040;
-        public static final int title_activity_charity_comment=0x7f050041;
-        public static final int title_activity_charity_info=0x7f05003d;
-        public static final int title_activity_charity_main=0x7f05003c;
-        public static final int title_activity_charity_support=0x7f050042;
-        public static final int title_activity_charity_wnfcomment=0x7f05003f;
-        public static final int title_activity_charity_wnfinfo=0x7f050036;
+        public static final int title_activity_category=0x7f050038;
+        public static final int title_activity_category_news_dieren=0x7f05003f;
+        public static final int title_activity_charity_comment=0x7f050040;
+        public static final int title_activity_charity_info=0x7f05003c;
+        public static final int title_activity_charity_main=0x7f05003b;
+        public static final int title_activity_charity_support=0x7f050041;
+        public static final int title_activity_charity_wnfcomment=0x7f05003e;
+        public static final int title_activity_charity_wnfinfo=0x7f05003a;
         /**  Rest 
          */
-        public static final int title_activity_charity_wnfsupport=0x7f05003e;
-        public static final int title_activity_list_categories=0x7f05003a;
-        public static final int title_activity_login=0x7f05003b;
+        public static final int title_activity_charity_wnfsupport=0x7f05003d;
+        public static final int title_activity_list_categories=0x7f050039;
+        public static final int title_activity_login=0x7f050043;
         public static final int title_activity_login_facebook=0x7f050044;
-        public static final int title_activity_nieuw_overzicht=0x7f050038;
-        public static final int title_activity_nieuws_artikel=0x7f050043;
-        public static final int title_activity_splash=0x7f050037;
+        public static final int title_activity_nieuw_overzicht=0x7f050037;
+        public static final int title_activity_nieuws_artikel=0x7f050042;
+        public static final int title_activity_splash=0x7f050036;
         public static final int url=0x7f05002d;
         public static final int wnf_info=0x7f05002f;
         public static final int wnf_steun=0x7f05002e;
