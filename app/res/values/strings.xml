@@ -5,18 +5,18 @@
     <string name="app_name">Charitybook</string>
     <string name="app_id">172436992923336</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_login">Login</string>
-    <string name="title_activity_about">Over deze App</string>
+    
+    
     <string name="btnLoginTekst">Login</string>
-    <string name="etxtGebruikersnaamHint">Gebruikersnaam</string>
+    <string name="btnGegevensOpslaanTekst">Gegevens onthouden</string><string name="etxtGebruikersnaamHint">Gebruikersnaam</string>
     <string name="etxtWachtwoordHint">Wachtwoord</string>
-    <string name="btnGegevensOpslaanTekst">Gegevens onthouden</string>
-    <string name="title_activity_splash">SplashActivity</string>
-    <string name="title_activity_nieuw_overzicht">NieuwOverzichtActivity</string>
+    
+    
+    
     <string name="fbloginscreen">Logging in&#8230;</string>
 
     <!-- Categories -->
-    <string name="title_activity_list_categories">Categorieën</string>
+    
     <string name="category_dieren">Dieren</string>
     <string name="category_overig">Overige goede doelen</string>
     <string name="category_noodhulp">Noodhulp</string>
@@ -24,31 +24,33 @@
     <string name="category_ontwikkelingshulp">Ontwikkelingshulp</string>
     <string name="category_natuur_en_milieu">Natuur en milieu</string>
     <string name="category_vluchtelingenhulp">Vluchtelingenhulp</string>
-    <string name="title_activity_category">CategoryActivity</string>
+    
 
     <!-- Charities -->
     <string name="goede_doelen">Goede doelen</string>
     <string name="nieuws">Nieuws</string>
-    <string name="wnf_title">Wereld Natuur Fonds</string>
-    <string name="wspa_title">WSPA</string>
-    <string name="title_activity_charity_wnfinfo">CharityWNFInfoActivity</string>
-    <string name="info">Informatie</string>
+    
+    
+    
+    <string name="info">Informatie</string><string name="charity_steun">Laat zien dat u geeft om dit goede doel. Deel uw mening met uw vrienden! Laten zien dat u een goed doel steunt kan inspireren en activeren.</string>
     <string name="steun">Steun dit goede doel</string>
     <string name="url">De officiële website</string>
-    <string name="wnf_info">Het Wereld Natuur Fonds zet zich op veel manieren in voor bedreigde diersoorten. Allereerst natuurlijk door de bescherming in hun eigen gebied door middel van verschillende veldprojecten. Bijvoorbeeld door trainen en financieren van anti-stropersbrigades. Maar ook door samen met de lokale bevolking te zoeken naar alternatieve, duurzame bronnen van inkomen en haar te helpen conflicten met wilde dieren te voorkomen. </string>
+    <string name="wnf_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun het WNF dan ook door te doneren of mee te doen aan hun vele projecten.</string><string name="wnf_info">Het Wereld Natuur Fonds zet zich op veel manieren in voor bedreigde diersoorten. Allereerst natuurlijk door de bescherming in hun eigen gebied door middel van verschillende veldprojecten. Bijvoorbeeld door trainen en financieren van anti-stropersbrigades. Maar ook door samen met de lokale bevolking te zoeken naar alternatieve, duurzame bronnen van inkomen en haar te helpen conflicten met wilde dieren te voorkomen. </string>
     <string name="donate">Klik hier om te doneren</string>
-    <string name="comments">Aanbevelingen / comments</string>
+    <string name="comments">Aanbevelingen / comments</string><string name="hello_world">Hello world!</string><string name="wnf_title">Wereld Natuur Fonds</string><string name="wspa_title">WSPA</string><string name="title_activity_about">Over deze App</string><string name="title_activity_splash">SplashActivity</string><string name="title_activity_nieuw_overzicht">Nieuwsoverzicht</string><string name="title_activity_category">Categorie</string><string name="title_activity_list_categories">Categorieën</string><string name="title_activity_charity_wnfinfo">CharityWNFInfoActivity</string>
     <string name="title_activity_charity_main">CharityMainActivity</string>
     <string name="title_activity_charity_info">CharityInfoActivity</string>
-    <string name="charity_steun">Laat zien dat u geeft om dit goede doel. Deel uw mening met uw vrienden! Laten zien dat u een goed doel steunt kan inspireren en activeren.</string>
-    <string name="wnf_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun het WNF dan ook door te doneren of mee te doen aan hun vele projecten.</string>
+    
+    
 
     <!-- Rest -->
-    <string name="hello_world">Hello world!</string>
+    
     <string name="title_activity_charity_wnfsupport">CharityWNFSupportActivity</string>
     <string name="title_activity_charity_wnfcomment">CharityWNFCommentActivity</string>
     <string name="title_activity_category_news_dieren">CategoryNewsDierenActivity</string>
     <string name="title_activity_charity_comment">CharityCommentActivity</string>
     <string name="title_activity_charity_support">CharitySupportActivity</string>
+    <string name="title_activity_nieuws_artikel">Nieuwsoverzicht</string><string name="title_activity_login">Login</string>
+    <string name="title_activity_login_facebook">Inloggen bij Facebook</string>
 
 </resources>
