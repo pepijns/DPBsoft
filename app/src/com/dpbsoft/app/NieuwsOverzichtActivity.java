@@ -54,6 +54,13 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	//int helpId = Menu.FIRST +4;
 	//int contactusId = Menu.FIRST +5;
 	
+	private String[] urlArray = {
+			"http://feeds.feedburner.com/OverzichtGoedeDoelen",
+			"http://www.nu.nl/feeds/rss/tag/dieren.rss"
+	};
+	
+	String newsUrl = new String();
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -110,6 +117,17 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	 public void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
 		 setContentView(R.layout.activity_nieuw_overzicht);
+		 
+		 String newscategory = new String();
+		 
+		 Bundle extras = getIntent().getExtras();
+		 if (extras != null) {
+		     newscategory = extras.getString("newscategory");
+		 }
+		 else
+			newscategory = "algemeen";
+		 
+		 newsUrl = handleNews(newscategory);
 	        
 		 // Load the list with messages
 		 lstTweets = (ListView)findViewById(R.id.listViewRss);
@@ -156,8 +174,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		 }.execute();
 	}
 
-
-	 public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+	public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 		 lstTweets.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			 @Override
 			 public void onItemClick(AdapterView<?> parent, View view,
@@ -174,7 +191,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	     try{
 	    	 
 	      Log.i("AndroidNews", "ParserType="+type.name());
-	      FeedParser parser = FeedParserFactory.getParser(type,"http://feeds.feedburner.com/OverzichtGoedeDoelen");
+	      FeedParser parser = FeedParserFactory.getParser(type, newsUrl);
 	      long start = System.currentTimeMillis();
 	      messages = parser.parse();
 	      long duration = System.currentTimeMillis() - start;
@@ -240,6 +257,22 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		    // set the flag to true so the next activity won't start up
 		 	Intent intent = new Intent(NieuwsOverzichtActivity.this, MainActivity.class);
 			startActivity(intent);
-	}
+	 }
+	 
+	 private String handleNews(String c)
+	 {
+		 int urlnum = 0;
+		 
+		 if(c == "algemeen")
+		 {
+			 urlnum = 0;
+		 }
+		 else if(c == "dieren")
+		 {
+			 urlnum = 1;
+		 }
+		 
+		 return urlArray[urlnum];
+	 }
 
 }

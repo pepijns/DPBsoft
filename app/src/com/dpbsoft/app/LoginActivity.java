@@ -32,9 +32,11 @@ public class LoginActivity extends Activity {
 			        startActivity(intent);
 			    } else if (user.isNew()) {
 			    	Intent intent = new Intent(LoginActivity.this, NieuwsOverzichtActivity.class);
+			    	intent.putExtra("newscategory","algemeen");
 			        startActivity(intent);
 			    } else {
 			    	Intent intent = new Intent(LoginActivity.this, NieuwsOverzichtActivity.class);
+			    	intent.putExtra("newscategory","algemeen");
 			        startActivity(intent);
 			    }
 			  }
