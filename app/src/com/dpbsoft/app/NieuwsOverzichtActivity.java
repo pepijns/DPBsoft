@@ -10,6 +10,8 @@ import org.developerworks.android.Message;
 import org.developerworks.android.ParserType;
 import org.xmlpull.v1.XmlSerializer;
 
+import com.facebook.Session;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -45,14 +47,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	
 	public ListView lstTweets = null;
 	
-	//TweetsAdapter ta = new TweetsAdapter(this);
-	
-	int homeId = Menu.FIRST;
-	//int profileId = Menu.FIRST +1;
-	//int searchId = Menu.FIRST +2;
-	//int dealsId = Menu.FIRST +3;
-	//int helpId = Menu.FIRST +4;
-	//int contactusId = Menu.FIRST +5;
+	int nieuwsId = Menu.FIRST;
+	int logoutId = Menu.FIRST +1;
 	
 	private String[] urlArray = {
 			"http://feeds.feedburner.com/OverzichtGoedeDoelen",
@@ -64,12 +60,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
-	    menu.add(group1Id, homeId, homeId, "").setIcon(R.drawable.ic_launcher);
-	    //menu.add(group1Id, profileId, profileId, "").setIcon(R.drawable.ic_launcher);
-	    //menu.add(group1Id, searchId, searchId, "").setIcon(R.drawable.ic_launcher);
-	    //menu.add(group1Id, dealsId, dealsId, "").setIcon(R.drawable.ic_launcher);
-	    //menu.add(group1Id, helpId, helpId, "").setIcon(R.drawable.ic_launcher);
-	    // menu.add(group1Id, contactusId, contactusId, "").setIcon(R.drawable.ic_launcher);
+	    menu.add(group1Id, nieuwsId, nieuwsId, "Nieuwsoverzicht");
+	    menu.add(group1Id, logoutId, logoutId, "Logout");
 
 	    return super.onCreateOptionsMenu(menu); 
 	    }
@@ -84,29 +76,15 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 			        startActivity(intent);
 			        return true;
 			
-				//case 2:
-				    //code here
-				 //   return true;
-			
-				//case 3:
-				           //code here
-				 //   return true;
-			
-				//case 4:
-				    //code here
-				 //   return true;
-			
-				//case 5:
-				    //code here
-			
-				  //  return true;
-			
-				//case 6:
-				    //code here
-				 //   return true;
+				case 2:
+					Session session = Session.getActiveSession();
+				    session.closeAndClearTokenInformation();
+				    Toast.makeText(getApplicationContext(), "U bent uitgelogd.", Toast.LENGTH_LONG).show();
+				    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+				    return true;
 	
-				//default:
-				  //  break;
+				default:
+				    break;
 				}
 		   
 	    return super.onOptionsItemSelected(item);
