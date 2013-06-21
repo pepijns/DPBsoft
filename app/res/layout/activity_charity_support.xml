@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".CharityWNFSupportActivity"  
+    tools:context=".CharitySupportActivity"  
     android:background="@color/main_blue">
 
     <Button
@@ -16,49 +16,48 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="@string/steun"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+   		android:onClick="onClick"/>
 
     <TextView
-        android:id="@+id/txtvSteunWNF"
+        android:id="@+id/tvSupport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/txtvSteun"
+        android:layout_alignRight="@+id/tvSteun"
         android:layout_below="@+id/btnSteun"
         android:layout_marginTop="31dp"
-        android:text="@string/wnf_steun"
         android:textColor="@color/main_white"
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/txtvDonate"
+        android:id="@+id/tvDonate"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtvSteunWNF"
-        android:layout_below="@+id/txtvSteunWNF"
+        android:layout_alignLeft="@+id/tvSupport"
+        android:layout_below="@+id/tvSupport"
         android:layout_marginTop="18dp"
         android:clickable="true"
         android:text="@string/donate"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/txtvSteun"
+        android:id="@+id/tvSteun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btnSteun"
-        android:layout_alignRight="@+id/textView1"
+        android:layout_alignRight="@+id/tvTitleSupport"
         android:layout_marginBottom="27dp"
         android:text="@string/charity_steun"
         android:textColor="@color/main_white"
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tvTitleSupport"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="33dp"
-        android:text="@string/wnf_title"
         android:textColor="@color/main_white"
         android:textSize="25sp" />
 

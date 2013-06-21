@@ -6,52 +6,59 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class CharitySupportActivity extends Activity {
+public class CharitySupportActivity extends Activity implements OnClickListener {
 
 	private int charity;
 	
 	Globals globalState = new Globals();
 
-	String donateURL;
+	private String donateURL;
+	
+	//charities
+	private static final int WNF = 1;
+	private static final int WSPA = 2;
+	
+	//view strings
+	private static final int WNF_TITLE = R.string.wnf_title;
+	private static final int WSPA_TITLE = R.string.wspa_title;
+	private static final int WNF_STEUN = R.string.wnf_steun;
+	private static final int WSPA_STEUN = R.string.wspa_steun;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_charity_support);
 		
 		charity = globalState.getCharity();
 
-		/* Kijken welke pagina er weergegeven moeten worden */
+		setView(charity);
+	}
+	
+	private void setView(int charity){
+		TextView tvTitle =(TextView)findViewById(R.id.tvTitleSupport);
+		TextView tvSupport =(TextView)findViewById(R.id.tvSupport);
+		
 		switch (charity){
-		case 1: /* wnf */
-			setContentView(R.layout.activity_charity_wnfsupport);
+		case WNF: 
+		    tvTitle.setText(WNF_TITLE);
+		    tvSupport.setText(WNF_STEUN);
 			donateURL = "https://www.wnf.nl/nl/hoe_kan_ik_helpen/giften/";
 			break;
-		case 2: /* wspa */
-			setContentView(R.layout.activity_charity_wspasupport);
+		case WSPA: 
+		    tvTitle.setText(WSPA_TITLE);
+		    tvSupport.setText(WSPA_STEUN);
 			donateURL = "http://www.wspa-doneren.nl/wspa/?kclid=ZGFpc3ljb24g";
 			break;
-		default:
-			setContentView(R.layout.activity_charity_wnfsupport);
-			donateURL = "https://www.wnf.nl/nl/hoe_kan_ik_helpen/giften/";
-			break;
 		}
+	}
 
-		/* Knoppen */
-		
-		TextView txtvDonate = (TextView)findViewById(R.id.txtvDonate);
-		
-		txtvDonate.setOnClickListener(new View.OnClickListener() {
-		      @Override
-		      public void onClick(View view) {
-		    	  Intent i = new Intent(Intent.ACTION_VIEW, 
-		    		       Uri.parse(donateURL));
-		    		startActivity(i);
-		      }
-		});
-		
-		/* Einde knoppen */
+	@Override
+	public void onClick(View v) {
+		Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(donateURL));
+ 		startActivity(i);		
 	}
 
 	@Override

@@ -11,6 +11,19 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class ListCharitiesActivity extends ListActivity {
+	
+	//Lists
+	static final String[] DIERENCHARITIES = new String[] { "WNF", "WSPA", "Charity 3", "Charity 4", "Charity 5"};
+	static final String[] NATUURCHARITIES = new String[] { "WNF", "WSPA", "Charity 3", "Charity 4", "Charity 5"};
+	static final String[] NOODHULPCHARITIES = new String[] { "WNF", "WSPA", "Charity 3", "Charity 4", "Charity 5"};
+	static final String[] ONTWIKKELINGSCHARITIES = new String[] { "WNF", "WSPA", "Charity 3", "Charity 4", "Charity 5"};
+	static final String[] VLUCHTELINGENCHARITIES = new String[] { "WNF", "WSPA", "Charity 3", "Charity 4", "Charity 5"};
+	static final String[] ZIEKTESCHARITIES = new String[] { "WNF", "WSPA", "Charity 3", "Charity 4", "Charity 5"};
+	static final String[] OVERIGECHARITIES = new String[] { "WNF", "WSPA", "Charity 3", "Charity 4", "Charity 5"};
+	
+	//charities
+	private static final int WNF = 1;
+	private static final int WSPA = 2;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -18,9 +31,6 @@ public class ListCharitiesActivity extends ListActivity {
 		getMenuInflater().inflate(R.menu.list_charities, menu);
 		return true;
 	}
-	static final String[] DIERENCHARITIES = new String[] { "WNF", "WSPA", "Charity 3",
-		"Charity 4", "Charity 5", "Charity 6", "Charity 7", "Charity 8",
-		"Charity 9", "Charity 10", "Charity 11", "Charity 12", "Charity 13" };
 	
 	private int category;
 
@@ -30,6 +40,10 @@ public class ListCharitiesActivity extends ListActivity {
 
 		category = Globals.getInstance().getCategory();
 		
+		setView(category);
+	}
+	
+	private void setView(int category){
 		/* Kijken welke lijst er weergegeven moeten worden */
 		switch (category){
 		case 1: /* dieren */
@@ -42,37 +56,12 @@ public class ListCharitiesActivity extends ListActivity {
 					//welke knop?
 					switch (position){
 						case 0: //wnf
-							Globals.getInstance().setCharity(1);
+							Globals.getInstance().setCharity(WNF);
 							Intent intent1 = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
 							startActivity(intent1);
 							break;
 						case 1: //wspa
-							Globals.getInstance().setCharity(2);
-							Intent intent2 = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
-							startActivity(intent2);
-							break;
-						default:
-							break;
-					}
-				}
-			});
-			break;
-		default:
-			setListAdapter(new ArrayAdapter<String>(this, R.layout.activity_list_categories,DIERENCHARITIES));
-			ListView defaultListView = getListView();
-			defaultListView.setTextFilterEnabled(true);
-			/* knoppen */
-			defaultListView.setOnItemClickListener(new OnItemClickListener() {
-				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-					//welke knop?
-					switch (position){
-						case 0: //wnf
-							Globals.getInstance().setCharity(1);
-							Intent intent1 = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
-							startActivity(intent1);
-							break;
-						case 1: //wspa
-							Globals.getInstance().setCharity(2);
+							Globals.getInstance().setCharity(WSPA);
 							Intent intent2 = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
 							startActivity(intent2);
 							break;
@@ -83,7 +72,6 @@ public class ListCharitiesActivity extends ListActivity {
 			});
 			break;
 		}
-
 	}
 
 }

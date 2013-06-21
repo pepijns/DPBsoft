@@ -5,61 +5,56 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
 
-public class CharityMainActivity extends Activity {
+public class CharityMainActivity extends Activity implements OnClickListener {
+	
+	//charities
+	private static final int WNF = 1;
+	private static final int WSPA = 2;
+	
+	//view strings
+	private static final int WNF_TITLE = R.string.wnf_title;
+	private static final int WSPA_TITLE = R.string.wspa_title;
 
-	private int charity;
+	private int charity; //Charity selected in the list
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_charity_main);
 		
 		charity = Globals.getInstance().getCharity();
 		
-		/* Kijken welke pagina er weergegeven moeten worden */
+		setView(charity);	
+	}
+	
+	private void setView(int charity){
+		TextView tv =(TextView)findViewById(R.id.tvTitleMain); 
+		
 		switch (charity){
-		case 1: /* wnf */
-			setContentView(R.layout.activity_charity_wnfmain);
+		case WNF:
+		    tv.setText(WNF_TITLE);
 			break;
-		case 2: /* wspa */
-			setContentView(R.layout.activity_charity_wspamain);
-			break;
-		default:
-			setContentView(R.layout.activity_charity_wnfmain);
+		case WSPA:
+		    tv.setText(WSPA_TITLE);
 			break;
 		}
-		
-		/* Knoppen */
-		Button btnInfo = (Button)findViewById(R.id.btnInfo);
-		Button btnComments = (Button)findViewById(R.id.btnComments);
-		Button btnSteun = (Button)findViewById(R.id.btnSteun);
-		
-		btnInfo.setOnClickListener(new View.OnClickListener() {
-		      @Override
-		      public void onClick(View view) {
-		    	  Intent intent = new Intent(CharityMainActivity.this, CharityInfoActivity.class);
-		    	  startActivity(intent);
-		      }
-		});
-		
-		btnComments.setOnClickListener(new View.OnClickListener() {
-		      @Override
-		      public void onClick(View view) {
-		    	  Intent intent = new Intent(CharityMainActivity.this, CharityCommentActivity.class);
-		    	  startActivity(intent);
-		      }
-		});
-		
-		btnSteun.setOnClickListener(new View.OnClickListener() {
-		      @Override
-		      public void onClick(View view) {
-		    	  Intent intent = new Intent(CharityMainActivity.this, CharitySupportActivity.class);
-		    	  startActivity(intent);
-		      }
-		});
-		/* Einde knoppen */
-		
+	}
+	
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()) {
+        	case R.id.btnInfo:
+		    	Intent a = new Intent(CharityMainActivity.this, CharityInfoActivity.class);
+		    	startActivity(a);
+        		break;
+        	case R.id.btnSteun:
+		    	Intent b = new Intent(CharityMainActivity.this, CharitySupportActivity.class);
+		    	startActivity(b);
+        		break;
+		}
 	}
 
 	@Override
@@ -68,5 +63,7 @@ public class CharityMainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.charity_main, menu);
 		return true;
 	}
+
+	
 
 }

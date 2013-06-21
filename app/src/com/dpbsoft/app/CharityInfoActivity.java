@@ -6,68 +6,71 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class CharityInfoActivity extends Activity {
+public class CharityInfoActivity extends Activity implements OnClickListener {
 
 	private int charity;
 	
 	Globals globalState = new Globals();
 
-	String homeURL;
+	private String homeURL;
 
-	String donateURL;
+	private String donateURL;
+	
+	//charities
+	private static final int WNF = 1;
+	private static final int WSPA = 2;
+	
+	//view strings
+	private static final int WNF_TITLE = R.string.wnf_title;
+	private static final int WSPA_TITLE = R.string.wspa_title;
+	private static final int WNF_INFO = R.string.wnf_info;
+	private static final int WSPA_INFO = R.string.wspa_info;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_charity_info);
 		
 		charity = globalState.getCharity();
 
-		/* Kijken welke pagina er weergegeven moeten worden */
+		setView(charity);
+	}
+	
+	private void setView(int charity){
+		TextView tvTitle =(TextView)findViewById(R.id.tvTitleInfo);
+		TextView tvInfo =(TextView)findViewById(R.id.tvInfo);
+		
 		switch (charity){
-		case 1: /* wnf */
-			setContentView(R.layout.activity_charity_wnfinfo);
+		case WNF: 
+		    tvTitle.setText(WNF_TITLE);
+		    tvInfo.setText(WNF_INFO);
 			homeURL = "http://www.wnf.nl/";
 			donateURL = "https://www.wnf.nl/nl/hoe_kan_ik_helpen/giften/";
-			
 			break;
-		case 2: /* wspa */
-			setContentView(R.layout.activity_charity_wspainfo);
+		case WSPA: 
+		    tvTitle.setText(WSPA_TITLE);
+		    tvInfo.setText(WSPA_INFO);
 			homeURL = "http://www.wspa.nl/";
 			donateURL = "http://www.wspa-doneren.nl/wspa/?kclid=ZGFpc3ljb24g";
 			break;
-		default:
-			setContentView(R.layout.activity_charity_wnfinfo);
-			homeURL = "http://www.wnf.nl/";
-			donateURL = "https://www.wnf.nl/nl/hoe_kan_ik_helpen/giften/";
-			break;
 		}
-		
-		/* Knoppen */
-		TextView txtvURL = (TextView)findViewById(R.id.txtvURL);
-		
-		txtvURL.setOnClickListener(new View.OnClickListener() {
-		      @Override
-		      public void onClick(View view) {
-		    	  Intent i = new Intent(Intent.ACTION_VIEW, 
-		    		       Uri.parse(homeURL));
-		    		startActivity(i);
-		      }
-		});
-		
-		TextView txtvDonate = (TextView)findViewById(R.id.txtvDonate);
-		
-		txtvDonate.setOnClickListener(new View.OnClickListener() {
-		      @Override
-		      public void onClick(View view) {
-		    	  Intent i = new Intent(Intent.ACTION_VIEW, 
-		    		       Uri.parse(donateURL));
-		    		startActivity(i);
-		      }
-		});
-		
-		/* Einde knoppen */
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()) {
+    	case R.id.tvDonate:
+    		Intent a = new Intent(Intent.ACTION_VIEW, Uri.parse(donateURL));
+    		startActivity(a);
+    		break;
+    	case R.id.tvURL:
+    		Intent b = new Intent(Intent.ACTION_VIEW, Uri.parse(homeURL));
+    		startActivity(b);
+    		break;
+		}
 	}
 
 	@Override

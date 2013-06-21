@@ -113,14 +113,6 @@
             android:name="com.dpbsoft.app.CharityWNFInfoActivity"
             android:label="@string/wnf_title" >
         </activity>
-        <activity
-            android:name="com.dpbsoft.app.CharityWNFSupportActivity"
-            android:label="@string/title_activity_charity_wnfsupport" >
-        </activity>
-        <activity
-            android:name="com.dpbsoft.app.CharityWNFCommentActivity"
-            android:label="@string/title_activity_charity_wnfcomment" >
-        </activity>
 
         <!-- Einde activities -->
         <activity
