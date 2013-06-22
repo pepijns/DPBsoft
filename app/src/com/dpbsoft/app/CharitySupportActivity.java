@@ -32,26 +32,29 @@ public class CharitySupportActivity extends Activity implements OnClickListener 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_charity_support);
 		
-		charity = globalState.getCharity();
+		Bundle extras = getIntent().getExtras(); 
+		if (extras != null) {
+		    charity = extras.getInt("charity");
+		}
 
-		setView(charity);
+		setView();
 	}
 	
-	private void setView(int charity){
+	private void setView(){
 		TextView tvTitle =(TextView)findViewById(R.id.tvTitleSupport);
 		TextView tvSupport =(TextView)findViewById(R.id.tvSupport);
 		
 		switch (charity){
-		case WNF: 
-		    tvTitle.setText(WNF_TITLE);
-		    tvSupport.setText(WNF_STEUN);
-			donateURL = "https://www.wnf.nl/nl/hoe_kan_ik_helpen/giften/";
-			break;
-		case WSPA: 
-		    tvTitle.setText(WSPA_TITLE);
-		    tvSupport.setText(WSPA_STEUN);
-			donateURL = "http://www.wspa-doneren.nl/wspa/?kclid=ZGFpc3ljb24g";
-			break;
+			case WNF: 
+				tvTitle.setText(WNF_TITLE);
+				tvSupport.setText(WNF_STEUN);
+				donateURL = "https://www.wnf.nl/nl/hoe_kan_ik_helpen/giften/";
+				break;
+			case WSPA: 
+				tvTitle.setText(WSPA_TITLE);
+				tvSupport.setText(WSPA_STEUN);
+				donateURL = "http://www.wspa-doneren.nl/wspa/?kclid=ZGFpc3ljb24g";
+				break;
 		}
 	}
 

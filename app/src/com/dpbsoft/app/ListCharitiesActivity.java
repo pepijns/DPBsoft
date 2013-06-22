@@ -55,15 +55,15 @@ public class ListCharitiesActivity extends ListActivity {
 				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 					//welke knop?
 					switch (position){
-						case 0: //wnf
-							Globals.getInstance().setCharity(WNF);
-							Intent intent1 = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
-							startActivity(intent1);
+						case 0: //WNF
+							Intent a = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
+				    		a.putExtra("charity",WNF);
+							startActivity(a);
 							break;
-						case 1: //wspa
-							Globals.getInstance().setCharity(WSPA);
-							Intent intent2 = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
-							startActivity(intent2);
+						case 1: //WSPA
+							Intent b = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
+				    		b.putExtra("charity",WSPA);
+							startActivity(b);
 							break;
 						default:
 							break;

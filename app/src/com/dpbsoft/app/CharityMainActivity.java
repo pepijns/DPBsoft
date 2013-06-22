@@ -25,12 +25,15 @@ public class CharityMainActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_charity_main);
 		
-		charity = Globals.getInstance().getCharity();
+		Bundle extras = getIntent().getExtras(); 
+		if (extras != null) {
+		    charity = extras.getInt("charity");
+		}
 		
-		setView(charity);	
+		setView();	 
 	}
 	
-	private void setView(int charity){
+	private void setView(){
 		TextView tv =(TextView)findViewById(R.id.tvTitleMain); 
 		
 		switch (charity){
@@ -48,10 +51,12 @@ public class CharityMainActivity extends Activity implements OnClickListener {
 		switch(v.getId()) {
         	case R.id.btnInfo:
 		    	Intent a = new Intent(CharityMainActivity.this, CharityInfoActivity.class);
+	    		a.putExtra("charity",charity);
 		    	startActivity(a);
         		break;
         	case R.id.btnSteun:
 		    	Intent b = new Intent(CharityMainActivity.this, CharitySupportActivity.class);
+	    		b.putExtra("charity",charity);
 		    	startActivity(b);
         		break;
 		}

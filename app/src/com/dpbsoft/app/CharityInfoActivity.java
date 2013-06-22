@@ -34,28 +34,31 @@ public class CharityInfoActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_charity_info);
 		
-		charity = globalState.getCharity();
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+		    charity = extras.getInt("charity");
+		}
 
-		setView(charity);
+		setView();
 	}
 	
-	private void setView(int charity){
+	private void setView(){
 		TextView tvTitle =(TextView)findViewById(R.id.tvTitleInfo);
 		TextView tvInfo =(TextView)findViewById(R.id.tvInfo);
 		
 		switch (charity){
-		case WNF: 
-		    tvTitle.setText(WNF_TITLE);
-		    tvInfo.setText(WNF_INFO);
-			homeURL = "http://www.wnf.nl/";
-			donateURL = "https://www.wnf.nl/nl/hoe_kan_ik_helpen/giften/";
-			break;
-		case WSPA: 
-		    tvTitle.setText(WSPA_TITLE);
-		    tvInfo.setText(WSPA_INFO);
-			homeURL = "http://www.wspa.nl/";
-			donateURL = "http://www.wspa-doneren.nl/wspa/?kclid=ZGFpc3ljb24g";
-			break;
+			case WNF: 
+				tvTitle.setText(WNF_TITLE);
+				tvInfo.setText(WNF_INFO);
+				homeURL = "http://www.wnf.nl/";
+				donateURL = "https://www.wnf.nl/nl/hoe_kan_ik_helpen/giften/";
+				break;
+			case WSPA: 
+				tvTitle.setText(WSPA_TITLE);
+				tvInfo.setText(WSPA_INFO);
+				homeURL = "http://www.wspa.nl/";
+				donateURL = "http://www.wspa-doneren.nl/wspa/?kclid=ZGFpc3ljb24g";
+				break;
 		}
 	}
 
