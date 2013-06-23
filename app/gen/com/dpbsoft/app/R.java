@@ -395,7 +395,7 @@ containing a value of this type.
         public static final int fightcancer_info=0x7f05006c;
         public static final int fightcancer_steun=0x7f05004b;
         public static final int fightcancer_title=0x7f050092;
-        /**  Charities 
+        /**  Charities Buttons 
          */
         public static final int goede_doelen=0x7f05002c;
         public static final int greenpeace_info=0x7f050059;
@@ -487,8 +487,14 @@ containing a value of this type.
         public static final int warchild_info=0x7f050062;
         public static final int warchild_steun=0x7f05004c;
         public static final int warchild_title=0x7f050082;
+        /**  Charities Info 
+         */
         public static final int wnf_info=0x7f050053;
+        /**  Charities Steun 
+         */
         public static final int wnf_steun=0x7f050033;
+        /**  Charities Title 
+         */
         public static final int wnf_title=0x7f050073;
         public static final int wspa_info=0x7f050054;
         public static final int wspa_steun=0x7f050034;

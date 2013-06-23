@@ -5,15 +5,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Arrays;
 
-import org.developerworks.android.FeedParser;
 import org.developerworks.android.FeedParserFactory;
 import org.developerworks.android.Message;
 import org.developerworks.android.ParserType;
 import org.xmlpull.v1.XmlSerializer;
-
-import com.facebook.Session;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -30,6 +26,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.facebook.Session;
 
 public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnItemClickListener{
 
@@ -92,6 +90,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	 @Override
 	 public void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
+		 addInt();
+		 sortList();
 		 setContentView(R.layout.activity_nieuw_overzicht);
 		 
 		 
@@ -255,6 +255,13 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 			startActivity(intent);
 	 }
 	 
+		public String[] getFeeds(String cat){
+			if(cat == "algemeen")
+				return feedAlgemeen;
+			else
+				return feedDieren;
+		}
+	 
 	 	private String feedWnf = "http://www.nu.nl/feeds/rss/tag/dieren.rss";
 		private String feedWspa = "http://feeds.feedburner.com/OverzichtGoedeDoelen";
 		
@@ -266,18 +273,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		private String[] feedZiektes = {feedWnf,feedWspa};
 		private String[] feedAlgemeen = {feedWnf,feedWspa};
 
-		
-		
-		//Arrays.sort(points, Collections.reverseOrder());
-
-		    
-		//Arrays.sort(points,Collections.reverseOrder());
-		//
-		//Collections.sort(points, new );
-	   // Collections.reverse(points);
-	    
-        //Arrays.sort(points,Collections.reverseOrder());
-		
 		ListCategoriesActivity lca = new ListCategoriesActivity();
 		int dierenRank = lca.getRankingDieren();
 		int natuurRank = lca.getRankingNatuur();
@@ -287,19 +282,21 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		int overigRank = lca.getRankingOverig();
 		
 		
-		Integer[] points = {dierenRank, natuurRank, ontwikkelingRank, vluchtelingenRank, ziektesRank, overigRank};
-		
-	    //Arrays.sort(points, new Comparator<Integer>());
-	    Collections.sort(points, new CustomIntComparator());
-	    Collections.reverse(points);
-	    
-		
-		public String[] getFeeds(String cat){
-			if(cat == "algemeen")
-				return feedAlgemeen;
-			else
-				return feedDieren;
+		List<Integer> points = new ArrayList<Integer>();
+	
+		public void addInt() {
+			points.add(dierenRank);
+			points.add(natuurRank);
+			points.add(ontwikkelingRank);
+			points.add(vluchtelingenRank);
+			points.add(ziektesRank);
+			points.add(overigRank);
 		}
+	    //Arrays.sort(points, new Comparator<Integer>());
 		
+		public void sortList() {
+			Collections.sort(points, new CustomIntComparator());
+	    	Collections.reverse(points);
+		}
 
 }
