@@ -31,7 +31,7 @@ import android.widget.Toast;
 public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnItemClickListener{
 
 	// Store the messages from the RSS
-	private List<Message> messages;
+	private List<Message> messages = new ArrayList<Message>();
 	
 	// Store the extracted information from the messages
 	static List<String> titles;
