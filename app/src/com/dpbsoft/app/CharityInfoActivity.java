@@ -29,7 +29,7 @@ public class CharityInfoActivity extends Activity implements OnClickListener {
 		private static final int GREENPEACE = 7;
 		private static final int NATUURMONUMENTEN = 8;
 		private static final int MILIEUDEFENSIE = 9;
-		private static final int UNICEF = 10;
+		/*private static final int UNICEF = 10;
 		private static final int LEGER_DES_HEILS = 11;
 		private static final int TERRE_DES_HOMMES = 12;
 		private static final int SOS_KINDERDORPEN = 13;
@@ -52,13 +52,27 @@ public class CharityInfoActivity extends Activity implements OnClickListener {
 		private static final int NIERSTICHTING = 30;
 		private static final int AMNESTY_INTERNATIONAL = 31;
 		private static final int CLINICLOWNS_NEDERLAND = 32;
-		private static final int INDEPENDER_NL = 33;;
+		private static final int INDEPENDER_NL = 33;*/
 	
 	//view strings
 	private static final int WNF_TITLE = R.string.wnf_title;
 	private static final int WSPA_TITLE = R.string.wspa_title;
+	private static final int SOPHIA_KATTENBOND_TITLE = R.string.kattenbond_title;
+	private static final int SOPHIA_VEREENIGING_TITLE = R.string.vereeniging_title;
+	private static final int STICHTING_DIERENLOT_TITLE = R.string.dierenlot_title;
+	private static final int BROOKE_HOSPITAL_TITLE = R.string.brooke_title;
+	private static final int GREENPEACE_TITLE = R.string.greenpeace_title;
+	private static final int NATUURMONUMENTEN_TITLE = R.string.natuurmonumenten_title;
+	private static final int MILIEUDEFENSIE_TITLE = R.string.milieudefensie_title;
 	private static final int WNF_INFO = R.string.wnf_info;
 	private static final int WSPA_INFO = R.string.wspa_info;
+	private static final int SOPHIA_KATTENBOND_INFO = R.string.kattenbond_info;
+	private static final int SOPHIA_VEREENIGING_INFO = R.string.vereeniging_info;
+	private static final int STICHTING_DIERENLOT_INFO = R.string.dierenlot_info;
+	private static final int BROOKE_HOSPITAL_INFO = R.string.brooke_info;
+	private static final int GREENPEACE_INFO = R.string.greenpeace_info;
+	private static final int NATUURMONUMENTEN_INFO = R.string.natuurmonumenten_info;
+	private static final int MILIEUDEFENSIE_INFO = R.string.milieudefensie_info;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +103,48 @@ public class CharityInfoActivity extends Activity implements OnClickListener {
 				tvInfo.setText(WSPA_INFO);
 				homeURL = "http://www.wspa.nl/";
 				donateURL = "http://www.wspa-doneren.nl/wspa/?kclid=ZGFpc3ljb24g";
+				break;
+			case SOPHIA_KATTENBOND:
+				tvTitle.setText(SOPHIA_KATTENBOND_TITLE);
+				tvInfo.setText(SOPHIA_KATTENBOND_INFO);
+				homeURL = "http://www.sophia-vereeniging.nl/";
+				donateURL = "http://www.sophia-vereeniging.nl/en/pages/help-mee/doneren/donatie-voor-dieren.html";
+				break;
+			case SOPHIA_VEREENIGING:
+				tvTitle.setText(SOPHIA_VEREENIGING_TITLE);
+				tvInfo.setText(SOPHIA_VEREENIGING_INFO);
+				homeURL = "http://www.sophia-vereeniging.nl/";
+				donateURL = "http://www.sophia-vereeniging.nl/en/pages/help-mee/doneren/donatie-voor-dieren.html";
+				break;
+			case STICHTING_DIERENLOT:
+				tvTitle.setText(STICHTING_DIERENLOT_TITLE);
+				tvInfo.setText(STICHTING_DIERENLOT_INFO);
+				homeURL = "https://www.dier.nu/";
+				donateURL = "https://www.dier.nu/help-mee/6/Help-mee";
+				break;
+			case BROOKE_HOSPITAL:
+				tvTitle.setText(BROOKE_HOSPITAL_TITLE);
+				tvInfo.setText(BROOKE_HOSPITAL_INFO);
+				homeURL = "http://www.greenpeace.nl/";
+				donateURL = "http://www.greenpeace.nl/word-donateur/04895/";
+				break;
+			case GREENPEACE:
+				tvTitle.setText(GREENPEACE_TITLE);
+				tvInfo.setText(GREENPEACE_INFO);
+				homeURL = "http://www.wspa.nl/";
+				donateURL = "http://www.wspa-doneren.nl/wspa/?kclid=ZGFpc3ljb24g";
+				break;
+			case NATUURMONUMENTEN:
+				tvTitle.setText(NATUURMONUMENTEN_TITLE);
+				tvInfo.setText(NATUURMONUMENTEN_INFO);
+				homeURL = "http://www.natuurmonumenten.nl/";
+				donateURL = "http://www.natuurmonumenten.nl/doe-een-gift";
+				break;
+			case MILIEUDEFENSIE:
+				tvTitle.setText(MILIEUDEFENSIE_TITLE);
+				tvInfo.setText(MILIEUDEFENSIE_INFO);
+				homeURL = "https://www.milieudefensie.nl/";
+				donateURL = "https://doneren.milieudefensie.nl/idoo/iwh/geefnu.php?aid=1";
 				break;
 		}
 	}

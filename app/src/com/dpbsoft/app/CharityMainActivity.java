@@ -20,7 +20,7 @@ public class CharityMainActivity extends Activity implements OnClickListener {
 		private static final int GREENPEACE = 7;
 		private static final int NATUURMONUMENTEN = 8;
 		private static final int MILIEUDEFENSIE = 9;
-		private static final int UNICEF = 10;
+		/*private static final int UNICEF = 10;
 		private static final int LEGER_DES_HEILS = 11;
 		private static final int TERRE_DES_HOMMES = 12;
 		private static final int SOS_KINDERDORPEN = 13;
@@ -43,11 +43,18 @@ public class CharityMainActivity extends Activity implements OnClickListener {
 		private static final int NIERSTICHTING = 30;
 		private static final int AMNESTY_INTERNATIONAL = 31;
 		private static final int CLINICLOWNS_NEDERLAND = 32;
-		private static final int INDEPENDER_NL = 33;
+		private static final int INDEPENDER_NL = 33;*/
 	
 	//view strings
 	private static final int WNF_TITLE = R.string.wnf_title;
 	private static final int WSPA_TITLE = R.string.wspa_title;
+	private static final int SOPHIA_KATTENBOND_TITLE = R.string.kattenbond_title;
+	private static final int SOPHIA_VEREENIGING_TITLE = R.string.vereeniging_title;
+	private static final int STICHTING_DIERENLOT_TITLE = R.string.dierenlot_title;
+	private static final int BROOKE_HOSPITAL_TITLE = R.string.brooke_title;
+	private static final int GREENPEACE_TITLE = R.string.greenpeace_title;
+	private static final int NATUURMONUMENTEN_TITLE = R.string.natuurmonumenten_title;
+	private static final int MILIEUDEFENSIE_TITLE = R.string.milieudefensie_title;
 
 	private int charity; //Charity selected in the list
 	
@@ -73,6 +80,27 @@ public class CharityMainActivity extends Activity implements OnClickListener {
 			break;
 		case WSPA:
 		    tv.setText(WSPA_TITLE);
+			break;
+		case SOPHIA_KATTENBOND:
+		    tv.setText(SOPHIA_KATTENBOND_TITLE);
+			break;
+		case SOPHIA_VEREENIGING:
+		    tv.setText(SOPHIA_VEREENIGING_TITLE);
+			break;
+		case STICHTING_DIERENLOT:
+		    tv.setText(STICHTING_DIERENLOT_TITLE);
+			break;
+		case BROOKE_HOSPITAL:
+		    tv.setText(BROOKE_HOSPITAL_TITLE);
+			break;
+		case GREENPEACE:
+		    tv.setText(GREENPEACE_TITLE);
+			break;
+		case NATUURMONUMENTEN:
+		    tv.setText(NATUURMONUMENTEN_TITLE);
+			break;
+		case MILIEUDEFENSIE:
+		    tv.setText(MILIEUDEFENSIE_TITLE);
 			break;
 		}
 	}

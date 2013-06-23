@@ -333,6 +333,9 @@ containing a value of this type.
         /**  General 
          */
         public static final int app_name=0x7f050019;
+        public static final int brooke_info=0x7f050041;
+        public static final int brooke_steun=0x7f050038;
+        public static final int brooke_title=0x7f05004a;
         public static final int btnGegevensOpslaanTekst=0x7f05001d;
         public static final int btnLoginTekst=0x7f05001c;
         /**  Categories 
@@ -370,6 +373,9 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_log_in_button=0x7f050008;
         public static final int com_facebook_usersettingsfragment_logged_in=0x7f050009;
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f05000a;
+        public static final int dierenlot_info=0x7f050040;
+        public static final int dierenlot_steun=0x7f050037;
+        public static final int dierenlot_title=0x7f050049;
         public static final int donate=0x7f050032;
         public static final int etxtGebruikersnaamHint=0x7f05001e;
         public static final int etxtWachtwoordHint=0x7f05001f;
@@ -377,32 +383,47 @@ containing a value of this type.
         /**  Charities 
          */
         public static final int goede_doelen=0x7f05002c;
+        public static final int greenpeace_info=0x7f050042;
+        public static final int greenpeace_steun=0x7f050039;
+        public static final int greenpeace_title=0x7f05004b;
         public static final int info=0x7f05002e;
+        public static final int kattenbond_info=0x7f05003e;
+        public static final int kattenbond_steun=0x7f050035;
+        public static final int kattenbond_title=0x7f050047;
+        public static final int milieudefensie_info=0x7f050044;
+        public static final int milieudefensie_steun=0x7f05003b;
+        public static final int milieudefensie_title=0x7f05004d;
+        public static final int natuurmonumenten_info=0x7f050043;
+        public static final int natuurmonumenten_steun=0x7f05003a;
+        public static final int natuurmonumenten_title=0x7f05004c;
         public static final int nieuws=0x7f05002d;
         public static final int steun=0x7f050030;
         public static final int title_activity_about=0x7f050021;
         public static final int title_activity_category=0x7f050024;
         /**  Rest 
          */
-        public static final int title_activity_category_news_dieren=0x7f050039;
-        public static final int title_activity_charity_comment=0x7f05003a;
-        public static final int title_activity_charity_info=0x7f050042;
-        public static final int title_activity_charity_main=0x7f050041;
-        public static final int title_activity_charity_support=0x7f05003b;
-        public static final int title_activity_charity_wnfinfo=0x7f050040;
-        public static final int title_activity_list_categories=0x7f05003f;
-        public static final int title_activity_login=0x7f05003d;
-        public static final int title_activity_login_facebook=0x7f05003e;
+        public static final int title_activity_category_news_dieren=0x7f05004e;
+        public static final int title_activity_charity_comment=0x7f05004f;
+        public static final int title_activity_charity_info=0x7f050057;
+        public static final int title_activity_charity_main=0x7f050056;
+        public static final int title_activity_charity_support=0x7f050050;
+        public static final int title_activity_charity_wnfinfo=0x7f050055;
+        public static final int title_activity_list_categories=0x7f050054;
+        public static final int title_activity_login=0x7f050052;
+        public static final int title_activity_login_facebook=0x7f050053;
         public static final int title_activity_nieuw_overzicht=0x7f050023;
-        public static final int title_activity_nieuws_artikel=0x7f05003c;
+        public static final int title_activity_nieuws_artikel=0x7f050051;
         public static final int title_activity_splash=0x7f050022;
         public static final int url=0x7f050031;
-        public static final int wnf_info=0x7f050035;
+        public static final int vereeniging_info=0x7f05003f;
+        public static final int vereeniging_steun=0x7f050036;
+        public static final int vereeniging_title=0x7f050048;
+        public static final int wnf_info=0x7f05003c;
         public static final int wnf_steun=0x7f050033;
-        public static final int wnf_title=0x7f050037;
-        public static final int wspa_info=0x7f050036;
+        public static final int wnf_title=0x7f050045;
+        public static final int wspa_info=0x7f05003d;
         public static final int wspa_steun=0x7f050034;
-        public static final int wspa_title=0x7f050038;
+        public static final int wspa_title=0x7f050046;
     }
     public static final class style {
         /** 
