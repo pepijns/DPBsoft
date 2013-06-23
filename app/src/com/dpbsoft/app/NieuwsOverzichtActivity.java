@@ -46,16 +46,10 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	static int ArrayPosition;
 	
 	public ListView lstTweets = null;
+	String newscategory = new String();
 	
 	int nieuwsId = Menu.FIRST;
 	int logoutId = Menu.FIRST +1;
-	
-	private String[] urlArray = {
-			"http://feeds.feedburner.com/OverzichtGoedeDoelen",
-			"http://www.nu.nl/feeds/rss/tag/dieren.rss"
-	};
-	
-	String newsUrl = new String();
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -96,7 +90,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		 super.onCreate(savedInstanceState);
 		 setContentView(R.layout.activity_nieuw_overzicht);
 		 
-		 String newscategory = new String();
 		 
 		 Bundle extras = getIntent().getExtras();
 		 if (extras != null) {
@@ -104,8 +97,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		 }
 		 else
 			newscategory = "algemeen";
-		 
-		 newsUrl = handleNews(newscategory);
 	        
 		 // Load the list with messages
 		 lstTweets = (ListView)findViewById(R.id.listViewRss);
@@ -174,9 +165,13 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	     try{
 	    	 
 	      Log.i("AndroidNews", "ParserType="+type.name());
-	      FeedParser parser = FeedParserFactory.getParser(type, newsUrl);
 	      long start = System.currentTimeMillis();
-	      messages = parser.parse();
+	      
+	      for(String s : getFeeds(newscategory))
+	      {
+	    	  messages.addAll(FeedParserFactory.getParser(type, s).parse());
+	      }
+	      
 	      long duration = System.currentTimeMillis() - start;
 	      String xml = writeXml();      
 	      
@@ -242,20 +237,16 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 			startActivity(intent);
 	 }
 	 
-	 private String handleNews(String c)
-	 {
-		 int urlnum = 0;
-		 
-		 if(c == "algemeen")
-		 {
-			 urlnum = 0;
-		 }
-		 else if(c == "dieren")
-		 {
-			 urlnum = 1;
-		 }
-		 
-		 return urlArray[urlnum];
-	 }
+	 	private String feedWnf = "http://www.nu.nl/feeds/rss/tag/dieren.rss";
+		private String feedWspa = "http://feeds.feedburner.com/OverzichtGoedeDoelen";
+		private String[] feedDieren = {feedWnf,feedWspa};
+		private String[] feedAlgemeen = {feedWnf,feedWspa};
+		
+		public String[] getFeeds(String cat){
+			if(cat == "algemeen")
+				return feedAlgemeen;
+			else
+				return feedDieren;
+		}
 
 }
