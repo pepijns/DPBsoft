@@ -1,9 +1,8 @@
 package com.dpbsoft.app;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
+import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
@@ -20,7 +19,7 @@ public class CharityMainActivity extends Activity implements OnClickListener {
 		private static final int GREENPEACE = 7;
 		private static final int NATUURMONUMENTEN = 8;
 		private static final int MILIEUDEFENSIE = 9;
-		/*private static final int UNICEF = 10;
+		private static final int UNICEF = 10;
 		private static final int LEGER_DES_HEILS = 11;
 		private static final int TERRE_DES_HOMMES = 12;
 		private static final int SOS_KINDERDORPEN = 13;
@@ -32,7 +31,7 @@ public class CharityMainActivity extends Activity implements OnClickListener {
 		private static final int REUMAFONDS = 19;
 		private static final int ALZHEIMER_NEDERLAND = 20;
 		private static final int NATIONAAL_EPILEPSIE_FONDS = 21;
-		private static final int HARTSTICTHING = 22;
+		private static final int HARTSTICHTING = 22;
 		private static final int VERENIGING_DE_ZONNEBLOEM = 23;
 		private static final int KIKA = 24;
 		private static final int MAAG_LEVER_DARM_STICHTING = 25;
@@ -43,7 +42,6 @@ public class CharityMainActivity extends Activity implements OnClickListener {
 		private static final int NIERSTICHTING = 30;
 		private static final int AMNESTY_INTERNATIONAL = 31;
 		private static final int CLINICLOWNS_NEDERLAND = 32;
-		private static final int INDEPENDER_NL = 33;*/
 	
 	//view strings
 	private static final int WNF_TITLE = R.string.wnf_title;
@@ -55,6 +53,29 @@ public class CharityMainActivity extends Activity implements OnClickListener {
 	private static final int GREENPEACE_TITLE = R.string.greenpeace_title;
 	private static final int NATUURMONUMENTEN_TITLE = R.string.natuurmonumenten_title;
 	private static final int MILIEUDEFENSIE_TITLE = R.string.milieudefensie_title;
+	private static final int UNICEF_TITLE = R.string.unicef_title;
+	private static final int LEGER_DES_HEILS_TITLE = R.string.legerdesheils_title;
+	private static final int TERRE_DES_HOMMES_TITLE = R.string.terredeshommes_title;
+	private static final int SOS_KINDERDORPEN_TITLE = R.string.soskinderdorpen_title;
+	private static final int PLAN_NEDERLAND_TITLE = R.string.plannederland_title;
+	private static final int VLUCHTELINGENWERK_NEDERLAND_TITLE = R.string.vluchtelingenwerknederland_title;
+	private static final int WAR_CHILD_TITLE = R.string.warchild_title;
+	private static final int KWF_KANKERBESTRIJDING_TITLE = R.string.kwfkankerbestrijding_title;
+	private static final int REUMAFONDS_TITLE = R.string.reumafonds_title;
+	private static final int LONGFONDS_TITLE = R.string.longfonds_title;
+	private static final int ALZHEIMER_NEDERLAND_TITLE = R.string.alzheimernederland_title;
+	private static final int NATIONAAL_EPILEPSIE_FONDS_TITLE = R.string.nationaalepilepsiefonds_title;
+	private static final int HARTSTICHTING_TITLE = R.string.hartstichting_title;
+	private static final int VERENIGING_DE_ZONNEBLOEM_TITLE = R.string.verenigingdezonnebloem_title;
+	private static final int KIKA_TITLE = R.string.kika_title;
+	private static final int MAAG_LEVER_DARM_STICHTING_TITLE = R.string.maagleverdarmstichting_title;
+	private static final int FIGHT_CANCER_TITLE = R.string.fightcancer_title;
+	private static final int DIABETES_FONDS_TITLE = R.string.diabetesfonds_title;
+	private static final int NSGK_TITLE = R.string.nsgk_title;
+	private static final int STOP_AIDS_NOW_TITLE = R.string.stopaidsnow_title;
+	private static final int NIERSTICHTING_TITLE = R.string.nierstichting_title;
+	private static final int AMNESTY_INTERNATIONAL_TITLE = R.string.amnestyinternational_title;
+	private static final int CLINICLOWNS_NEDERLAND_TITLE = R.string.cliniclownsnederland_title;
 
 	private int charity; //Charity selected in the list
 	
@@ -102,6 +123,75 @@ public class CharityMainActivity extends Activity implements OnClickListener {
 		case MILIEUDEFENSIE:
 		    tv.setText(MILIEUDEFENSIE_TITLE);
 			break;
+		case UNICEF:
+		    tv.setText(UNICEF_TITLE);
+			break;
+		case LEGER_DES_HEILS:
+		    tv.setText(LEGER_DES_HEILS_TITLE);
+			break;
+		case TERRE_DES_HOMMES:
+		    tv.setText(TERRE_DES_HOMMES_TITLE);
+			break;
+		case SOS_KINDERDORPEN:
+		    tv.setText(SOS_KINDERDORPEN_TITLE);
+			break;
+		case PLAN_NEDERLAND:
+		    tv.setText(PLAN_NEDERLAND_TITLE);
+			break;
+		case VLUCHTELINGENWERK_NEDERLAND:
+		    tv.setText(VLUCHTELINGENWERK_NEDERLAND_TITLE);
+			break;
+		case WAR_CHILD:
+		    tv.setText(WAR_CHILD_TITLE);
+			break;
+		case KWF_KANKERBESTRIJDING:
+		    tv.setText(KWF_KANKERBESTRIJDING_TITLE);
+			break;
+		case LONGFONDS:
+		    tv.setText(LONGFONDS_TITLE);
+			break;
+		case REUMAFONDS:
+		    tv.setText(REUMAFONDS_TITLE);
+			break;
+		case ALZHEIMER_NEDERLAND:
+		    tv.setText(ALZHEIMER_NEDERLAND_TITLE);
+			break;
+		case NATIONAAL_EPILEPSIE_FONDS:
+		    tv.setText(NATIONAAL_EPILEPSIE_FONDS_TITLE);
+			break;
+		case HARTSTICHTING:
+		    tv.setText(HARTSTICHTING_TITLE);
+			break;
+		case VERENIGING_DE_ZONNEBLOEM:
+		    tv.setText(VERENIGING_DE_ZONNEBLOEM_TITLE);
+			break;
+		case KIKA :
+		    tv.setText(KIKA_TITLE);
+			break;
+		case MAAG_LEVER_DARM_STICHTING:
+		    tv.setText(MAAG_LEVER_DARM_STICHTING_TITLE);
+			break;
+		case FIGHT_CANCER:
+		    tv.setText(FIGHT_CANCER_TITLE);
+			break;
+		case DIABETES_FONDS :
+		    tv.setText(DIABETES_FONDS_TITLE);
+			break;
+		case NSGK :
+		    tv.setText(NSGK_TITLE);
+			break;
+		case STOP_AIDS_NOW  :
+		    tv.setText(STOP_AIDS_NOW_TITLE);
+			break;
+		case NIERSTICHTING  :
+		    tv.setText(NIERSTICHTING_TITLE);
+			break;
+		case AMNESTY_INTERNATIONAL :
+		    tv.setText(AMNESTY_INTERNATIONAL_TITLE);
+			break;
+		case CLINICLOWNS_NEDERLAND :
+		    tv.setText(CLINICLOWNS_NEDERLAND_TITLE);
+			break;
 		}
 	}
 	
@@ -120,14 +210,4 @@ public class CharityMainActivity extends Activity implements OnClickListener {
         		break;
 		}
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.charity_main, menu);
-		return true;
-	}
-
-	
-
 }
