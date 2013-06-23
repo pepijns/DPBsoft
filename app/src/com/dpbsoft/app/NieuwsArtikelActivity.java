@@ -20,16 +20,6 @@ public class NieuwsArtikelActivity extends Activity {
 	private String linkHost;
 	private String linkProtocol;
 	private int position = NieuwsOverzichtActivity.ArrayPosition;
-
-	private int ranking = 0;
-
-	public int getRanking() {
-		return ranking;
-	}
-
-	public void setRanking(int ranking) {
-		this.ranking = ranking;
-	}
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +73,7 @@ public class NieuwsArtikelActivity extends Activity {
 		linkHost = NieuwsOverzichtActivity.hosts.get(position);
 		linkPath = NieuwsOverzichtActivity.paths.get(position);
 		linkProtocol = NieuwsOverzichtActivity.protocols.get(position);
-			  
+
 		// Create the text view for the title of the message
 		TextView textView = (TextView) findViewById(R.id.textView1);
 		textView.setTextSize(24);

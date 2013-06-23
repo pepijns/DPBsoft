@@ -2,7 +2,10 @@ package com.dpbsoft.app;
 
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Arrays;
 
 import org.developerworks.android.FeedParser;
 import org.developerworks.android.FeedParserFactory;
@@ -50,6 +53,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	
 	int nieuwsId = Menu.FIRST;
 	int logoutId = Menu.FIRST +1;
+	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -151,11 +155,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 				 	ArrayPosition = position;
 				 	Intent intent = new Intent(NieuwsOverzichtActivity.this, NieuwsArtikelActivity.class);
 				 	startActivity(intent);
-
-				 	NieuwsArtikelActivity naa = new NieuwsArtikelActivity();
-				 	int rank = naa.getRanking();
-				 	rank=+1;
-				 	naa.setRanking(rank);
 			 		}
 		 	}); 
 	 }
@@ -171,6 +170,9 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	      {
 	    	  messages.addAll(FeedParserFactory.getParser(type, s).parse());
 	      }
+	      
+	      Collections.sort(messages, new CustomComparator());
+	      Collections.reverse(messages);
 	      
 	      long duration = System.currentTimeMillis() - start;
 	      String xml = writeXml();      
@@ -230,6 +232,22 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		 }
 	}
 	    
+		public class CustomComparator implements Comparator<Message> {
+		     @Override
+		     public int compare(Message o1, Message o2) {
+		         return o1.getDate().compareTo(o2.getDate());
+		     		}
+		       }
+	 
+		public class CustomIntComparator implements Comparator<Integer> {
+		     @Override
+		     public int compare(Integer o1, Integer o2)
+		        {
+		            return o2.compareTo(o1);
+		        }
+		       }
+		
+        
 	 @Override
 		public void onBackPressed() {
 		    // set the flag to true so the next activity won't start up
@@ -239,8 +257,42 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	 
 	 	private String feedWnf = "http://www.nu.nl/feeds/rss/tag/dieren.rss";
 		private String feedWspa = "http://feeds.feedburner.com/OverzichtGoedeDoelen";
+		
 		private String[] feedDieren = {feedWnf,feedWspa};
+		private String[] feedNatuur = {feedWnf,feedWspa};
+		private String[] feedOntwikkeling = {feedWnf,feedWspa};
+		private String[] feedVluchtelingen = {feedWnf,feedWspa};
+		private String[] feedOverig = {feedWnf,feedWspa};
+		private String[] feedZiektes = {feedWnf,feedWspa};
 		private String[] feedAlgemeen = {feedWnf,feedWspa};
+
+		
+		
+		//Arrays.sort(points, Collections.reverseOrder());
+
+		    
+		//Arrays.sort(points,Collections.reverseOrder());
+		//
+		//Collections.sort(points, new );
+	   // Collections.reverse(points);
+	    
+        //Arrays.sort(points,Collections.reverseOrder());
+		
+		ListCategoriesActivity lca = new ListCategoriesActivity();
+		int dierenRank = lca.getRankingDieren();
+		int natuurRank = lca.getRankingNatuur();
+		int ontwikkelingRank = lca.getRankingOntwikkeling();
+		int vluchtelingenRank = lca.getRankingVluchtelingen();
+		int ziektesRank = lca.getRankingZiektes();
+		int overigRank = lca.getRankingOverig();
+		
+		
+		Integer[] points = {dierenRank, natuurRank, ontwikkelingRank, vluchtelingenRank, ziektesRank, overigRank};
+		
+	    //Arrays.sort(points, new Comparator<Integer>());
+	    Collections.sort(points, new CustomIntComparator());
+	    Collections.reverse(points);
+	    
 		
 		public String[] getFeeds(String cat){
 			if(cat == "algemeen")
@@ -248,5 +300,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 			else
 				return feedDieren;
 		}
+		
 
 }
