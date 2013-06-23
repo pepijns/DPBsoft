@@ -19,7 +19,7 @@ public class ListCharitiesActivity extends ListActivity {
 	static final String[] ONTWIKKELINGSCHARITIES = new String[] { "UNICEF", "Het Leger des Heils", "Terre des Hommes", "SOS Kinderdorpen", "Plan Nederland"};
 	static final String[] VLUCHTELINGENCHARITIES = new String[] { "VluchtelingenWerk Nederland", "War Child"};
 	static final String[] ZIEKTESCHARITIES = new String[] { "KWF Kankerbestrijding", "Longfonds", "Reumafonds", "Alzheimer Nederland", "Nationaal Epilepsie Fonds", "Hartstichting", "Vereniging de Zonnebloem", "KiKa", "Maag Lever Darm Stichting", "Fight Cancer", "Diabetes Fonds", "NSGK", "STOP AIDS NOW!", "Nierstichting"};
-	static final String[] OVERIGECHARITIES = new String[] { "Amnesty International", "CliniClowns Nederland", "Independer.nl"};
+	static final String[] OVERIGECHARITIES = new String[] { "Amnesty International", "CliniClowns Nederland"};
 	
 	//categories
 	private static final int DIEREN = 1;
@@ -62,7 +62,6 @@ public class ListCharitiesActivity extends ListActivity {
 	private static final int NIERSTICHTING = 30;
 	private static final int AMNESTY_INTERNATIONAL = 31;
 	private static final int CLINICLOWNS_NEDERLAND = 32;
-	private static final int INDEPENDER_NL = 33;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -318,11 +317,6 @@ public class ListCharitiesActivity extends ListActivity {
 							Intent b = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
 				    		b.putExtra("charity", CLINICLOWNS_NEDERLAND);
 							startActivity(b);
-							break;
-						case 2: //Independer.nl
-							Intent c = new Intent(ListCharitiesActivity.this, CharityMainActivity.class);
-				    		c.putExtra("charity", INDEPENDER_NL);
-							startActivity(c);
 							break;
 					}
 				}

@@ -26,8 +26,7 @@
     <string name="category_natuur_en_milieu">Natuur en milieu</string>
     <string name="category_vluchtelingenhulp">Vluchtelingenhulp</string>
     
-
-    <!-- Charities -->
+    <!-- Charities Buttons -->
     
     <string name="goede_doelen">Goede doelen</string>
     <string name="nieuws">Nieuws</string>
@@ -36,6 +35,9 @@
     <string name="steun">Steun dit goede doel</string>
     <string name="url">De officiële website</string>
     <string name="donate">Klik hier om te doneren</string>
+    
+    <!-- Charities Steun -->
+    
     <string name="wnf_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun het WNF dan ook door te doneren of mee te doen aan hun vele projecten.</string>
     <string name="wspa_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun het WSPA dan ook door te doneren en vergeet u niet voor de dieren te laten horen. </string>
     <string name="kattenbond_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun de Sophia Kattenbond dan ook door te doneren of door lid te worden. </string>
@@ -45,6 +47,32 @@
 	<string name="greenpeace_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun het Greenpeace dan ook door te doneren en kijk op de website om te zien op welke andere manieren u allemaal ook kunt helpen. </string>
 	<string name="natuurmonumenten_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun de Natuurmonumenten dan ook door te doneren of door lid te worden. </string>
 	<string name="milieudefensie_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun de Milieudefensie dan ook door te doneren of wordt vrijwilliger.</string>
+    <string name="unicef_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun Unicef dan ook door te doneren of kijk op de website om te zien op welke andere manieren u allemaal ook kunt helpen.</string>
+	<string name="legerdesheils_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun het Leger des Heils dan ook door te doneren of te collecteren.</string>
+    <string name="terredeshommes_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun Terre des Hommes dan ook door te doneren.</string>
+    <string name="soskinderdorpen_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun SOS Kinderdorpen dan ook door te doneren.</string>
+    <string name="plannederland_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun Plan Nederland dan ook door te doneren of te sponoren.</string>
+    <string name="vluchtelingenwerknederland_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun VluchtelingenWerk Nederland dan ook door te doneren of een vrijwillger te worden.</string>
+    <string name="kwfkankerbestrijding_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun KWF Kankerbestrijding dan ook door te doneren.</string>
+    <string name="longfonds_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun het Longfonds dan ook door te doneren.</string>
+    <string name="reumafonds_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun het Reumafonds dan ook door te doneren.</string>
+    <string name="alzheimernederland_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun Alzheimer Nederland dan ook door te doneren.</string>
+    <string name="nationaalepilepsiefonds_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun het Nationaal Epilepsie Fonds dan ook door te doneren.</string>
+    <string name="hartstichting_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun de Hartstichting dan ook door te doneren.</string>
+    <string name="verenigingdezonnebloem_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun Vereniging De Zonnebloem dan ook door te doneren.</string>
+    <string name="kika_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun Kika dan ook door te doneren.</string>
+    <string name="maagleverdarmstichting_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun de Maag Lever Darm Stichting dan ook door te doneren.</string>
+    <string name="fightcancer_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun Fight Cancer dan ook door te doneren.</string>
+    <string name="warchild_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun War Child dan ook door te doneren of doe mee aan acties.</string>
+    <string name="diabetesfonds_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun het Diabetes Fonds dan ook door te doneren.</string>
+    <string name="nsgk_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun de NSGK dan ook door te doneren.</string>
+    <string name="stopaidsnow_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun STOP AIDS NOW! dan ook door te doneren</string>
+    <string name="nierstichting_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun de Nierstichting dan ook door te doneren</string>
+    <string name="amnestyinternational_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun Amnesty International dan ook door te doneren</string>
+    <string name="cliniclownsnederland_steun">Wilt u meer helpen dan alleen uw steun aan anderen laten zien? Steun CliniClowns dan ook door te doneren</string>
+	
+    <!-- Charities Info -->
+    
     <string name="wnf_info">Het Wereld Natuur Fonds zet zich op veel manieren in voor bedreigde diersoorten. Allereerst natuurlijk door de bescherming in hun eigen gebied door middel van verschillende veldprojecten. Bijvoorbeeld door trainen en financieren van anti-stropersbrigades. Maar ook door samen met de lokale bevolking te zoeken naar alternatieve, duurzame bronnen van inkomen en haar te helpen conflicten met wilde dieren te voorkomen. </string>
     <string name="wspa_info">De World Society for the Protection of Animals (WSPA) is een internationale dierenwelzijnsorganisatie. Onze visie is een wereld waarin dierenwelzijn ertoe doet en wreedheid tegen dieren niet meer bestaat. We pakken dierenleed direct aan en werken nauw samen met lokale organisaties om dieren ter plekke te helpen. </string>
     <string name="kattenbond_info">De Sophia KattenBond komt op voor alle katten in Nederland: ‘gewone’ huiskatten, zwerfkatten en raskatten. Zij zet zich in voor beschermende wetgeving rondom de kattenhandel en de raskattenfokkerij en houdt zich bezig met het zwerfkattenprobleem. Door regelmatig een KattenActie te organiseren, ondersteunt de Sophia KattenBond vrijwilligersorganisaties die opkomen voor zwerfkatten. Op die manier kan het enorme aantal zwerfkatten in Nederland ingeperkt worden en blijven de dieren gezond. Ook andere organisaties die zich inzetten voor het welzijn van katten, kunnen deelnemen aan een KattenActie van de Sophia KattenBond.</string>
@@ -54,6 +82,32 @@
 	<string name="greenpeace_info">Greenpeace zet zich in voor een schone en gezonde wereld. Daarom doet Greenpeace onderzoek, vertellen ze mensen over milieuproblemen en praten ze met bedrijven, ministers en andere belangrijke mensen. En als die niet luisteren, voert Greenpeace actie zonder vormen van geweldpleging. Net zolang als dat nodig is.</string>
 	<string name="natuurmonumenten_info">Natuurmonumenten is een vereniging die midden in de maatschappij staat. Daarom hebben leden een stem: via afgevaardigden kunnen leden hun mening laten doorklinken in de besluiten en standpunten van de vereniging.  In districtscommissies vertegenwoordigen leden de stem van de leden in hun district. Natuurmonumenten kent dertien districten: de alle twaalf provincies plus Amsterdam. De districtscommissies vormen samen de verenigingsraad. Samen met het bestuur denkt, praat en beslist de verenigingsraad mee over de hoofdlijnen van het beleid.</string>
 	<string name="milieudefensie_info">Met het oplossen en voorkomen van milieuproblemen is een wereld te winnen. Voor onszelf en toekomstige generaties. De Milieudefensie is een beweging van mensen die zich hiervoor inzet: lokaal, landelijk én wereldwijd als lid van Friends of the Earth International. Milieudefensie is actief op drie thema\'s: Internationaal, Verkeer en Duurzaam Voedsel.</string>
+    <string name="unicef_info">Niets geeft meer voldoening dan alle kinderen geven waar ze recht op hebben. UNICEF helpt kinderen over de hele wereld bij het overwinnen van armoede, ziekte, geweld en discriminatie. Miljoenen kinderen gaan dankzij UNICEF naar school. Talloze kinderen worden ingeënt tegen dodelijke ziektes als mazelen en krijgen goede voeding. UNICEF werkt hard aan de bestrijding van de aidsepidemie en helpt kinderen die er het slachtoffer van zijn geworden. Waar een noodsituatie heerst, zijn wij. UNICEF is bij rampen en oorlogen direct ter plaatse en zorgt ervoor dat kinderen en hun families kunnen overleven. Kinderen die er alleen voor staan, krijgen van UNICEF bescherming tegen geweld, misbruik en uitbuiting. </string>
+	<string name="legerdesheils_info">Het Leger des Heils is een internationale beweging en behoort tot de universele christelijke kerk. Zijn boodschap is gebaseerd op de Bijbel. Zijn dienstverlening wordt gestimuleerd door de liefde tot God. Zijn opdracht is het Evangelie van Jezus Christus te prediken en in Zijn naam menselijk nood te lenigen zonder enige vorm van discriminatie.</string>
+	<string name="terredeshommes_info">Ieder kind heeft het recht om op te groeien in een veilige omgeving zonder kinderuitbuiting. Helaas is de realiteit voor veel kinderen in ontwikkelings-landen vaak anders. Ze moeten hun lichaam verkopen, worden verhandeld als koopwaar of worden uitgebuit als arbeider. Een wereld waarin kinderen niet meer worden uitgebuit: dat is wat wij nastreven. Wij gaan net zo lang door tot dit bereikt is. </string>
+	<string name="soskinderdorpen_info">Door armoede, ziekte, natuurrampen en oorlog hebben 153 miljoen kinderen in de wereld geen ouders of veilig thuis. Zij staan er vaak alleen voor en zijn kwetsbaar. Dit laat diepe sporen na. Kinderen die opgroeien buiten de veiligheid van een liefdevolle familie vertonen vaker gedrags- en leerproblemen en kunnen zich minder goed ontwikkelen. Waardoor hun toekomst op het spel staat. SOS Kinderdorpen gelooft dat familieliefde een primaire levensbehoefte is voor ieder kind. Om een blijvende positieve wending te geven aan het leven van kinderen, zorgen we ervoor dat zij in een liefdevolle familie kunnen opgroeien. </string>
+    <string name="plannederland_info">Armoede heeft nooit één oorzaak. Daarom pakt Plan armoede aan de basis aan, op meerdere terreinen tegelijkertijd. Want een school bouwen heeft weinig zin als kinderen moeten werken, als er geen goede leerkrachten zijn en ouders niet weten hoe belangrijk onderwijs is. Als Plan een school gaat bouwen, zet Plan dus ook projecten op voor inkomensverbetering van ouders, leidt leerkrachten op en vertelt kinderen en ouders over de rechten van kinderen. Plan werkt voor en met kinderen in hun directe omgeving om armoede blijvend te bestrijden. De rechten van kinderen zijn daarbij het uitgangspunt. Daarom besteedt Plan extra aandacht aan meisjes, want zij worden in veel landen achtergesteld en gediscrimineerd. Juist meisjes kunnen de armoedespiraal doorbreken, als zij dezelfde rechten en kansen krijgen als jongens.</string>
+   	<string name="vluchtelingenwerknederland_info">VluchtelingenWerk Nederland behartigt de belangen van vluchtelingen en asielzoekers in Nederland, vanaf het moment van binnenkomst tot en met de integratie in de Nederlandse samenleving.</string>
+    <string name="warchild_info">Kinderen horen niet thuis in oorlog. Nooit. Ze hebben het recht op te groeien in vrede. Zich op een gezonde manier te ontwikkelen, in een veilige omgeving. Te worden wie ze willen zijn. Kinderen die opgroeien tot evenwichtige volwassenen, zijn later beter in staat conflicten te voorkomen of op te lossen. Die generatie vormt de hoeksteen van een toekomst in vrede. Die generatie heeft vrienden nodig. War Child wil ze die vriendschap bieden, samen met onze Friends.War Child’s missie: Een oorlogskind helpen de toekomst te verbeteren</string>
+    <string name="kwfkankerbestrijding_info">Miljoenen mensen delen een droom: een wereld waarin kanker niet langer een dodelijke ziekte is. Wat zou het mooi zijn als deze droom uitkomt. We doen er alles aan om dit waar te maken. Wereldwijd werken wetenschappers naar die dag toe. Zo snel als zij kunnen. Zo snel als wij hen in staat stellen. We kunnen kanker onder controle brengen. Wij willen niet accepteren dat er zo veel mensen aan kanker lijden en er al te vaak aan overlijden.</string>
+    <string name="longfonds_info">In Nederland zijn ruim een miljoen mensen met een longziekte. Het Longfonds zet zich voor hen in, want longen zijn van levensbelang. Wij strijden voor gezonde longen en tegen longziekten.</string>
+    <string name="reumafonds_info">Het Reumafonds strijdt voor een beter leven met reuma vandaag en een leven zonder reuma morgen. We doen dat samen met vrijwilligers, donateurs, patiënten, artsen en onderzoekers.</string>
+    <string name="alzheimernederland_info">Alzheimer Nederland geeft al ruim 25 jaar hulp en informatie aan mensen met dementie en hun directe omgeving. Door belangenbehartiging en financiering van wetenschappelijk onderzoek werken we aan een betere toekomst, uiteindelijk zonder dementie.</string>
+    <string name="nationaalepilepsiefonds_info">In ons land heeft 1 op de 150 mensen epilepsie. Het Epilepsiefonds zet zich al meer dan 100 jaar in voor de epilepsiebestrijding en een goede behandeling en begeleiding van mensen met epilepsie.</string>
+    <string name="hartstichting_info">De Hartstichting strijdt tegen hart- en vaatziekten. Het aantal sterfgevallen en patiënten moet omlaag. Hiertoe investeert de Hartstichting in wetenschappelijk onderzoek, voorlichting en patiëntenzorg. Ongeveer 50% van het geld gaat naar onderzoek.</string>
+    <string name="verenigingdezonnebloem_info">We zorgen voor betekenisvolle ontmoetingen tussen vrijwilligers en mensen met een fysieke beperking door ziekte of handicap. Zo kunnen tienduizenden mensen, met én zonder handicap, volop mee blijven doen aan onze maatschappij. En helpen we eenzaamheid te voorkomen. Samen bouwen we aan een zorgzame samenleving, want zonder elkaar is iedereen alleen. </string>
+    <string name="kika_info">Stichting Kinderen Kankervrij (KiKa) heeft als algemeen doel: het werven van fondsen voor vernieuwend onderzoek en andere activiteiten op het gebied van kinderkanker, gericht op minder pijn en strijd, meer genezing en een hogere kwaliteit van leven op latere leeftijd. </string>
+    <string name="maagleverdarmstichting_info">De Maag Lever Darm Stichting is een onafhankelijke stichting die al ruim 30 jaar werkt aan een betere toekomst voor mensen met maag-, darm-, en leverproblemen. Het is onze missie om maag-, darm- en leverziekten te voorkomen, te bestrijden en de kwaliteit van leven van patiënten te verbeteren. De rol die de MLDS hierbij als geen ander inneemt is die van facilitator van wetenschappelijk onderzoek, voorlichter en kennisbron. Om onze missie kunnen realiseren, werft de MLDS fondsen en werkt de stichting intensief samen met vrijwilligers, patiëntenorganisaties, zorgprofessionals, onderzoekers, overheden en bedrijfsleven.</string>
+    <string name="fightcancer_info">Fight cancer is het jonge en eigenzinnige actielabel van KWF Kankerbestrijding voor jongvolwassenen (tussen de 20 en 40). Onder het motto ‘Love life. Fight cancer.’ laat Fight cancer zien dat de strijd tegen kanker resultaat oplevert en inspireert ze mensen om mee te doen. Fight cancer wil jonge mensen bewust maken van de noodzaak van kankerbestrijding, ze betrekken bij de strijd tegen kanker en vooral: aansporen tot actie! De opbrengsten van Fight cancer gaan (net als die van KWF Kankerbestrijding) naar wetenschappelijk onderzoek naar kanker, voorlichting en patiëntenondersteuning. </string>
+    <string name="diabetesfonds_info">Diabetes heeft grote invloed op je leven. Je moet iedere dag rekening houden met wat, wanneer en hoeveel je eet. En je bent constant bang voor schade aan je lijf of erger, want jaarlijks overlijden 10.000 Nederlanders aan de gevolgen. Er zijn in Nederland al 1 miljoen mensen met diabetes. Daar komen elke dag 200 mensen bij. Het is zelfs een van de meest voorkomende chronische ziekten bij kinderen. Een toekomst zonder diabetes. Daar gaan we voor.</string>
+    <string name="nsgk_info">NSGK steunt projecten die de ontwikkeling van kinderen met een handicap stimuleren, zodat ze kunnen opgroeien tot zo zelfstandig mogelijke volwassenen. Volwassenen die door hun capaciteiten en talenten te benutten een eigen, unieke rol in de maatschappij kunnen vervullen, op de manier die ze zelf willen. Daarnaast steunen we het gezin en de directe omgeving van deze kinderen en jongeren. </string>
+    <string name="stopaidsnow_info">Samen werken aan een wereld zonder aids - dat is wat STOP AIDS NOW!  doet. We doen dat door fondsen te werven voor aidsprojecten in ontwikkelingslanden. Maar ook door zo veel mogelijk Nederlanders te betrekken bij aidsproblematiek via onze acties, campagnes en voorlichting. Daarbij werken we samen met partners, zowel in Nederland als internationaal. Samen met hen zetten we projecten op, die vooral jongeren, vrouwen en kinderen steunen.</string>
+    <string name="nierstichting_info">De Nierstichting zet zich in voor een toekomst met zo min mogelijk nierziekten én een betere toekomst voor nierpatiënten. Dát is onze veelzeggende missie. En we doen er al het mogelijke aan om die waar te maken.</string>
+    <string name="amnestyinternational_info">Amnesty International is een onafhankelijke beweging die zich inzet voor slachtoffers van schendingen van mensenrechten. Amnesty heeft 3 miljoen leden, donateurs en vaste begunstigers in meer dan 150 landen. Amnesty Nederland is met bijna 280.000 leden één van de grootste afdelingen.</string>
+    <string name="cliniclownsnederland_info">Kinderen met een ziekte of handicap zijn afhankelijk en kwetsbaar. Doordat de omgeving zich richt op de ziekte of handicap komen zij zo ongewild in een volwassen wereld terecht. CliniClowns vindt dat kinderen onder alle omstandigheden moeten kunnen blijven spelen. Gewoon weer even kind kunnen zijn. Door te spelen kan het kind zich ontwikkelen. Het spel kan helpen zijn situatie te verwerken.</string>
+    
+    <!-- Charities Title -->
+    
     <string name="wnf_title">Wereld Natuur Fonds</string>
     <string name="wspa_title">WSPA</string>
     <string name="kattenbond_title">Sophia Kattenbond</string>
@@ -63,9 +117,30 @@
 	<string name="greenpeace_title">Greenpeace</string>
 	<string name="natuurmonumenten_title">Natuurmonumenten</string>
 	<string name="milieudefensie_title">Milieudefensie</string>
-    
-    
-
+    <string name="unicef_title">UNICEF</string>
+    <string name="legerdesheils_title">Het Leger des Heils</string>
+    <string name="terredeshommes_title">Terre des Hommes</string>
+	<string name="soskinderdorpen_title">SOS Kinderdorpen</string>
+    <string name="plannederland_title">Plan Nederland</string>
+    <string name="vluchtelingenwerknederland_title">VluchtelingenWerk Nederland</string>
+    <string name="warchild_title">War Child</string>
+    <string name="diabetesfonds_title">Diabetes Fonds</string>
+    <string name="nsgk_title">NSGK</string>
+    <string name="stopaidsnow_title">STOP AIDS NOW!</string>
+    <string name="nierstichting_title">Nierstichting</string>
+    <string name="amnestyinternational_title">Amnesty International</string>
+    <string name="cliniclownsnederland_title">CliniClowns Nederland</string>
+    <string name="kwfkankerbestrijding_title">KWF Kankerbestrijding</string>
+    <string name="longfonds_title">Longfonds</string>
+    <string name="reumafonds_title">Reumafonds</string>
+    <string name="alzheimernederland_title">Alzheimer Nederland</string>
+    <string name="nationaalepilepsiefonds_title">Nationaal Epilepsiefonds</string>
+    <string name="hartstichting_title">Hartstichting</string>
+    <string name="verenigingdezonnebloem_title">Vereniging de Zonnebloem</string>
+    <string name="kika_title">KiKa</string>
+    <string name="maagleverdarmstichting_title">Maag Lever Darm Stichting</string>
+    <string name="fightcancer_title">Fight Cancer</string>
+    	
     <!-- Rest -->
     
     <string name="title_activity_category_news_dieren">CategoryNewsDierenActivity</string>
