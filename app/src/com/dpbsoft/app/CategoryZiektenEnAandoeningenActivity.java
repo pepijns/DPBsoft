@@ -12,7 +12,7 @@ public class CategoryZiektenEnAandoeningenActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_category_overig);
+		setContentView(R.layout.activity_category_ziekten_en_aandoeningen);
 
 		/* Knoppen */
 		Button btnNieuws = (Button)findViewById(R.id.btnNieuws);

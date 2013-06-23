@@ -12,7 +12,7 @@ public class CategoryOntwikkelingshulpActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_category_overig);
+		setContentView(R.layout.activity_category_ontwikkelingshulp);
 
 		/* Knoppen */
 		Button btnNieuws = (Button)findViewById(R.id.btnNieuws);

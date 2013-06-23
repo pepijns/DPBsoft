@@ -11,8 +11,16 @@ import android.widget.AdapterView.OnItemClickListener;
  
 public class ListCategoriesActivity extends ListActivity {
  
-	static final String[] CATEGORIES = new String[] { "Dieren", "Natuur en milieu", "Noodhulp", "Ontwikkelingshulp", "Vluchtelingenhulp", "Ziekten en aandoeningen", "Overig" };
+	//list of categories
+	static final String[] CATEGORIES = new String[] { "Dieren", "Natuur en milieu", "Ontwikkelingshulp", "Vluchtelingenhulp", "Ziekten en aandoeningen", "Overig" };
 
+	//categories
+	private static final int DIEREN = 1;
+	private static final int NATUUR = 2;
+	private static final int ONTWIKKELING = 3;
+	private static final int VLUCHTELINGEN = 4;
+	private static final int ZIEKTES = 5;
+	private static final int OVERIG = 6;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -31,11 +39,34 @@ public class ListCategoriesActivity extends ListActivity {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				switch (position){
 				case 0:
-					Globals.getInstance().setCategory(1);
-					Intent intent = new Intent(ListCategoriesActivity.this, CategoryDierenActivity.class);
-					startActivity(intent);
+					Globals.getInstance().setCategory(DIEREN);
+					Intent a = new Intent(ListCategoriesActivity.this, CategoryDierenActivity.class);
+					startActivity(a);
 					break;
-				default:
+				case 1:
+					Globals.getInstance().setCategory(NATUUR);
+					Intent b = new Intent(ListCategoriesActivity.this, CategoryNatuurEnMilieuActivity.class);
+					startActivity(b);
+					break;
+				case 2:
+					Globals.getInstance().setCategory(ONTWIKKELING);
+					Intent c = new Intent(ListCategoriesActivity.this, CategoryOntwikkelingshulpActivity.class);
+					startActivity(c);
+					break;
+				case 3:
+					Globals.getInstance().setCategory(VLUCHTELINGEN);
+					Intent d = new Intent(ListCategoriesActivity.this, CategoryVluchtelingenhulpActivity.class);
+					startActivity(d);
+					break;
+				case 4:
+					Globals.getInstance().setCategory(ZIEKTES);
+					Intent e = new Intent(ListCategoriesActivity.this, CategoryZiektenEnAandoeningenActivity.class);
+					startActivity(e);
+					break;
+				case 5:
+					Globals.getInstance().setCategory(OVERIG);
+					Intent f = new Intent(ListCategoriesActivity.this, CategoryOverigActivity.class);
+					startActivity(f);
 					break;
 				}
 			}
