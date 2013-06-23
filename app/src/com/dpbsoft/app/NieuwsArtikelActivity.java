@@ -21,6 +21,16 @@ public class NieuwsArtikelActivity extends Activity {
 	private String linkProtocol;
 	private int position = NieuwsOverzichtActivity.ArrayPosition;
 
+	private int ranking = 0;
+
+	public int getRanking() {
+		return ranking;
+	}
+
+	public void setRanking(int ranking) {
+		this.ranking = ranking;
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

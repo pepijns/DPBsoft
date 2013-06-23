@@ -160,6 +160,11 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 				 	ArrayPosition = position;
 				 	Intent intent = new Intent(NieuwsOverzichtActivity.this, NieuwsArtikelActivity.class);
 				 	startActivity(intent);
+
+				 	NieuwsArtikelActivity naa = new NieuwsArtikelActivity();
+				 	int rank = naa.getRanking();
+				 	rank=+1;
+				 	naa.setRanking(rank);
 			 		}
 		 	}); 
 	 }
