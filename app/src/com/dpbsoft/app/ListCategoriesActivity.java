@@ -22,8 +22,8 @@ public class ListCategoriesActivity extends ListActivity {
 	private static final int ZIEKTES = 5;
 	private static final int OVERIG = 6;
 	
-	private int rankingDieren = 0;
-	private int rankingNatuur = 0;
+	private int rankingDieren = 5;
+	private int rankingNatuur = 2;
 	private int rankingOntwikkeling = 0;
 	private int rankingVluchtelingen = 0;
 	private int rankingZiektes = 0;

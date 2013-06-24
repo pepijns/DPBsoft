@@ -48,6 +48,12 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	
 	public ListView lstTweets = null;
 	String newscategory = new String();
+	String rank1;
+	String rank2;
+	String rank3;
+	String rank4;
+	String rank5;
+	String rank6;
 	
 	int nieuwsId = Menu.FIRST;
 	int logoutId = Menu.FIRST +1;
@@ -92,6 +98,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		 super.onCreate(savedInstanceState);
 		 addInt();
 		 sortList();
+		 algemeenOrder();
 		 setContentView(R.layout.activity_nieuw_overzicht);
 		 
 		 
@@ -271,7 +278,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		private String[] feedVluchtelingen = {feedWnf,feedWspa};
 		private String[] feedOverig = {feedWnf,feedWspa};
 		private String[] feedZiektes = {feedWnf,feedWspa};
-		private String[] feedAlgemeen = {feedWnf,feedWspa};
+		
+		private String[] feedAlgemeen = {rank1,rank2,rank3,rank4,rank5,rank6};
 
 		ListCategoriesActivity lca = new ListCategoriesActivity();
 		int dierenRank = lca.getRankingDieren();
@@ -280,6 +288,34 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		int vluchtelingenRank = lca.getRankingVluchtelingen();
 		int ziektesRank = lca.getRankingZiektes();
 		int overigRank = lca.getRankingOverig();
+		
+		public void algemeenOrder(){
+		//dit is nog niet wat het moet worden (een soort place holder)	
+			 for(int i=1;i<points.size();i++) {
+				 if(points.get(points.size()) == dierenRank)
+					{
+					rank1 = feedWnf;
+					}
+				 else if(points.get(points.size()) == natuurRank)
+				 {
+					rank1 = feedWnf;
+				 }
+				 
+			 }
+				 
+			
+			
+			if(Collections.max(points) == dierenRank)
+					{
+					rank1 = feedWnf;
+					}
+			else if(Collections.max(points) == natuurRank)
+			{
+					rank1 = feedWnf;
+			}
+		}
+		
+		
 		
 		
 		List<Integer> points = new ArrayList<Integer>();
@@ -292,11 +328,10 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 			points.add(ziektesRank);
 			points.add(overigRank);
 		}
-	    //Arrays.sort(points, new Comparator<Integer>());
-		
+				
 		public void sortList() {
 			Collections.sort(points, new CustomIntComparator());
-	    	Collections.reverse(points);
+			Collections.reverse(points);
 		}
 
 }
