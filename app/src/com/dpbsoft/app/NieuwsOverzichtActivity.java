@@ -14,6 +14,7 @@ import org.xmlpull.v1.XmlSerializer;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,7 +45,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	
 	private boolean mIsBackButtonPressed;
 	private int group1Id = 1;
-	
+	private boolean isFBinstalled;
+
 	static int ArrayPosition;
 	
 	public ListView lstTweets = null;
@@ -57,11 +59,26 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
-	    menu.add(group1Id, nieuwsId, nieuwsId, "Nieuwsoverzicht");
-	    menu.add(group1Id, logoutId, logoutId, "Logout");
+	    menu.add(group1Id, nieuwsId, nieuwsId, "Categorieën");
+	    if (!isFBinstalled) { 
+	    	menu.add(group1Id, logoutId, logoutId, "Logout");
+	    }
 
 	    return super.onCreateOptionsMenu(menu); 
 	    }
+	
+	private boolean appInstalledOrNot(String uri) {
+        PackageManager pm = getPackageManager();
+        boolean app_installed = false;
+        try {
+               pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
+               app_installed = true;
+        }
+        catch (PackageManager.NameNotFoundException e){
+               app_installed = false;
+        }
+        return app_installed ;
+    }
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -75,11 +92,10 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 			
 				case 2:
 					Session session = Session.getActiveSession();
-				    session.closeAndClearTokenInformation();
-				    Toast.makeText(getApplicationContext(), "U bent uitgelogd.", Toast.LENGTH_LONG).show();
-				    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-				    return true;
-	
+					session.closeAndClearTokenInformation();
+					Toast.makeText(getApplicationContext(), "U bent uitgelogd.", Toast.LENGTH_LONG).show();
+					startActivity(new Intent(NieuwsOverzichtActivity.this, MainActivity.class));
+
 				default:
 				    break;
 				}
@@ -94,6 +110,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		 addInt();
 		 sortList();
 		 setContentView(R.layout.activity_nieuw_overzicht);
+		 isFBinstalled = appInstalledOrNot("com.facebook.katana");
+
 		 
 		 
 		 Bundle extras = getIntent().getExtras();
