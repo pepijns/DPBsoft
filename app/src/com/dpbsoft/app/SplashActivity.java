@@ -55,7 +55,8 @@ public class SplashActivity extends Activity {
 			intent.putExtra("newscategory","algemeen");
 			startActivity(intent);
 		}	
-		else if (startedBefore == false) {
+		
+		else {
 			Intent intent = new Intent(SplashActivity.this, MainActivity.class);
 			intent.putExtra("newscategory","algemeen");
 			startActivity(intent);

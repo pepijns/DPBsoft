@@ -13,10 +13,13 @@ import org.xmlpull.v1.XmlSerializer;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.util.Xml;
 import android.view.Gravity;
@@ -29,6 +32,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.facebook.Session;
+import com.facebook.SessionState;
 
 public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnItemClickListener{
 
@@ -46,7 +50,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	private boolean mIsBackButtonPressed;
 	private int group1Id = 1;
 	private boolean isFBinstalled;
-
+	private static Context context;
 	static int ArrayPosition;
 	
 	public ListView lstTweets = null;
@@ -54,7 +58,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	
 	int nieuwsId = Menu.FIRST;
 	int logoutId = Menu.FIRST +1;
-	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -93,6 +96,10 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 				case 2:
 					Session session = Session.getActiveSession();
 					session.closeAndClearTokenInformation();
+					
+					SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+	    			p.edit().putBoolean("loggedIn", false).commit();
+	    			
 					Toast.makeText(getApplicationContext(), "U bent uitgelogd.", Toast.LENGTH_LONG).show();
 					startActivity(new Intent(NieuwsOverzichtActivity.this, MainActivity.class));
 
@@ -103,6 +110,19 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	    return super.onOptionsItemSelected(item);
 	    
 	}
+	@Override
+	  public void onActivityResult(int requestCode, int resultCode, Intent data) {
+	      super.onActivityResult(requestCode, resultCode, data);
+	      Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);	
+	}
+	
+	public void fbLogin() {
+		Session.openActiveSession(this, true, new Session.StatusCallback() {
+	    	@Override
+	    	public void call(Session session, SessionState state, Exception exception) { 
+	    	}
+		});
+	}
 
 	 @Override
 	 public void onCreate(Bundle savedInstanceState) {
@@ -111,8 +131,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		 sortList();
 		 setContentView(R.layout.activity_nieuw_overzicht);
 		 isFBinstalled = appInstalledOrNot("com.facebook.katana");
-
-		 
+		 fbLogin();
+		 NieuwsOverzichtActivity.context = getApplicationContext();
 		 
 		 Bundle extras = getIntent().getExtras();
 		 if (extras != null) {
