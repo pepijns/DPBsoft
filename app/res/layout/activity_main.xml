@@ -21,17 +21,6 @@
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/aboutButton"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignLeft="@+id/loginButton"
-        android:layout_below="@+id/loginButton"
-        android:layout_marginTop="25dp"
-        android:background="@android:color/white"
-        android:onClick="aboutScreen"
-        android:text="@string/title_activity_about" />
-
-    <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -41,5 +30,15 @@
         android:text="@string/title_activity_login" 
         android:onClick="loginScreen"
         android:background="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/loginButton"
+        android:layout_below="@+id/loginButton"
+        android:layout_marginTop="84dp"
+        android:text="Log in met Facebook om van deze applicatie gebruik te kunnen maken."
+        android:textColor="@color/main_white" />
 
 </RelativeLayout>
