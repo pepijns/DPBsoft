@@ -42,6 +42,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	static List<String> hosts;
 	static List<String> protocols;
 	
+	private boolean mIsBackButtonPressed;
 	private int group1Id = 1;
 	
 	static int ArrayPosition;
@@ -246,14 +247,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		            return o2.compareTo(o1);
 		        }
 		       }
-		
-        
-	 @Override
-		public void onBackPressed() {
-		    // set the flag to true so the next activity won't start up
-		 	Intent intent = new Intent(NieuwsOverzichtActivity.this, MainActivity.class);
-			startActivity(intent);
-	 }
 	 
 		public String[] getFeeds(String cat){
 			if(cat == "algemeen")
@@ -281,7 +274,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		int ziektesRank = lca.getRankingZiektes();
 		int overigRank = lca.getRankingOverig();
 		
-		
 		List<Integer> points = new ArrayList<Integer>();
 	
 		public void addInt() {
@@ -298,5 +290,12 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 			Collections.sort(points, new CustomIntComparator());
 	    	Collections.reverse(points);
 		}
-
+		
+		
+		@Override
+	    public void onBackPressed() {
+	        // set the flag to true so the next activity won't start up
+	        mIsBackButtonPressed = true;
+	        super.onBackPressed();
+	    }
 }
