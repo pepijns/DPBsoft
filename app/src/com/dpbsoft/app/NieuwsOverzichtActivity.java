@@ -116,6 +116,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	    return super.onOptionsItemSelected(item);
 	    
 	}
+	
 	@Override
 	  public void onActivityResult(int requestCode, int resultCode, Intent data) {
 	      super.onActivityResult(requestCode, resultCode, data);
@@ -133,9 +134,9 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	 @Override
 	 public void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
-		 addInt();
-		 sortList();
-		 algemeenOrder();
+		 //addInt();
+		 //sortList();
+		 //algemeenOrder();
 		 setContentView(R.layout.activity_nieuw_overzicht);
 		 isFBinstalled = appInstalledOrNot("com.facebook.katana");
 		 fbLogin();
@@ -278,101 +279,95 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		 }
 	}
 	    
-		public class CustomComparator implements Comparator<Message> {
-		     @Override
-		     public int compare(Message o1, Message o2) {
-		         return o1.getDate().compareTo(o2.getDate());
-		     		}
-		       }
-	 
-		public class CustomIntComparator implements Comparator<Integer> {
-		     @Override
-		     public int compare(Integer o1, Integer o2)
-		        {
-		            return o2.compareTo(o1);
-		        }
-		       }
-	 
-		public String[] getFeeds(String cat){
-			if(cat == "algemeen")
-				return feedAlgemeen;
-			else
-				return feedDieren;
-		}
-	 
-	 	private String feedWnf = "http://www.nu.nl/feeds/rss/tag/dieren.rss";
-		private String feedWspa = "http://feeds.feedburner.com/OverzichtGoedeDoelen";
-		
-		private String[] feedDieren = {feedWnf,feedWspa};
-		private String[] feedNatuur = {feedWnf,feedWspa};
-		private String[] feedOntwikkeling = {feedWnf,feedWspa};
-		private String[] feedVluchtelingen = {feedWnf,feedWspa};
-		private String[] feedOverig = {feedWnf,feedWspa};
-		private String[] feedZiektes = {feedWnf,feedWspa};
-		
-		private String[] feedAlgemeen = {rank1,rank2,rank3,rank4,rank5,rank6};
-
-		ListCategoriesActivity lca = new ListCategoriesActivity();
-		int dierenRank = lca.getRankingDieren();
-		int natuurRank = lca.getRankingNatuur();
-		int ontwikkelingRank = lca.getRankingOntwikkeling();
-		int vluchtelingenRank = lca.getRankingVluchtelingen();
-		int ziektesRank = lca.getRankingZiektes();
-		int overigRank = lca.getRankingOverig();
-		
-<<<<<<< HEAD
-		public void algemeenOrder(){
-		//dit is nog niet wat het moet worden (een soort place holder)	
-			 for(int i=1;i<points.size();i++) {
-				 if(points.get(points.size()) == dierenRank)
-					{
-					rank1 = feedWnf;
-					}
-				 else if(points.get(points.size()) == natuurRank)
-				 {
-					rank1 = feedWnf;
-				 }
-				 
-			 }
-				 
-			
-			
-			if(Collections.max(points) == dierenRank)
-					{
-					rank1 = feedWnf;
-					}
-			else if(Collections.max(points) == natuurRank)
-			{
-					rank1 = feedWnf;
-			}
-		}
-		
-		
-		
-		
-=======
->>>>>>> f6652651a3a74b1fb02d2fae184a7afc7ec1dae9
-		List<Integer> points = new ArrayList<Integer>();
-	
-		public void addInt() {
-			points.add(dierenRank);
-			points.add(natuurRank);
-			points.add(ontwikkelingRank);
-			points.add(vluchtelingenRank);
-			points.add(ziektesRank);
-			points.add(overigRank);
-		}
-				
-		public void sortList() {
-			Collections.sort(points, new CustomIntComparator());
-			Collections.reverse(points);
-		}
-		
-		
+	public class CustomComparator implements Comparator<Message> {
 		@Override
-	    public void onBackPressed() {
-	        // set the flag to true so the next activity won't start up
-	        mIsBackButtonPressed = true;
-	        super.onBackPressed();
-	    }
+		public int compare(Message o1, Message o2) {
+		return o1.getDate().compareTo(o2.getDate());
+		}
+	}
+	 
+	public class CustomIntComparator implements Comparator<Integer> {
+		@Override
+		public int compare(Integer o1, Integer o2)
+		{
+			return o2.compareTo(o1);
+		}
+	}
+	 
+	public String[] getFeeds(String cat){
+		if(cat == "algemeen")
+			return feedAlgemeen;
+		else
+			return feedDieren;
+		}
+	 
+	private String feedWnf = "http://www.nu.nl/feeds/rss/tag/dieren.rss";
+	private String feedWspa = "http://feeds.feedburner.com/OverzichtGoedeDoelen";
+		
+	private String[] feedDieren = {feedWnf,feedWspa};
+	private String[] feedNatuur = {feedWnf,feedWspa};
+	private String[] feedOntwikkeling = {feedWnf,feedWspa};
+	private String[] feedVluchtelingen = {feedWnf,feedWspa};
+	private String[] feedOverig = {feedWnf,feedWspa};
+	private String[] feedZiektes = {feedWnf,feedWspa};
+		
+	private String[] feedAlgemeen = {rank1,rank2,rank3,rank4,rank5,rank6};
+
+	ListCategoriesActivity lca = new ListCategoriesActivity();
+	int dierenRank = lca.getRankingDieren();
+	int natuurRank = lca.getRankingNatuur();
+	int ontwikkelingRank = lca.getRankingOntwikkeling();
+	int vluchtelingenRank = lca.getRankingVluchtelingen();
+	int ziektesRank = lca.getRankingZiektes();
+	int overigRank = lca.getRankingOverig();
+		
+	/*
+	public void algemeenOrder(){
+	//dit is nog niet wat het moet worden (een soort place holder)	
+		for(int i=1;i<points.size();i++) {
+		if(points.get(points.size()) == dierenRank)
+		{
+			rank1 = feedWnf;
+		}
+		else if(points.get(points.size()) == natuurRank)
+		{
+			rank1 = feedWnf;
+		}
+				 
+	}
+				 
+		if(Collections.max(points) == dierenRank)
+		{
+			rank1 = feedWnf;
+		}
+		else if(Collections.max(points) == natuurRank)
+		{
+			rank1 = feedWnf;
+		}
+	}
+		
+	List<Integer> points = new ArrayList<Integer>();
+	
+	public void addInt() {
+		points.add(dierenRank);
+		points.add(natuurRank);
+		points.add(ontwikkelingRank);
+		points.add(vluchtelingenRank);
+		points.add(ziektesRank);
+		points.add(overigRank);
+	}
+				
+	public void sortList() {
+		Collections.sort(points, new CustomIntComparator());
+		Collections.reverse(points);
+	}
+		
+	*/
+		
+	@Override
+	public void onBackPressed() {
+		// set the flag to true so the next activity won't start up
+		mIsBackButtonPressed = true;
+		super.onBackPressed();
+	}
 }
