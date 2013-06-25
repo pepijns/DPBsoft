@@ -9,46 +9,59 @@
     tools:context=".CharityInfoActivity"  
     android:background="@color/main_blue">
 
-    <TextView
-        android:id="@+id/tvTitleInfo"
-        android:layout_width="fill_parent"
-        android:layout_height="80dp"
+    <ScrollView
+        android:id="@+id/svLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:textSize="25sp"
-        android:textColor="@color/main_white" />
+        android:layout_alignParentBottom="true">
+        
+        <LinearLayout 
+            android:id="@+id/lLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    
+    	<TextView
+      		android:id="@+id/tvTitleInfo"
+       		android:layout_width="fill_parent"
+       		android:layout_height="80dp"
+       		android:layout_marginTop="40dp"
+        	android:textSize="25sp"
+        	android:textColor="@color/main_white" />
 
-    <TextView
-        android:id="@+id/tvInfo"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/tvTitleInfo"
-        android:layout_alignTop="@id/tvTitleInfo"
-        android:layout_marginTop="40dp"
-        android:textColor="@color/main_white"
-        android:textSize="15sp" />
+    	<TextView
+        	android:id="@+id/tvInfo"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="40dp"
+        	android:textColor="@color/main_white"
+        	android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/tvDonate"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/tvInfo"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="5dp"
-        android:text="@string/donate"
-        android:textSize="20sp"            
-       android:clickable="true" />
+    	<TextView
+        	android:id="@+id/tvDonate"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="5dp"
+        	android:text="@string/donate"
+        	android:textSize="20sp"            
+       		android:clickable="true" 
+   			android:onClick="onClick" />
 
-    <TextView
-        android:id="@+id/tvURL"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/tvDonate"
-        android:layout_alignLeft="@id/tvDonate"
-        android:layout_marginTop="25dp"
-        android:text="@string/url"
-        android:textSize="20sp"              
-       android:clickable="true" />
+    	<TextView
+        	android:id="@+id/tvURL"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="25dp"
+        	android:text="@string/url"
+        	android:textSize="20sp"              
+       		android:clickable="true" 
+   			android:onClick="onClick" />
+    	
+    	</LinearLayout>
+    	
+    </ScrollView>
 
 </RelativeLayout>

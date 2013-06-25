@@ -50,17 +50,6 @@ public class MainActivity extends Activity {
 	    	@Override
 	    	public void call(Session session, SessionState state, Exception exception) {
 	    		if (session.isOpened()) {
-	    			
-	    			//SharedPreferences prefs = getPreferences(0); 
-	    			//String restoredText = prefs.getString("text", null);
-	    			
-	    			//if (restoredText == null) {
-		    		//	SharedPreferences.Editor editor = getPreferences(0).edit();
-		    		//	editor.putString("text", "KEIHARDE DREK");
-		    		//	editor.commit();
-		    		//	Toast.makeText(getApplicationContext(), "SHARED INGEVULD", Toast.LENGTH_LONG).show();
-	    			//}
-	    			
 	    			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
 	    			p.edit().putBoolean("loggedIn", true).commit();
 	    			
