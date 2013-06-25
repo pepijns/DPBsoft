@@ -9,12 +9,25 @@
     tools:context=".CharitySupportActivity"  
     android:background="@color/main_blue">
 
+    <ScrollView
+        android:id="@+id/svLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true">
+        
+        <LinearLayout 
+            android:id="@+id/lLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    
     <Button
         android:id="@+id/btnSteun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:text="@string/steun"
         android:textSize="15sp"
    		android:onClick="onClick"/>
@@ -23,8 +36,6 @@
         android:id="@+id/tvSupport"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/tvSteun"
-        android:layout_below="@+id/btnSteun"
         android:layout_marginTop="31dp"
         android:textColor="@color/main_white"
         android:textSize="15sp" />
@@ -33,10 +44,9 @@
         android:id="@+id/tvDonate"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvSupport"
-        android:layout_below="@+id/tvSupport"
         android:layout_marginTop="18dp"
-        android:clickable="true"
+        android:clickable="true" 
+   		android:onClick="onClick"
         android:text="@string/donate"
         android:textSize="20sp" />
 
@@ -44,8 +54,6 @@
         android:id="@+id/tvSteun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnSteun"
-        android:layout_alignRight="@+id/tvTitleSupport"
         android:layout_marginBottom="27dp"
         android:text="@string/charity_steun"
         android:textColor="@color/main_white"
@@ -55,10 +63,12 @@
         android:id="@+id/tvTitleSupport"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="33dp"
         android:textColor="@color/main_white"
         android:textSize="25sp" />
+    
+    </LinearLayout>
+    
+    </ScrollView>
 
 </RelativeLayout>
