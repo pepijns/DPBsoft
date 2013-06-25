@@ -304,6 +304,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		private String feedWspa = "http://feeds.feedburner.com/OverzichtGoedeDoelen";
 		
 		private String[] feedDieren = {feedWnf,feedWspa};
+		
+		//hier moeten nog feeds in:
 		private String[] feedNatuur = {feedWnf,feedWspa};
 		private String[] feedOntwikkeling = {feedWnf,feedWspa};
 		private String[] feedVluchtelingen = {feedWnf,feedWspa};
@@ -320,39 +322,175 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		int ziektesRank = lca.getRankingZiektes();
 		int overigRank = lca.getRankingOverig();
 		
-<<<<<<< HEAD
+		List<Integer> points = new ArrayList<Integer>();
+		
 		public void algemeenOrder(){
-		//dit is nog niet wat het moet worden (een soort place holder)	
-			 for(int i=1;i<points.size();i++) {
-				 if(points.get(points.size()) == dierenRank)
+			
+				 //rank1
+			
+				 if(points.get(1) == dierenRank)
 					{
 					rank1 = feedWnf;
 					}
-				 else if(points.get(points.size()) == natuurRank)
+				 else if(points.get(1) == natuurRank)
+				 {
+					rank1 = feedWnf;
+				 }
+				 else if(points.get(1) == ontwikkelingRank)
+					{
+					rank1 = feedWnf;
+					}
+				 else if(points.get(1) == vluchtelingenRank)
+				 {
+					rank1 = feedWnf;
+				 }
+				 else if(points.get(1) == ziektesRank)
+					{
+					rank1 = feedWnf;
+					}
+				 else if(points.get(1) == overigRank)
 				 {
 					rank1 = feedWnf;
 				 }
 				 
-			 }
+				//rank2
 				 
-			
-			
-			if(Collections.max(points) == dierenRank)
+				 if(points.get(2) == dierenRank)
 					{
-					rank1 = feedWnf;
+					rank2 = feedWnf;
 					}
-			else if(Collections.max(points) == natuurRank)
-			{
-					rank1 = feedWnf;
-			}
+				 else if(points.get(2) == natuurRank)
+				 {
+					rank2 = feedWnf;
+				 }
+				 else if(points.get(2) == ontwikkelingRank)
+					{
+					rank2 = feedWnf;
+					}
+				 else if(points.get(2) == vluchtelingenRank)
+				 {
+					rank2 = feedWnf;
+				 }
+				 else if(points.get(2) == ziektesRank)
+					{
+					rank2 = feedWnf;
+					}
+				 else if(points.get(2) == overigRank)
+				 {
+					rank2 = feedWnf;
+				 }
+
+				//rank3
+				 
+				 if(points.get(3) == dierenRank)
+					{
+					rank3 = feedWnf;
+					}
+				 else if(points.get(3) == natuurRank)
+				 {
+					rank3 = feedWnf;
+				 }
+				 else if(points.get(3) == ontwikkelingRank)
+					{
+					rank3 = feedWnf;
+					}
+				 else if(points.get(3) == vluchtelingenRank)
+				 {
+					rank3 = feedWnf;
+				 }
+				 else if(points.get(3) == ziektesRank)
+					{
+					rank3 = feedWnf;
+					}
+				 else if(points.get(3) == overigRank)
+				 {
+					rank3 = feedWnf;
+				 }
+				 
+				//rank4
+				 
+				 if(points.get(4) == dierenRank)
+					{
+					rank4 = feedWnf;
+					}
+				 else if(points.get(4) == natuurRank)
+				 {
+					rank4 = feedWnf;
+				 }
+				 else if(points.get(4) == ontwikkelingRank)
+					{
+					rank4 = feedWnf;
+					}
+				 else if(points.get(4) == vluchtelingenRank)
+				 {
+					rank4 = feedWnf;
+				 }
+				 else if(points.get(4) == ziektesRank)
+					{
+					rank4 = feedWnf;
+					}
+				 else if(points.get(4) == overigRank)
+				 {
+					rank4 = feedWnf;
+				 }
+				 
+				//rank5
+				 
+				 if(points.get(5) == dierenRank)
+					{
+					rank5 = feedWnf;
+					}
+				 else if(points.get(5) == natuurRank)
+				 {
+					rank5 = feedWnf;
+				 }
+				 else if(points.get(5) == ontwikkelingRank)
+					{
+					rank5 = feedWnf;
+					}
+				 else if(points.get(5) == vluchtelingenRank)
+				 {
+					rank5 = feedWnf;
+				 }
+				 else if(points.get(5) == ziektesRank)
+					{
+					rank5 = feedWnf;
+					}
+				 else if(points.get(5) == overigRank)
+				 {
+					rank5 = feedWnf;
+				 }
+				 
+				//rank6
+				 
+				 if(points.get(6) == dierenRank)
+					{
+					rank6 = feedWnf;
+					}
+				 else if(points.get(6) == natuurRank)
+				 {
+					rank6 = feedWnf;
+				 }
+				 else if(points.get(6) == ontwikkelingRank)
+					{
+					rank6 = feedWnf;
+					}
+				 else if(points.get(6) == vluchtelingenRank)
+				 {
+					rank6 = feedWnf;
+				 }
+				 else if(points.get(6) == ziektesRank)
+					{
+					rank6 = feedWnf;
+					}
+				 else if(points.get(6) == overigRank)
+				 {
+					rank6 = feedWnf;
+				 }
+			 
 		}
 		
 		
-		
-		
-=======
->>>>>>> f6652651a3a74b1fb02d2fae184a7afc7ec1dae9
-		List<Integer> points = new ArrayList<Integer>();
 	
 		public void addInt() {
 			points.add(dierenRank);
