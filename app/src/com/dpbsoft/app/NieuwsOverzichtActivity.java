@@ -1,6 +1,5 @@
 package com.dpbsoft.app;
 
-import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -9,7 +8,6 @@ import java.util.List;
 import org.developerworks.android.FeedParserFactory;
 import org.developerworks.android.Message;
 import org.developerworks.android.ParserType;
-import org.xmlpull.v1.XmlSerializer;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -21,7 +19,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.util.Xml;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -211,7 +208,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	     try{
 	    	 
 	      Log.i("AndroidNews", "ParserType="+type.name());
-	      long start = System.currentTimeMillis();
 	      
 	      for(String s : getFeeds(newscategory))
 	      {
@@ -221,8 +217,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	      Collections.sort(messages, new CustomComparator());
 	      Collections.reverse(messages);
 	      
-	      long duration = System.currentTimeMillis() - start;
-	      String xml = writeXml();      
+   
 	      
 	      // Initialize the ArrayLists
 	      titles = new ArrayList<String>(messages.size());
@@ -247,37 +242,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	      }
 	}
 
-	 private String writeXml(){
-		 XmlSerializer serializer = Xml.newSerializer();
-		 StringWriter writer = new StringWriter();
-		 
-		 	try {
-		 		serializer.setOutput(writer);
-		 		serializer.startDocument("UTF-8", true);
-		 		serializer.startTag("", "messages");
-		 		serializer.attribute("", "number", String.valueOf(messages.size()));
-		 	for (Message msg: messages){
-		 		serializer.startTag("", "message");
-		 		serializer.attribute("", "date", msg.getDate());
-		 		serializer.startTag("", "title");
-		 		serializer.text(msg.getTitle());
-		 		serializer.endTag("", "title");
-		 		serializer.startTag("", "url");
-		 		serializer.text(msg.getLink().toExternalForm());
-		 		serializer.endTag("", "url");
-		 		serializer.startTag("", "body");
-		 		serializer.text(msg.getDescription());
-		 		serializer.endTag("", "body");
-		 		serializer.endTag("", "message");
-		 }
-		 	
-		 serializer.endTag("", "messages");
-		 serializer.endDocument();
-		 return writer.toString();
-		 } catch (Exception e) {
-		 throw new RuntimeException(e);
-		 }
-	}
+	
 	    
 	public class CustomComparator implements Comparator<Message> {
 		@Override
@@ -304,7 +269,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	private String feedWnf = "http://www.nu.nl/feeds/rss/tag/dieren.rss";
 	private String feedWspa = "http://feeds.feedburner.com/OverzichtGoedeDoelen";
 		
-<<<<<<< HEAD
 		private String[] feedDieren = {feedWnf,feedWspa};
 		
 		//hier moeten nog feeds in:
@@ -313,14 +277,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		private String[] feedVluchtelingen = {feedWnf,feedWspa};
 		private String[] feedOverig = {feedWnf,feedWspa};
 		private String[] feedZiektes = {feedWnf,feedWspa};
-=======
-	private String[] feedDieren = {feedWnf,feedWspa};
-	private String[] feedNatuur = {feedWnf,feedWspa};
-	private String[] feedOntwikkeling = {feedWnf,feedWspa};
-	private String[] feedVluchtelingen = {feedWnf,feedWspa};
-	private String[] feedOverig = {feedWnf,feedWspa};
-	private String[] feedZiektes = {feedWnf,feedWspa};
->>>>>>> dfec5ffe2cc0f48d95960c1cca262b2e7e4c58bc
 		
 	private String[] feedAlgemeen = {rank1,rank2,rank3,rank4,rank5,rank6};
 
@@ -332,7 +288,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	int ziektesRank = lca.getRankingZiektes();
 	int overigRank = lca.getRankingOverig();
 		
-<<<<<<< HEAD
 		List<Integer> points = new ArrayList<Integer>();
 		
 		public void algemeenOrder(){
@@ -498,8 +453,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 				 {
 					rank6 = feedWnf;
 				 }
+		}
 			 
-=======
 	/*
 	public void algemeenOrder(){
 	//dit is nog niet wat het moet worden (een soort place holder)	
