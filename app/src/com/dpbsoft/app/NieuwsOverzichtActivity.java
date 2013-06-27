@@ -226,7 +226,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	    	      Collections.reverse(tempMessages);
 	    	      
 	    	      int l = points.get(iz);
-	    	      int listLength = (int)l / iz * 30;
+	    	      int listLength = (int)l / sum * 30;
 	    	      if(listLength ==0)
 	    	    	  listLength = 1;
 	    	      

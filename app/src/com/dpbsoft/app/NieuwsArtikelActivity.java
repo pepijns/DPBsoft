@@ -1,7 +1,11 @@
 package com.dpbsoft.app;
 
+import java.util.Arrays;
+import java.util.List;
+
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -9,9 +13,14 @@ import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class NieuwsArtikelActivity extends Activity {
+import com.facebook.Session;
+import com.facebook.widget.WebDialog;
+
+public class NieuwsArtikelActivity extends Activity implements OnClickListener{
 	
 	private String titleString;
 	private String descriptionString;
@@ -20,6 +29,8 @@ public class NieuwsArtikelActivity extends Activity {
 	private String linkHost;
 	private String linkProtocol;
 	private int position = NieuwsOverzichtActivity.ArrayPosition;
+	private static final List<String> PERMISSIONS = Arrays.asList("publish_actions");
+	private static final int REAUTH_ACTIVITY_CODE = 100;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +51,15 @@ public class NieuwsArtikelActivity extends Activity {
 		}
 	}
 
+	@Override
+	public void onClick(View v) {
+		switch(v.getId()) {
+    	case R.id.tvShare:
+    		share(titleString, linkProtocol, linkHost, linkPath);
+    		break;
+		}
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -88,5 +108,33 @@ public class NieuwsArtikelActivity extends Activity {
 		textView4.setMovementMethod(LinkMovementMethod.getInstance());
 		textView4.setText(Html.fromHtml(linkText));
 		    
+	}
+	
+private void share(String titleString, String linkProtocol, String linkHost, String linkPath) {
+		requestPublishPermissions(Session.getActiveSession());
+		Bundle bundle = new Bundle();
+		bundle.putString("caption", "Lees ook eens dit artikel!");
+		bundle.putString("description", "Gedeeld via Charitybook.");
+		bundle.putString("link", ""+linkProtocol+"://"+linkHost+linkPath+"");
+		bundle.putString("name", ""+titleString);
+		new WebDialog.FeedDialogBuilder(NieuwsArtikelActivity.this, Session.getActiveSession(), bundle).build().show();
+	}
+	
+	private void requestPublishPermissions(Session session) {
+	    if (session != null) {
+	        Session.NewPermissionsRequest newPermissionsRequest = new Session.NewPermissionsRequest(this, PERMISSIONS).setRequestCode(REAUTH_ACTIVITY_CODE);
+	        session.requestNewPublishPermissions(newPermissionsRequest);
+	    }
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    super.onActivityResult(requestCode, resultCode, data);
+	    switch(requestCode) {
+	    default:
+	        if(Session.getActiveSession() != null) 
+	            Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);
+	        break;
+	    }
 	}
 }
