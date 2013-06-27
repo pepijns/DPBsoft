@@ -129,6 +129,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		 addInt();
 		 sortList();
 		 algemeenOrder();
+		 setRankingPoints();
+		 getRankingPoints();
 		 setContentView(R.layout.activity_nieuw_overzicht);
 		 isFBinstalled = appInstalledOrNot("com.facebook.katana");
 		 fbLogin();
@@ -226,14 +228,14 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	    	      Collections.reverse(tempMessages);
 	    	      
 	    	      int l = points.get(iz);
-	    	      int listLength = (int)l / iz * 30;
+	    	      int listLength = (int)l / sum * 30;
 	    	      if(listLength ==0)
 	    	    	  listLength = 1;
 	    	      
 	    	      int sz = tempMessages.size();
 	    	      for(int i = listLength;i<sz;i++)
 	    	    	  tempMessages.remove(listLength);
-	    	      
+
 	    	      
 	    	      messages.addAll(tempMessages);
 	    	      
@@ -343,20 +345,47 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	int ziektesRank = lca.getRankingZiektes();
 	int overigRank = lca.getRankingOverig();
 		
+	
+public void setRankingPoints()
+{
+	SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+    p.edit().putInt("dierenPoints", dierenRank).commit();
+    p.edit().putInt("natuurPoints", natuurRank).commit();
+    p.edit().putInt("ontwikkelingPoints", ontwikkelingRank).commit();
+    p.edit().putInt("vluchtelingenPoints", vluchtelingenRank).commit();
+    p.edit().putInt("ziektesPoints", ziektesRank).commit();
+    p.edit().putInt("overigPoints", overigRank).commit();   
+}
+
+public void getRankingPoints(){
+SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+int currentDierenRank = p.getInt("dierenPoints", 0);
+int currentNatuurRank = p.getInt("natuurPoints", 0);
+int currentOntwikkelingRank = p.getInt("ontwikkelingPoints", 0);
+int currentVluchtelingenRank = p.getInt("vluchtelingenPoints", 0);
+int currentZiektesRank = p.getInt("ziektesPoints", 0);
+int currentOverigRank = p.getInt("overigPoints", 0);
+
+ListCategoriesActivity lca = new ListCategoriesActivity();
+lca.setRankingDieren(currentDierenRank);
+lca.setRankingNatuur(currentNatuurRank);
+lca.setRankingOntwikkeling(currentOntwikkelingRank);
+lca.setRankingVluchtelingen(currentVluchtelingenRank);
+lca.setRankingZiektes(currentZiektesRank);
+lca.setRankingOverig(currentOverigRank);
+}
+
+
+	
 		List<Integer> points = new ArrayList<Integer>();
 		
-		
-		
 		public void algemeenOrder(){
-			
-				 //ranks
 			for(int i=0; i<points.size();i++)
 			{
 				 if(points.get(i) == dierenRank && !rank.contains(feedDieren))
 					{
-					 rank.add(feedDieren);
-					 
-					 					}
+					 rank.add(feedDieren); 
+					}
 				 else if(points.get(i) == natuurRank && !rank.contains(feedNatuur))
 						 rank.add(feedNatuur);
 				 else if(points.get(i) == ontwikkelingRank && !rank.contains(feedOntwikkeling))
@@ -368,43 +397,10 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 				 else if(points.get(1) == overigRank && !rank.contains(feedOverig))
 						 rank.add(feedOverig);		 
 				 
-			}
-				 
+			}		 
 			
 		}
 			 
-	/*
-	public void algemeenOrder(){
-	//dit is nog niet wat het moet worden (een soort place holder)	
-		for(int i=1;i<points.size();i++) {
-		if(points.get(points.size()) == dierenRank)
-		{
-			rank1 = feedWnf;
-		}
-		else if(points.get(points.size()) == natuurRank)
-		{
-			rank1 = feedWnf;
-		}
-				 
-	}
-				 
-		if(Collections.max(points) == dierenRank)
-		{
-			rank1 = feedWnf;
->>>>>>> dfec5ffe2cc0f48d95960c1cca262b2e7e4c58bc
-		}
-		else if(Collections.max(points) == natuurRank)
-		{
-			rank1 = feedWnf;
-		}
-	}
-		
-<<<<<<< HEAD
-		
-=======
-	List<Integer> points = new ArrayList<Integer>();
->>>>>>> dfec5ffe2cc0f48d95960c1cca262b2e7e4c58bc
-	*/
 	public void addInt() {
 		points.add(dierenRank);
 		points.add(natuurRank);
