@@ -30,7 +30,7 @@ public class ListCharitiesActivity extends ListActivity {
 	private static final int OVERIG = 6;
 	
 	//charities
-	private static final int WNF = 1;
+	private static final int WNF = 1; 
 	private static final int WSPA = 2;
 	private static final int SOPHIA_KATTENBOND = 3;
 	private static final int SOPHIA_VEREENIGING = 4;
