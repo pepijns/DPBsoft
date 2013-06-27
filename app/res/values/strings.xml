@@ -153,5 +153,6 @@
     <string name="title_activity_charity_wnfinfo">CharityWNFInfoActivity</string>
     <string name="title_activity_charity_main">CharityMainActivity</string>
     <string name="title_activity_charity_info">CharityInfoActivity</string>
+    <string name="shareButtonCharity">Steun dit goede doel via Facebook</string>
 
 </resources>
