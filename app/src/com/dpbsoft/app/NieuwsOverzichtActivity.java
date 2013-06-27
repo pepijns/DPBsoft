@@ -313,16 +313,26 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	private String feedAmnesty = "http://www.nu.nl/feeds/rss/tag/amnesty%20international.rss";
 	private String feedWarChild = "http://www.nu.nl/feeds/rss/tag/war%20child.rss";
 	private String feedWnf = "http://www.nu.nl/feeds/rss/tag/wnf.rss";
-	private String feedWspa = "http://www.nu.nl/feeds/rss/tag/wspa.rss"; //leeg
+	private String feedWspa = "http://www.nu.nl/feeds/rss/tag/wspa.rss";
 	private String feedKwf = "http://www.nu.nl/feeds/rss/tag/kwf%20kankerbestrijding.rss";
 	private String feedUnicef = "http://www.nu.nl/feeds/rss/tag/unicef.rss";
-		
+	private String feedNmonument = "http://www.nu.nl/feeds/rss/tag/natuurmonumenten.rss";
+	private String feedMilieuDef = "http://www.nu.nl/feeds/rss/tag/milieudefensie.rss";
+	private String feedLdHeils = "http://www.nu.nl/feeds/rss/tag/leger%20des%20heils.rss";
+	private String feedTdH = "http://www.nu.nl/feeds/rss/tag/terre%20des%20hommes.rss";	
+	private String feedLong = "http://www.nu.nl/feeds/rss/tag/longfonds.rss";	
+	private String feedKika = "http://www.nu.nl/feeds/rss/tag/kika.rss";
+	private String feedStopAids = "http://www.nu.nl/feeds/rss/tag/stop%20aids%20now.rss";
+	private String feedDiabetsFonds = "http://www.diabetesfonds.nl/feeds/rss.xml";
+	private String feedNier = "http://www.nierstichting.nl/rss";
+	private String feedAzG = "http://www.artsenzondergrenzen.nl/feeds/news.aspx";
+
 		private String[] feedDieren = {feedWnf,feedWspa,feedAap};
-		private String[] feedNatuur = {feedGreen};
-		private String[] feedOntwikkeling = {feedUnicef};
+		private String[] feedNatuur = {feedGreen,feedMilieuDef};
+		private String[] feedOntwikkeling = {feedUnicef, feedTdH, feedLdHeils};
 		private String[] feedVluchtelingen = {feedWarChild};
-		private String[] feedOverig = {feedAmnesty};
-		private String[] feedZiektes = {feedKwf};
+		private String[] feedOverig = {feedAmnesty,feedNmonument};
+		private String[] feedZiektes = {feedKwf,feedLong, feedKika, feedStopAids, feedDiabetsFonds, feedNier, feedAzG};
 		
 
 	ListCategoriesActivity lca = new ListCategoriesActivity();
