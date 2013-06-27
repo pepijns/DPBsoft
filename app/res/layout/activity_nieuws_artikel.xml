@@ -48,5 +48,16 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="" />
+    
+    <TextView
+        	android:id="@+id/tvShare"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="5dp"
+        	android:text="@string/donate"
+        	android:textSize="20sp"  
+        	android:layout_below="@+id/textView3"          
+       		android:clickable="true" 
+   			android:onClick="onClick" />
 
 </RelativeLayout>
