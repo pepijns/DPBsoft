@@ -43,6 +43,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	static List<String> paths;
 	static List<String> hosts;
 	static List<String> protocols;
+	List<String[]> rank = new ArrayList<String[]>();
 	
 	private boolean mIsBackButtonPressed;
 	private int group1Id = 1;
@@ -52,12 +53,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	
 	public ListView lstTweets = null;
 	String newscategory = new String();
-	String rank1;
-	String rank2;
-	String rank3;
-	String rank4;
-	String rank5;
-	String rank6;
 	
 	int nieuwsId = Menu.FIRST;
 	int logoutId = Menu.FIRST +1;
@@ -131,9 +126,9 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	 @Override
 	 public void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
-		 //addInt();
-		 //sortList();
-		 //algemeenOrder();
+		 addInt();
+		 sortList();
+		 algemeenOrder();
 		 setContentView(R.layout.activity_nieuw_overzicht);
 		 isFBinstalled = appInstalledOrNot("com.facebook.katana");
 		 fbLogin();
@@ -206,18 +201,57 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 
 	 private void loadFeed(ParserType type){
 	     try{
-	    	 
+	    	 Log.i("Info",newscategory);
 	      Log.i("AndroidNews", "ParserType="+type.name());
+	      if(newscategory.equals("algemeen"))
+	      {
+	    	  int sum = 0;
+	    	  for(int num : points)
+	    	  {
+	    		  if(num>1)
+	    			  sum+=num;
+	    		  else
+	    			  sum++;
+	    	  }
+	    		  
+	    		  int iz = 0;
+	    	  for(String[] categorie : rank)
+	    	  {
+	    		  List<Message> tempMessages = new ArrayList<Message>();
+	    		  for(String s : categorie)
+	    		  {
+	    			  tempMessages.addAll(FeedParserFactory.getParser(type, s).parse());
+	    		  }
+	    		  Collections.sort(tempMessages, new CustomComparator());
+	    	      Collections.reverse(tempMessages);
+	    	      
+	    	      int l = points.get(iz);
+	    	      int listLength = (int)l / iz * 30;
+	    	      if(listLength ==0)
+	    	    	  listLength = 1;
+	    	      
+	    	      int sz = tempMessages.size();
+	    	      for(int i = listLength;i<sz;i++)
+	    	    	  tempMessages.remove(listLength);
+	    	      
+	    	      
+	    	      messages.addAll(tempMessages);
+	    	      
+	    	      iz++;
+	    	  }
 	      
+	      }
+	      else
+	      {
 	      for(String s : getFeeds(newscategory))
 	      {
 	    	  messages.addAll(FeedParserFactory.getParser(type, s).parse());
 	      }
+		      Collections.sort(messages, new CustomComparator());
+		      Collections.reverse(messages);
+	      }
 	      
-	      Collections.sort(messages, new CustomComparator());
-	      Collections.reverse(messages);
 	      
-   
 	      
 	      // Initialize the ArrayLists
 	      titles = new ArrayList<String>(messages.size());
@@ -260,25 +294,36 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	}
 	 
 	public String[] getFeeds(String cat){
-		if(cat == "algemeen")
-			return feedAlgemeen;
+		if(cat == "natuur")
+			return feedNatuur;
+		else if(cat=="ontwikkeling")
+			return feedOntwikkeling;
+		else if(cat=="vluchtelingen")
+			return feedVluchtelingen;
+		else if(cat == "overig")
+			return feedOverig;
+		else if (cat=="ziektes")
+			return feedZiektes;
 		else
 			return feedDieren;
 		}
 	 
-	private String feedWnf = "http://www.nu.nl/feeds/rss/tag/dieren.rss";
-	private String feedWspa = "http://feeds.feedburner.com/OverzichtGoedeDoelen";
+	private String feedAap = "http://www.nu.nl/feeds/rss/tag/stichting%20aap.rss";
+	private String feedGreen = "http://www.nu.nl/feeds/rss/tag/greenpeace.rss";
+	private String feedAmnesty = "http://www.nu.nl/feeds/rss/tag/amnesty%20international.rss";
+	private String feedWarChild = "http://www.nu.nl/feeds/rss/tag/war%20child.rss";
+	private String feedWnf = "http://www.nu.nl/feeds/rss/tag/wnf.rss";
+	private String feedWspa = "http://www.nu.nl/feeds/rss/tag/wspa.rss"; //leeg
+	private String feedKwf = "http://www.nu.nl/feeds/rss/tag/kwf%20kankerbestrijding.rss";
+	private String feedUnicef = "http://www.nu.nl/feeds/rss/tag/unicef.rss";
 		
-		private String[] feedDieren = {feedWnf,feedWspa};
+		private String[] feedDieren = {feedWnf,feedWspa,feedAap};
+		private String[] feedNatuur = {feedGreen};
+		private String[] feedOntwikkeling = {feedUnicef};
+		private String[] feedVluchtelingen = {feedWarChild};
+		private String[] feedOverig = {feedAmnesty};
+		private String[] feedZiektes = {feedKwf};
 		
-		//hier moeten nog feeds in:
-		private String[] feedNatuur = {feedWnf,feedWspa};
-		private String[] feedOntwikkeling = {feedWnf,feedWspa};
-		private String[] feedVluchtelingen = {feedWnf,feedWspa};
-		private String[] feedOverig = {feedWnf,feedWspa};
-		private String[] feedZiektes = {feedWnf,feedWspa};
-		
-	private String[] feedAlgemeen = {rank1,rank2,rank3,rank4,rank5,rank6};
 
 	ListCategoriesActivity lca = new ListCategoriesActivity();
 	int dierenRank = lca.getRankingDieren();
@@ -290,169 +335,32 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		
 		List<Integer> points = new ArrayList<Integer>();
 		
+		
+		
 		public void algemeenOrder(){
 			
-				 //rank1
+				 //ranks
+			for(int i=0; i<points.size();i++)
+			{
+				 if(points.get(i) == dierenRank && !rank.contains(feedDieren))
+					{
+					 rank.add(feedDieren);
+					 
+					 					}
+				 else if(points.get(i) == natuurRank && !rank.contains(feedNatuur))
+						 rank.add(feedNatuur);
+				 else if(points.get(i) == ontwikkelingRank && !rank.contains(feedOntwikkeling))
+						 rank.add(feedOntwikkeling);			
+				 else if(points.get(1) == vluchtelingenRank && !rank.contains(feedVluchtelingen))
+						 rank.add(feedVluchtelingen);			 
+				 else if(points.get(1) == ziektesRank && !rank.contains(feedZiektes))
+						 rank.add(feedZiektes);			
+				 else if(points.get(1) == overigRank && !rank.contains(feedOverig))
+						 rank.add(feedOverig);		 
+				 
+			}
+				 
 			
-				 if(points.get(1) == dierenRank)
-					{
-					rank1 = feedWnf;
-					}
-				 else if(points.get(1) == natuurRank)
-				 {
-					rank1 = feedWnf;
-				 }
-				 else if(points.get(1) == ontwikkelingRank)
-					{
-					rank1 = feedWnf;
-					}
-				 else if(points.get(1) == vluchtelingenRank)
-				 {
-					rank1 = feedWnf;
-				 }
-				 else if(points.get(1) == ziektesRank)
-					{
-					rank1 = feedWnf;
-					}
-				 else if(points.get(1) == overigRank)
-				 {
-					rank1 = feedWnf;
-				 }
-				 
-				//rank2
-				 
-				 if(points.get(2) == dierenRank)
-					{
-					rank2 = feedWnf;
-					}
-				 else if(points.get(2) == natuurRank)
-				 {
-					rank2 = feedWnf;
-				 }
-				 else if(points.get(2) == ontwikkelingRank)
-					{
-					rank2 = feedWnf;
-					}
-				 else if(points.get(2) == vluchtelingenRank)
-				 {
-					rank2 = feedWnf;
-				 }
-				 else if(points.get(2) == ziektesRank)
-					{
-					rank2 = feedWnf;
-					}
-				 else if(points.get(2) == overigRank)
-				 {
-					rank2 = feedWnf;
-				 }
-
-				//rank3
-				 
-				 if(points.get(3) == dierenRank)
-					{
-					rank3 = feedWnf;
-					}
-				 else if(points.get(3) == natuurRank)
-				 {
-					rank3 = feedWnf;
-				 }
-				 else if(points.get(3) == ontwikkelingRank)
-					{
-					rank3 = feedWnf;
-					}
-				 else if(points.get(3) == vluchtelingenRank)
-				 {
-					rank3 = feedWnf;
-				 }
-				 else if(points.get(3) == ziektesRank)
-					{
-					rank3 = feedWnf;
-					}
-				 else if(points.get(3) == overigRank)
-				 {
-					rank3 = feedWnf;
-				 }
-				 
-				//rank4
-				 
-				 if(points.get(4) == dierenRank)
-					{
-					rank4 = feedWnf;
-					}
-				 else if(points.get(4) == natuurRank)
-				 {
-					rank4 = feedWnf;
-				 }
-				 else if(points.get(4) == ontwikkelingRank)
-					{
-					rank4 = feedWnf;
-					}
-				 else if(points.get(4) == vluchtelingenRank)
-				 {
-					rank4 = feedWnf;
-				 }
-				 else if(points.get(4) == ziektesRank)
-					{
-					rank4 = feedWnf;
-					}
-				 else if(points.get(4) == overigRank)
-				 {
-					rank4 = feedWnf;
-				 }
-				 
-				//rank5
-				 
-				 if(points.get(5) == dierenRank)
-					{
-					rank5 = feedWnf;
-					}
-				 else if(points.get(5) == natuurRank)
-				 {
-					rank5 = feedWnf;
-				 }
-				 else if(points.get(5) == ontwikkelingRank)
-					{
-					rank5 = feedWnf;
-					}
-				 else if(points.get(5) == vluchtelingenRank)
-				 {
-					rank5 = feedWnf;
-				 }
-				 else if(points.get(5) == ziektesRank)
-					{
-					rank5 = feedWnf;
-					}
-				 else if(points.get(5) == overigRank)
-				 {
-					rank5 = feedWnf;
-				 }
-				 
-				//rank6
-				 
-				 if(points.get(6) == dierenRank)
-					{
-					rank6 = feedWnf;
-					}
-				 else if(points.get(6) == natuurRank)
-				 {
-					rank6 = feedWnf;
-				 }
-				 else if(points.get(6) == ontwikkelingRank)
-					{
-					rank6 = feedWnf;
-					}
-				 else if(points.get(6) == vluchtelingenRank)
-				 {
-					rank6 = feedWnf;
-				 }
-				 else if(points.get(6) == ziektesRank)
-					{
-					rank6 = feedWnf;
-					}
-				 else if(points.get(6) == overigRank)
-				 {
-					rank6 = feedWnf;
-				 }
 		}
 			 
 	/*
@@ -486,7 +394,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 =======
 	List<Integer> points = new ArrayList<Integer>();
 >>>>>>> dfec5ffe2cc0f48d95960c1cca262b2e7e4c58bc
-	
+	*/
 	public void addInt() {
 		points.add(dierenRank);
 		points.add(natuurRank);
@@ -495,13 +403,14 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		points.add(ziektesRank);
 		points.add(overigRank);
 	}
-				
+			
+		
 	public void sortList() {
 		Collections.sort(points, new CustomIntComparator());
 		Collections.reverse(points);
 	}
 		
-	*/
+	
 		
 	@Override
 	public void onBackPressed() {
