@@ -129,12 +129,13 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		 addInt();
 		 sortList();
 		 algemeenOrder();
+		 NieuwsOverzichtActivity.context = getApplicationContext();
 		 setRankingPoints();
 		 getRankingPoints();
 		 setContentView(R.layout.activity_nieuw_overzicht);
 		 isFBinstalled = appInstalledOrNot("com.facebook.katana");
 		 fbLogin();
-		 NieuwsOverzichtActivity.context = getApplicationContext();
+		 
 		 
 		 Bundle extras = getIntent().getExtras();
 		 if (extras != null) {
@@ -241,7 +242,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	    	      
 	    	      iz++;
 	    	  }
-	      
 	      }
 	      else
 	      {
@@ -277,9 +277,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	      Log.e("AndroidNews",t.getMessage(),t);
 	      }
 	}
-
-	
-	    
+  
 	public class CustomComparator implements Comparator<Message> {
 		@Override
 		public int compare(Message o1, Message o2) {
@@ -329,14 +327,13 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	private String feedNier = "http://www.nierstichting.nl/rss";
 	private String feedAzG = "http://www.artsenzondergrenzen.nl/feeds/news.aspx";
 
-		private String[] feedDieren = {feedWnf,feedWspa,feedAap};
-		private String[] feedNatuur = {feedGreen,feedMilieuDef};
-		private String[] feedOntwikkeling = {feedUnicef, feedTdH, feedLdHeils};
-		private String[] feedVluchtelingen = {feedWarChild};
-		private String[] feedOverig = {feedAmnesty,feedNmonument};
-		private String[] feedZiektes = {feedKwf,feedLong, feedKika, feedStopAids, feedDiabetsFonds, feedNier, feedAzG};
+	private String[] feedDieren = {feedWnf,feedWspa,feedAap};
+	private String[] feedNatuur = {feedGreen,feedMilieuDef};
+	private String[] feedOntwikkeling = {feedUnicef, feedTdH, feedLdHeils};
+	private String[] feedVluchtelingen = {feedWarChild};
+	private String[] feedOverig = {feedAmnesty,feedNmonument};
+	private String[] feedZiektes = {feedKwf,feedLong, feedKika, feedStopAids, feedDiabetsFonds, feedNier, feedAzG};
 		
-
 	ListCategoriesActivity lca = new ListCategoriesActivity();
 	int dierenRank = lca.getRankingDieren();
 	int natuurRank = lca.getRankingNatuur();
@@ -346,37 +343,35 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	int overigRank = lca.getRankingOverig();
 		
 	
-public void setRankingPoints()
-{
-	SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
-    p.edit().putInt("dierenPoints", dierenRank).commit();
-    p.edit().putInt("natuurPoints", natuurRank).commit();
-    p.edit().putInt("ontwikkelingPoints", ontwikkelingRank).commit();
-    p.edit().putInt("vluchtelingenPoints", vluchtelingenRank).commit();
-    p.edit().putInt("ziektesPoints", ziektesRank).commit();
-    p.edit().putInt("overigPoints", overigRank).commit();   
-}
+	public void setRankingPoints()
+	{
+		SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+	    p.edit().putInt("dierenPoints", dierenRank).commit();
+	    p.edit().putInt("natuurPoints", natuurRank).commit();
+	    p.edit().putInt("ontwikkelingPoints", ontwikkelingRank).commit();
+	    p.edit().putInt("vluchtelingenPoints", vluchtelingenRank).commit();
+	    p.edit().putInt("ziektesPoints", ziektesRank).commit();
+	    p.edit().putInt("overigPoints", overigRank).commit();   
+	}
 
-public void getRankingPoints(){
-SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
-int currentDierenRank = p.getInt("dierenPoints", 0);
-int currentNatuurRank = p.getInt("natuurPoints", 0);
-int currentOntwikkelingRank = p.getInt("ontwikkelingPoints", 0);
-int currentVluchtelingenRank = p.getInt("vluchtelingenPoints", 0);
-int currentZiektesRank = p.getInt("ziektesPoints", 0);
-int currentOverigRank = p.getInt("overigPoints", 0);
+	public void getRankingPoints(){
+		SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+		int currentDierenRank = p.getInt("dierenPoints", 0);
+		int currentNatuurRank = p.getInt("natuurPoints", 0);
+		int currentOntwikkelingRank = p.getInt("ontwikkelingPoints", 0);
+		int currentVluchtelingenRank = p.getInt("vluchtelingenPoints", 0);
+		int currentZiektesRank = p.getInt("ziektesPoints", 0);
+		int currentOverigRank = p.getInt("overigPoints", 0);
+		
+		ListCategoriesActivity lca = new ListCategoriesActivity();
+		lca.setRankingDieren(currentDierenRank);
+		lca.setRankingNatuur(currentNatuurRank);
+		lca.setRankingOntwikkeling(currentOntwikkelingRank);
+		lca.setRankingVluchtelingen(currentVluchtelingenRank);
+		lca.setRankingZiektes(currentZiektesRank);
+		lca.setRankingOverig(currentOverigRank);
+	}
 
-ListCategoriesActivity lca = new ListCategoriesActivity();
-lca.setRankingDieren(currentDierenRank);
-lca.setRankingNatuur(currentNatuurRank);
-lca.setRankingOntwikkeling(currentOntwikkelingRank);
-lca.setRankingVluchtelingen(currentVluchtelingenRank);
-lca.setRankingZiektes(currentZiektesRank);
-lca.setRankingOverig(currentOverigRank);
-}
-
-
-	
 		List<Integer> points = new ArrayList<Integer>();
 		
 		public void algemeenOrder(){
@@ -396,9 +391,7 @@ lca.setRankingOverig(currentOverigRank);
 						 rank.add(feedZiektes);			
 				 else if(points.get(1) == overigRank && !rank.contains(feedOverig))
 						 rank.add(feedOverig);		 
-				 
 			}		 
-			
 		}
 			 
 	public void addInt() {
@@ -410,14 +403,11 @@ lca.setRankingOverig(currentOverigRank);
 		points.add(overigRank);
 	}
 			
-		
 	public void sortList() {
 		Collections.sort(points, new CustomIntComparator());
 		Collections.reverse(points);
 	}
-		
-	
-		
+
 	@Override
 	public void onBackPressed() {
 		// set the flag to true so the next activity won't start up
