@@ -363,6 +363,9 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		int currentZiektesRank = p.getInt("ziektesPoints", 0);
 		int currentOverigRank = p.getInt("overigPoints", 0);
 		
+		String henk = Integer.toString(currentDierenRank);
+		Log.i("Ranking getrankingpoints", "Current dierenpunt "+ henk);
+		
 		ListCategoriesActivity lca = new ListCategoriesActivity();
 		lca.setRankingDieren(currentDierenRank);
 		lca.setRankingNatuur(currentNatuurRank);
@@ -370,6 +373,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		lca.setRankingVluchtelingen(currentVluchtelingenRank);
 		lca.setRankingZiektes(currentZiektesRank);
 		lca.setRankingOverig(currentOverigRank);
+		
+		
 	}
 
 		List<Integer> points = new ArrayList<Integer>();
@@ -401,6 +406,8 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		points.add(vluchtelingenRank);
 		points.add(ziektesRank);
 		points.add(overigRank);
+		String henk = Integer.toString(dierenRank);
+		Log.i("Ranking adInt()", "dierenpunt "+ henk);
 	}
 			
 	public void sortList() {
