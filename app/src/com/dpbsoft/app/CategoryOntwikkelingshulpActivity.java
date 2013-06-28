@@ -21,7 +21,8 @@ public class CategoryOntwikkelingshulpActivity extends Activity {
 		btnNieuws.setOnClickListener(new View.OnClickListener() {
 		      @Override
 		      public void onClick(View view) {
-		    	  Intent intent = new Intent(CategoryOntwikkelingshulpActivity.this, CategoryNewsOntwikkelingshulpActivity.class);
+		    	  Intent intent = new Intent(CategoryOntwikkelingshulpActivity.this, NieuwsOverzichtActivity.class);
+	    			intent.putExtra("newscategory","ontwikkeling");
 		    	  startActivity(intent);
 		      }
 		});

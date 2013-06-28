@@ -308,15 +308,15 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	}
 	 
 	public String[] getFeeds(String cat){
-		if(cat == "natuur")
+		if(cat.equals("natuur"))
 			return feedNatuur;
-		else if(cat=="ontwikkeling")
+		else if(cat.equals("ontwikkeling"))
 			return feedOntwikkeling;
-		else if(cat=="vluchtelingen")
+		else if(cat.equals("vluchtelingen"))
 			return feedVluchtelingen;
-		else if(cat == "overig")
+		else if(cat.equals("overig"))
 			return feedOverig;
-		else if (cat=="ziektes")
+		else if (cat.equals("ziektes"))
 			return feedZiektes;
 		else
 			return feedDieren;

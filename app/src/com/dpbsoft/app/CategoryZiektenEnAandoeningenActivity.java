@@ -21,7 +21,8 @@ public class CategoryZiektenEnAandoeningenActivity extends Activity {
 		btnNieuws.setOnClickListener(new View.OnClickListener() {
 		      @Override
 		      public void onClick(View view) {
-		    	  Intent intent = new Intent(CategoryZiektenEnAandoeningenActivity.this, CategoryNewsZiektenEnAandoeningenActivity.class);
+		    	  Intent intent = new Intent(CategoryZiektenEnAandoeningenActivity.this, NieuwsOverzichtActivity.class);
+	    			intent.putExtra("newscategory","ziektes");
 		    	  startActivity(intent);
 		      }
 		});		

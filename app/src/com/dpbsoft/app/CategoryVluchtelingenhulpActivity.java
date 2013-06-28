@@ -21,7 +21,8 @@ public class CategoryVluchtelingenhulpActivity extends Activity {
 		btnNieuws.setOnClickListener(new View.OnClickListener() {
 		      @Override
 		      public void onClick(View view) {
-		    	  Intent intent = new Intent(CategoryVluchtelingenhulpActivity.this, CategoryNewsVluchtelingenhulpActivity.class);
+		    	  Intent intent = new Intent(CategoryVluchtelingenhulpActivity.this, NieuwsOverzichtActivity.class);
+	    			intent.putExtra("newscategory","vluchtelingen");
 		    	  startActivity(intent);
 		      }
 		});		

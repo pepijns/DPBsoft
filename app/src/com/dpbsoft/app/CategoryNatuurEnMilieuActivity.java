@@ -21,7 +21,8 @@ public class CategoryNatuurEnMilieuActivity extends Activity {
 		btnNieuws.setOnClickListener(new View.OnClickListener() {
 		      @Override
 		      public void onClick(View view) {
-		    	  Intent intent = new Intent(CategoryNatuurEnMilieuActivity.this, CategoryNewsNatuurEnMilieuActivity.class);
+		    	  Intent intent = new Intent(CategoryNatuurEnMilieuActivity.this, NieuwsOverzichtActivity.class);
+	    			intent.putExtra("newscategory","natuur");
 		    	  startActivity(intent);
 		      }
 		});

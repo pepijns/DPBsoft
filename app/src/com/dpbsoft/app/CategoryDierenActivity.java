@@ -21,8 +21,9 @@ public class CategoryDierenActivity extends Activity {
 		btnNieuws.setOnClickListener(new View.OnClickListener() {
 		      @Override
 		      public void onClick(View view) {
-		    	  Intent intent = new Intent(CategoryDierenActivity.this, CategoryNewsDierenActivity.class);
-		    	  startActivity(intent);
+		    	  Intent intent = new Intent(CategoryDierenActivity.this, NieuwsOverzichtActivity.class);
+	    			intent.putExtra("newscategory","dieren");
+	    			startActivity(intent);
 		      }
 		});
 		
