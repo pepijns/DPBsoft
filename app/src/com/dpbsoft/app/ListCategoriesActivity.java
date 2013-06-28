@@ -26,12 +26,14 @@ public class ListCategoriesActivity extends ListActivity {
 	private static final int VLUCHTELINGEN = 4;
 	private static final int ZIEKTES = 5;
 	private static final int OVERIG = 6;
-		
+	
+	private static Context context;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);		
 		/* Lijst */
-		
+		 context = getApplicationContext();
+
 		setListAdapter(new ArrayAdapter<String>(this, R.layout.activity_list_categories,CATEGORIES));
  
 		ListView listView = getListView();
@@ -42,61 +44,43 @@ public class ListCategoriesActivity extends ListActivity {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				switch (position){
 				case 0:
-					NieuwsOverzichtActivity ranknew = new NieuwsOverzichtActivity();
-					int newRank1 = ranknew.getRankingDieren();
-					newRank1+=1;
-					ranknew.setRankingDieren(newRank1);
-					ranknew.setRank();
+					SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+				    p.edit().putInt("dierenPoints", p.getInt("dierenPoints", 0)+1).commit();
 					Globals.getInstance().setCategory(DIEREN);
 					Intent a = new Intent(ListCategoriesActivity.this, CategoryDierenActivity.class);
 					startActivity(a);
 					break;
 				case 1:
-					NieuwsOverzichtActivity ranknew2 = new NieuwsOverzichtActivity();
-					int newRank2 = ranknew2.getRankingDieren();
-					newRank2+=1;
-					ranknew2.setRankingDieren(newRank2);
-					ranknew2.setRank();
+					SharedPreferences pr = PreferenceManager.getDefaultSharedPreferences(context);
+				    pr.edit().putInt("natuurPoints", pr.getInt("natuurPoints", 0)+1).commit();
 					Globals.getInstance().setCategory(NATUUR);
 					Intent b = new Intent(ListCategoriesActivity.this, CategoryNatuurEnMilieuActivity.class);
 					startActivity(b);
 					break;
 				case 2:
-					NieuwsOverzichtActivity ranknew3 = new NieuwsOverzichtActivity();
-					int newRank3 = ranknew3.getRankingDieren();
-					newRank3+=1;
-					ranknew3.setRankingDieren(newRank3);
-					ranknew3.setRank();
+					SharedPreferences po = PreferenceManager.getDefaultSharedPreferences(context);
+				    po.edit().putInt("ontwikkelingPoints", po.getInt("ontwikkelingPoints", 0)+1).commit();
 					Globals.getInstance().setCategory(ONTWIKKELING);
 					Intent c = new Intent(ListCategoriesActivity.this, CategoryOntwikkelingshulpActivity.class);
 					startActivity(c);
 					break;
 				case 3:
-					NieuwsOverzichtActivity ranknew4 = new NieuwsOverzichtActivity();
-					int newRank4 = ranknew4.getRankingDieren();
-					newRank4+=1;
-					ranknew4.setRankingDieren(newRank4);
-					ranknew4.setRank();
+					SharedPreferences pv = PreferenceManager.getDefaultSharedPreferences(context);
+				    pv.edit().putInt("vluchtelingenPoints", pv.getInt("vluchtelingenPoints", 0)+1).commit();
 					Globals.getInstance().setCategory(VLUCHTELINGEN);
 					Intent d = new Intent(ListCategoriesActivity.this, CategoryVluchtelingenhulpActivity.class);
 					startActivity(d);
 					break;
 				case 4:
-					NieuwsOverzichtActivity ranknew5 = new NieuwsOverzichtActivity();
-					int newRank5 = ranknew5.getRankingDieren();
-					newRank5+=1;
-					ranknew5.setRankingDieren(newRank5);
-					ranknew5.setRank();
+					SharedPreferences pz = PreferenceManager.getDefaultSharedPreferences(context);
+				    pz.edit().putInt("ziektesPoints", pz.getInt("ziektesPoints", 0)+1).commit();
 					Globals.getInstance().setCategory(ZIEKTES);
 					Intent e = new Intent(ListCategoriesActivity.this, CategoryZiektenEnAandoeningenActivity.class);
 					startActivity(e);
 					break;
 				case 5:
-					NieuwsOverzichtActivity ranknew6 = new NieuwsOverzichtActivity();
-					int newRank6 = ranknew6.getRankingDieren();
-					newRank6+=1;
-					ranknew6.setRankingDieren(newRank6);
-					ranknew6.setRank();
+					SharedPreferences pov = PreferenceManager.getDefaultSharedPreferences(context);
+				    pov.edit().putInt("overigPoints", pov.getInt("overigPoints", 0)+1).commit();
 					Globals.getInstance().setCategory(OVERIG);
 					Intent f = new Intent(ListCategoriesActivity.this, CategoryOverigActivity.class);
 					startActivity(f);

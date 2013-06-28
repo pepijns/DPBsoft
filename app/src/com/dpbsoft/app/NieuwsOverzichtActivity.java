@@ -416,6 +416,12 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 			rankingOverig = currentOverigRank;
 			String henk = Integer.toString(rankingDieren);
 			Log.i("Ranking ", "dierenpunt getrankingpoints "+ henk);
+			String hank = Integer.toString(rankingNatuur);
+			Log.i("Ranking", "natuurpunt "+ hank);
+			String honk = Integer.toString(rankingZiektes);
+			Log.i("Ranking", "ziektespunt "+ honk);
+			String hink = Integer.toString(rankingOntwikkeling);
+			Log.i("Ranking", "ontwikkelingpunt "+ hink);
 		}
 
 		
@@ -429,31 +435,31 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		public void setRankingNatuur(int rankingNatuur) {
 			this.rankingNatuur = rankingNatuur;
 			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
-			p.edit().putInt("dierenPoints", rankingNatuur).commit();
+			p.edit().putInt("natuurPoints", rankingNatuur).commit();
 		}
 
 		public void setRankingOntwikkeling(int rankingOntwikkeling) {
 			this.rankingOntwikkeling = rankingOntwikkeling;
 			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
-			p.edit().putInt("dierenPoints", rankingOntwikkeling).commit();
+			p.edit().putInt("ontwikkelingPoints", rankingOntwikkeling).commit();
 		}
 
 		public void setRankingVluchtelingen(int rankingVluchtelingen) {
 			this.rankingVluchtelingen = rankingVluchtelingen;
 			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
-			p.edit().putInt("dierenPoints", rankingVluchtelingen).commit();
+			p.edit().putInt("vluchtelingenPoints", rankingVluchtelingen).commit();
 		}
 
 		public void setRankingZiektes(int rankingZiektes) {
 			this.rankingZiektes = rankingZiektes;
 			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
-			p.edit().putInt("dierenPoints", rankingZiektes).commit();
+			p.edit().putInt("ziektesPoints", rankingZiektes).commit();
 		}
 
 		public void setRankingOverig(int rankingOverig) {
 			this.rankingOverig = rankingOverig;
 			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
-			p.edit().putInt("dierenPoints", rankingOverig).commit();
+			p.edit().putInt("overigPoints", rankingOverig).commit();
 		}
 		
 		public int getRankingDieren() {
