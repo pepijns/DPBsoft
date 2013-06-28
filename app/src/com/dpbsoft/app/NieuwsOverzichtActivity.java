@@ -57,6 +57,13 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	int nieuwsId = Menu.FIRST;
 	int logoutId = Menu.FIRST +1;
 	
+	private int rankingDieren;
+	private int rankingNatuur;
+	private int rankingOntwikkeling;
+	private int rankingVluchtelingen;
+	private int rankingZiektes;
+	private int rankingOverig;
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -126,17 +133,24 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	 @Override
 	 public void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
+		 NieuwsOverzichtActivity.context = getApplicationContext();
+		 setContentView(R.layout.activity_nieuw_overzicht);
+		 getRankingPoints();  
 		 addInt();
 		 sortList();
 		 algemeenOrder();
-		 NieuwsOverzichtActivity.context = getApplicationContext();
-		 setRankingPoints();
-		 getRankingPoints();
-		 setContentView(R.layout.activity_nieuw_overzicht);
 		 isFBinstalled = appInstalledOrNot("com.facebook.katana");
 		 fbLogin();
 		 
-		 
+			String henk = Integer.toString(rankingDieren);
+			Log.i("Ranking", "dierenpunt "+ henk);
+			String hank = Integer.toString(rankingNatuur);
+			Log.i("Ranking", "natuurpunt "+ hank);
+			String honk = Integer.toString(rankingZiektes);
+			Log.i("Ranking", "ziektespunt "+ honk);
+			String hink = Integer.toString(rankingOntwikkeling);
+			Log.i("Ranking", "ontwikkelingpunt "+ hink);
+			
 		 Bundle extras = getIntent().getExtras();
 		 if (extras != null) {
 		     newscategory = extras.getString("newscategory");
@@ -334,80 +348,36 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	private String[] feedOverig = {feedAmnesty,feedNmonument};
 	private String[] feedZiektes = {feedKwf,feedLong, feedKika, feedStopAids, feedDiabetsFonds, feedNier, feedAzG};
 		
-	ListCategoriesActivity lca = new ListCategoriesActivity();
-	int dierenRank = lca.getRankingDieren();
-	int natuurRank = lca.getRankingNatuur();
-	int ontwikkelingRank = lca.getRankingOntwikkeling();
-	int vluchtelingenRank = lca.getRankingVluchtelingen();
-	int ziektesRank = lca.getRankingZiektes();
-	int overigRank = lca.getRankingOverig();
-		
-	
-	public void setRankingPoints()
-	{
-		SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
-	    p.edit().putInt("dierenPoints", dierenRank).commit();
-	    p.edit().putInt("natuurPoints", natuurRank).commit();
-	    p.edit().putInt("ontwikkelingPoints", ontwikkelingRank).commit();
-	    p.edit().putInt("vluchtelingenPoints", vluchtelingenRank).commit();
-	    p.edit().putInt("ziektesPoints", ziektesRank).commit();
-	    p.edit().putInt("overigPoints", overigRank).commit();   
-	}
-
-	public void getRankingPoints(){
-		SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
-		int currentDierenRank = p.getInt("dierenPoints", 0);
-		int currentNatuurRank = p.getInt("natuurPoints", 0);
-		int currentOntwikkelingRank = p.getInt("ontwikkelingPoints", 0);
-		int currentVluchtelingenRank = p.getInt("vluchtelingenPoints", 0);
-		int currentZiektesRank = p.getInt("ziektesPoints", 0);
-		int currentOverigRank = p.getInt("overigPoints", 0);
-		
-		String henk = Integer.toString(currentDierenRank);
-		Log.i("Ranking getrankingpoints", "Current dierenpunt "+ henk);
-		
-		ListCategoriesActivity lca = new ListCategoriesActivity();
-		lca.setRankingDieren(currentDierenRank);
-		lca.setRankingNatuur(currentNatuurRank);
-		lca.setRankingOntwikkeling(currentOntwikkelingRank);
-		lca.setRankingVluchtelingen(currentVluchtelingenRank);
-		lca.setRankingZiektes(currentZiektesRank);
-		lca.setRankingOverig(currentOverigRank);
-		
-		
-	}
 
 		List<Integer> points = new ArrayList<Integer>();
 		
 		public void algemeenOrder(){
 			for(int i=0; i<points.size();i++)
 			{
-				 if(points.get(i) == dierenRank && !rank.contains(feedDieren))
+				 if(points.get(i) == rankingDieren && !rank.contains(feedDieren))
 					{
 					 rank.add(feedDieren); 
 					}
-				 else if(points.get(i) == natuurRank && !rank.contains(feedNatuur))
+				 else if(points.get(i) == rankingNatuur && !rank.contains(feedNatuur))
 						 rank.add(feedNatuur);
-				 else if(points.get(i) == ontwikkelingRank && !rank.contains(feedOntwikkeling))
+				 else if(points.get(i) == rankingOntwikkeling && !rank.contains(feedOntwikkeling))
 						 rank.add(feedOntwikkeling);			
-				 else if(points.get(1) == vluchtelingenRank && !rank.contains(feedVluchtelingen))
+				 else if(points.get(1) == rankingVluchtelingen && !rank.contains(feedVluchtelingen))
 						 rank.add(feedVluchtelingen);			 
-				 else if(points.get(1) == ziektesRank && !rank.contains(feedZiektes))
+				 else if(points.get(1) == rankingZiektes && !rank.contains(feedZiektes))
 						 rank.add(feedZiektes);			
-				 else if(points.get(1) == overigRank && !rank.contains(feedOverig))
+				 else if(points.get(1) == rankingOverig && !rank.contains(feedOverig))
 						 rank.add(feedOverig);		 
 			}		 
 		}
 			 
 	public void addInt() {
-		points.add(dierenRank);
-		points.add(natuurRank);
-		points.add(ontwikkelingRank);
-		points.add(vluchtelingenRank);
-		points.add(ziektesRank);
-		points.add(overigRank);
-		String henk = Integer.toString(dierenRank);
-		Log.i("Ranking adInt()", "dierenpunt "+ henk);
+		points.add(rankingDieren);
+		points.add(rankingNatuur);
+		points.add(rankingOntwikkeling);
+		points.add(rankingVluchtelingen);
+		points.add(rankingZiektes);
+		points.add(rankingOverig);
 	}
 			
 	public void sortList() {
@@ -415,6 +385,111 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		Collections.reverse(points);
 	}
 
+	
+	 
+		public void setRank()
+		{
+			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+		    p.edit().putInt("dierenPoints", rankingDieren).commit();
+		    p.edit().putInt("natuurPoints", rankingNatuur).commit();
+		    p.edit().putInt("ontwikkelingPoints", rankingOntwikkeling).commit();
+		    p.edit().putInt("vluchtelingenPoints", rankingVluchtelingen).commit();
+		    p.edit().putInt("ziektesPoints", rankingZiektes).commit();
+		    p.edit().putInt("overigPoints", rankingOverig).commit();   
+		    String henk = Integer.toString(rankingDieren);
+			Log.i("Ranking ", "dierenpunt setrankingpoints "+ henk);
+		}
+
+		public void getRankingPoints(){
+			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+			int currentDierenRank = p.getInt("dierenPoints", 0);
+			int currentNatuurRank = p.getInt("natuurPoints", 0);
+			int currentOntwikkelingRank = p.getInt("ontwikkelingPoints", 0);
+			int currentVluchtelingenRank = p.getInt("vluchtelingenPoints", 0);
+			int currentZiektesRank = p.getInt("ziektesPoints", 0);
+			int currentOverigRank = p.getInt("overigPoints", 0);
+			rankingDieren = currentDierenRank;		
+			rankingNatuur = currentNatuurRank;
+			rankingOntwikkeling = currentOntwikkelingRank;
+			rankingVluchtelingen = currentVluchtelingenRank;
+			rankingZiektes = currentZiektesRank;
+			rankingOverig = currentOverigRank;
+			String henk = Integer.toString(rankingDieren);
+			Log.i("Ranking ", "dierenpunt getrankingpoints "+ henk);
+		}
+
+		
+
+		public void setRankingDieren(int rankingDieren) {
+			this.rankingDieren = rankingDieren;
+			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+			p.edit().putInt("dierenPoints", rankingDieren).commit();
+		}
+
+		public void setRankingNatuur(int rankingNatuur) {
+			this.rankingNatuur = rankingNatuur;
+			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+			p.edit().putInt("dierenPoints", rankingNatuur).commit();
+		}
+
+		public void setRankingOntwikkeling(int rankingOntwikkeling) {
+			this.rankingOntwikkeling = rankingOntwikkeling;
+			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+			p.edit().putInt("dierenPoints", rankingOntwikkeling).commit();
+		}
+
+		public void setRankingVluchtelingen(int rankingVluchtelingen) {
+			this.rankingVluchtelingen = rankingVluchtelingen;
+			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+			p.edit().putInt("dierenPoints", rankingVluchtelingen).commit();
+		}
+
+		public void setRankingZiektes(int rankingZiektes) {
+			this.rankingZiektes = rankingZiektes;
+			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+			p.edit().putInt("dierenPoints", rankingZiektes).commit();
+		}
+
+		public void setRankingOverig(int rankingOverig) {
+			this.rankingOverig = rankingOverig;
+			SharedPreferences p = PreferenceManager.getDefaultSharedPreferences(context);
+			p.edit().putInt("dierenPoints", rankingOverig).commit();
+		}
+		
+		public int getRankingDieren() {
+			return rankingDieren;
+		}
+
+		public int getRankingNatuur() {
+			return rankingNatuur;
+		}
+
+		public int getRankingOntwikkeling() {
+			return rankingOntwikkeling;
+		}
+
+		public int getRankingVluchtelingen() {
+			return rankingVluchtelingen;
+		}
+
+		public int getRankingZiektes() {
+			return rankingZiektes;
+		}
+
+		public int getRankingOverig() {
+			return rankingOverig;
+		}
+
+	
+
+		@Override
+		protected void onResume() {
+			// TODO Auto-generated method stub
+			super.onResume();
+			getRankingPoints();
+		}
+		
+	
 	@Override
 	public void onBackPressed() {
 		// set the flag to true so the next activity won't start up

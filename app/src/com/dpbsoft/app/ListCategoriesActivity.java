@@ -1,8 +1,11 @@
 package com.dpbsoft.app;
 
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +18,7 @@ public class ListCategoriesActivity extends ListActivity {
 	//list of categories
 	static final String[] CATEGORIES = new String[] { "Dieren", "Natuur en milieu", "Ontwikkelingshulp", "Vluchtelingenhulp", "Ziekten en aandoeningen", "Overig" };
 
+	
 	//categories
 	private static final int DIEREN = 1;
 	private static final int NATUUR = 2;
@@ -22,81 +26,10 @@ public class ListCategoriesActivity extends ListActivity {
 	private static final int VLUCHTELINGEN = 4;
 	private static final int ZIEKTES = 5;
 	private static final int OVERIG = 6;
-	
-	private int rankingDieren = 0;
-	private int rankingNatuur = 0;
-	private int rankingOntwikkeling = 0;
-	private int rankingVluchtelingen = 0;
-	private int rankingZiektes = 0;
-	private int rankingOverig = 0;
-	
-	public int getRankingDieren() {
-		return rankingDieren;
-	}
-
-
-	public void setRankingDieren(int rankingDieren) {
-		this.rankingDieren = rankingDieren;
-	}
-
-
-	public int getRankingNatuur() {
-		return rankingNatuur;
-	}
-
-
-	public void setRankingNatuur(int rankingNatuur) {
-		this.rankingNatuur = rankingNatuur;
-	}
-
-
-	public int getRankingOntwikkeling() {
-		return rankingOntwikkeling;
-	}
-
-
-	public void setRankingOntwikkeling(int rankingOntwikkeling) {
-		this.rankingOntwikkeling = rankingOntwikkeling;
-	}
-
-
-	public int getRankingVluchtelingen() {
-		return rankingVluchtelingen;
-	}
-
-
-	public void setRankingVluchtelingen(int rankingVluchtelingen) {
-		this.rankingVluchtelingen = rankingVluchtelingen;
-	}
-
-
-	public int getRankingZiektes() {
-		return rankingZiektes;
-	}
-
-
-	public void setRankingZiektes(int rankingZiektes) {
-		this.rankingZiektes = rankingZiektes;
-	}
-
-
-	public int getRankingOverig() {
-		return rankingOverig;
-	}
-
-
-	public void setRankingOverig(int rankingOverig) {
-		this.rankingOverig = rankingOverig;
-	}
-
-
-
-	
+		
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
-		
+		super.onCreate(savedInstanceState);		
 		/* Lijst */
 		
 		setListAdapter(new ArrayAdapter<String>(this, R.layout.activity_list_categories,CATEGORIES));
@@ -109,37 +42,61 @@ public class ListCategoriesActivity extends ListActivity {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				switch (position){
 				case 0:
-					rankingDieren++;
+					NieuwsOverzichtActivity ranknew = new NieuwsOverzichtActivity();
+					int newRank1 = ranknew.getRankingDieren();
+					newRank1+=1;
+					ranknew.setRankingDieren(newRank1);
+					ranknew.setRank();
 					Globals.getInstance().setCategory(DIEREN);
 					Intent a = new Intent(ListCategoriesActivity.this, CategoryDierenActivity.class);
 					startActivity(a);
 					break;
 				case 1:
-					rankingNatuur++;
+					NieuwsOverzichtActivity ranknew2 = new NieuwsOverzichtActivity();
+					int newRank2 = ranknew2.getRankingDieren();
+					newRank2+=1;
+					ranknew2.setRankingDieren(newRank2);
+					ranknew2.setRank();
 					Globals.getInstance().setCategory(NATUUR);
 					Intent b = new Intent(ListCategoriesActivity.this, CategoryNatuurEnMilieuActivity.class);
 					startActivity(b);
 					break;
 				case 2:
-					rankingOntwikkeling++;
+					NieuwsOverzichtActivity ranknew3 = new NieuwsOverzichtActivity();
+					int newRank3 = ranknew3.getRankingDieren();
+					newRank3+=1;
+					ranknew3.setRankingDieren(newRank3);
+					ranknew3.setRank();
 					Globals.getInstance().setCategory(ONTWIKKELING);
 					Intent c = new Intent(ListCategoriesActivity.this, CategoryOntwikkelingshulpActivity.class);
 					startActivity(c);
 					break;
 				case 3:
-					rankingVluchtelingen++;
+					NieuwsOverzichtActivity ranknew4 = new NieuwsOverzichtActivity();
+					int newRank4 = ranknew4.getRankingDieren();
+					newRank4+=1;
+					ranknew4.setRankingDieren(newRank4);
+					ranknew4.setRank();
 					Globals.getInstance().setCategory(VLUCHTELINGEN);
 					Intent d = new Intent(ListCategoriesActivity.this, CategoryVluchtelingenhulpActivity.class);
 					startActivity(d);
 					break;
 				case 4:
-					rankingZiektes++;
+					NieuwsOverzichtActivity ranknew5 = new NieuwsOverzichtActivity();
+					int newRank5 = ranknew5.getRankingDieren();
+					newRank5+=1;
+					ranknew5.setRankingDieren(newRank5);
+					ranknew5.setRank();
 					Globals.getInstance().setCategory(ZIEKTES);
 					Intent e = new Intent(ListCategoriesActivity.this, CategoryZiektenEnAandoeningenActivity.class);
 					startActivity(e);
 					break;
 				case 5:
-					rankingOverig++;
+					NieuwsOverzichtActivity ranknew6 = new NieuwsOverzichtActivity();
+					int newRank6 = ranknew6.getRankingDieren();
+					newRank6+=1;
+					ranknew6.setRankingDieren(newRank6);
+					ranknew6.setRank();
 					Globals.getInstance().setCategory(OVERIG);
 					Intent f = new Intent(ListCategoriesActivity.this, CategoryOverigActivity.class);
 					startActivity(f);
@@ -148,8 +105,10 @@ public class ListCategoriesActivity extends ListActivity {
 			}
 		});
 		/* Einde knoppen */
-		/* Einde lijst */
- 
+		/* Einde lijst */		
+		
 	}
- 
+
+	
+	
 }
