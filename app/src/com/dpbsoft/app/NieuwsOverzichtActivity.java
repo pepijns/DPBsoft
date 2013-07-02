@@ -141,15 +141,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		 algemeenOrder();
 		 isFBinstalled = appInstalledOrNot("com.facebook.katana");
 		 fbLogin();
-		 
-			String henk = Integer.toString(rankingDieren);
-			Log.i("Ranking", "dierenpunt "+ henk);
-			String hank = Integer.toString(rankingNatuur);
-			Log.i("Ranking", "natuurpunt "+ hank);
-			String honk = Integer.toString(rankingZiektes);
-			Log.i("Ranking", "ziektespunt "+ honk);
-			String hink = Integer.toString(rankingOntwikkeling);
-			Log.i("Ranking", "ontwikkelingpunt "+ hink);
 			
 		 Bundle extras = getIntent().getExtras();
 		 if (extras != null) {
@@ -218,8 +209,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 
 	 private void loadFeed(ParserType type){
 	     try{
-	    	 Log.i("Info",newscategory);
-	      Log.i("AndroidNews", "ParserType="+type.name());
+
 	      if(newscategory.equals("algemeen"))
 	      {
 	    	  int sum = 0;
@@ -231,7 +221,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	    			  sum++;
 	    	  }
 	    		  
-	    		  int iz = 0;
+	    	  int iz = 0;
 	    	  for(String[] categorie : rank)
 	    	  {
 	    		  List<Message> tempMessages = new ArrayList<Message>();
@@ -243,7 +233,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 	    	      Collections.reverse(tempMessages);
 	    	      
 	    	      int l = points.get(iz);
-	    	      int listLength = (int)l / sum * 30;
+	    	      int listLength = (int)(l*30 / sum);
 	    	      if(listLength ==0)
 	    	    	  listLength = 1;
 	    	      
@@ -362,11 +352,11 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 						 rank.add(feedNatuur);
 				 else if(points.get(i) == rankingOntwikkeling && !rank.contains(feedOntwikkeling))
 						 rank.add(feedOntwikkeling);			
-				 else if(points.get(1) == rankingVluchtelingen && !rank.contains(feedVluchtelingen))
+				 else if(points.get(i) == rankingVluchtelingen && !rank.contains(feedVluchtelingen))
 						 rank.add(feedVluchtelingen);			 
-				 else if(points.get(1) == rankingZiektes && !rank.contains(feedZiektes))
+				 else if(points.get(i) == rankingZiektes && !rank.contains(feedZiektes))
 						 rank.add(feedZiektes);			
-				 else if(points.get(1) == rankingOverig && !rank.contains(feedOverig))
+				 else if(points.get(i) == rankingOverig && !rank.contains(feedOverig))
 						 rank.add(feedOverig);		 
 			}		 
 		}
@@ -382,7 +372,7 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 			
 	public void sortList() {
 		Collections.sort(points, new CustomIntComparator());
-		Collections.reverse(points);
+		//Collections.reverse(points);
 	}
 
 	
@@ -397,7 +387,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 		    p.edit().putInt("ziektesPoints", rankingZiektes).commit();
 		    p.edit().putInt("overigPoints", rankingOverig).commit();   
 		    String henk = Integer.toString(rankingDieren);
-			Log.i("Ranking ", "dierenpunt setrankingpoints "+ henk);
 		}
 
 		public void getRankingPoints(){
@@ -414,14 +403,6 @@ public class NieuwsOverzichtActivity extends Activity implements AdapterView.OnI
 			rankingVluchtelingen = currentVluchtelingenRank;
 			rankingZiektes = currentZiektesRank;
 			rankingOverig = currentOverigRank;
-			String henk = Integer.toString(rankingDieren);
-			Log.i("Ranking ", "dierenpunt getrankingpoints "+ henk);
-			String hank = Integer.toString(rankingNatuur);
-			Log.i("Ranking", "natuurpunt "+ hank);
-			String honk = Integer.toString(rankingZiektes);
-			Log.i("Ranking", "ziektespunt "+ honk);
-			String hink = Integer.toString(rankingOntwikkeling);
-			Log.i("Ranking", "ontwikkelingpunt "+ hink);
 		}
 
 		
